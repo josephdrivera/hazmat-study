@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>HazMat Awareness / Operational — Academy Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       HOME SCREEN
+       ═══════════════════════════════════════════════════ -->
+  <main id="view-home" class="view active">
+    <div class="home-content">
+      <header class="home-header">
+        <h1 class="brand">HazMat</h1>
+        <p class="brand-sub">Awareness / Operational</p>
+        <p class="brand-tagline">100-Question Academy Practice</p>
+      </header>
+
+      <div class="home-scores">
+        <div class="score-block">
+          <span class="score-value">70%</span>
+          <span class="score-label">Passing Score</span>
+        </div>
+        <div class="score-block score-block--target">
+          <span class="score-value">80%+</span>
+          <span class="score-label">Study Target</span>
+        </div>
+      </div>
+
+      <div class="home-actions">
+        <button class="btn btn--primary" id="btn-study">Study Mode</button>
+        <button class="btn btn--primary" id="btn-exam">100-Question Practice Exam</button>
+      </div>
+
+      <div class="home-quizzes">
+        <button class="btn btn--secondary" id="btn-quiz1">
+          <strong>Quiz #1</strong>
+          <span>General — 50 Questions</span>
+        </button>
+        <button class="btn btn--secondary" id="btn-quiz2">
+          <strong>Quiz #2</strong>
+          <span>Hazardous Materials Properties and Effects — 50 Questions</span>
+        </button>
+      </div>
+
+      <div class="home-util">
+        <button class="btn btn--text" id="btn-clear-progress">Clear Saved Progress</button>
+      </div>
+
+      <footer class="disclaimer">
+        Study aid based on instructor-provided Hartford County Regional Fire School Hazardous Materials Awareness / Operational materials. This is not an official state examination.
+        <p class="credit">Developed by <a href="https://josephdrivera.com/" target="_blank" rel="noopener">Joseph Rivera</a></p>
+      </footer>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       STUDY MODE
+       ═══════════════════════════════════════════════════ -->
+  <main id="view-study" class="view">
+    <div class="study-content">
+
+      <div class="study-topbar">
+        <button class="btn btn--text btn--back" id="study-home">&larr; Home</button>
+        <div class="study-filters">
+          <select id="filter-level" class="filter-select" aria-label="Filter by level">
+            <option value="all">All Levels</option>
+            <option value="Awareness">Awareness</option>
+            <option value="Operations">Operations</option>
+          </select>
+          <select id="filter-quiz" class="filter-select" aria-label="Filter by quiz">
+            <option value="all">All 100</option>
+            <option value="1">Quiz #1 — General</option>
+            <option value="2">Quiz #2 — Properties and Effects</option>
+          </select>
+          <label class="shuffle-label">
+            <input type="checkbox" id="filter-shuffle"> Shuffle
+          </label>
+        </div>
+      </div>
+
+      <div class="study-progress" id="study-progress"></div>
+
+      <div class="question-area">
+        <div class="question-header" id="study-header"></div>
+        <div class="question-level-tag" id="study-level-tag"></div>
+        <p class="question-text" id="study-question"></p>
+        <div class="choices" id="study-choices"></div>
+        <div class="feedback" id="study-feedback"></div>
+        <div class="question-meta" id="study-meta"></div>
+      </div>
+
+      <div class="nav-bar">
+        <div class="nav-primary">
+          <button class="btn btn--nav" id="study-prev">Previous</button>
+          <button class="btn btn--nav" id="study-next">Next</button>
+        </div>
+        <div class="nav-secondary">
+          <button class="btn btn--text btn--small" id="study-next-unanswered">Next Unanswered</button>
+          <button class="btn btn--text btn--small" id="study-review-missed">Review Missed</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       PRACTICE EXAM
+       ═══════════════════════════════════════════════════ -->
+  <main id="view-exam" class="view">
+    <div class="exam-content">
+
+      <div class="exam-topbar">
+        <button class="btn btn--text btn--back" id="exam-home">&larr; Home</button>
+        <div class="exam-header-text" id="exam-header"></div>
+      </div>
+
+      <div class="exam-progress-bar">
+        <div class="exam-progress-fill" id="exam-progress-fill"></div>
+      </div>
+
+      <div class="question-area">
+        <div class="question-level-tag" id="exam-level-tag"></div>
+        <p class="question-text" id="exam-question"></p>
+        <div class="choices" id="exam-choices"></div>
+      </div>
+
+      <div class="nav-bar">
+        <div class="nav-primary">
+          <button class="btn btn--nav" id="exam-prev">Previous</button>
+          <button class="btn btn--nav" id="exam-next">Next</button>
+        </div>
+      </div>
+
+      <div class="exam-navigator" id="exam-navigator"></div>
+
+      <div class="exam-submit-area">
+        <button class="btn btn--primary" id="exam-submit">Submit Exam</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       EXAM RESULTS
+       ═══════════════════════════════════════════════════ -->
+  <main id="view-results" class="view">
+    <div class="results-content">
+      <div class="results-score" id="results-score"></div>
+      <div class="results-counts" id="results-counts"></div>
+      <div class="results-band" id="results-band"></div>
+      <div class="results-actions">
+        <button class="btn btn--primary" id="results-review-missed">Review Missed Questions</button>
+        <button class="btn btn--nav" id="results-restart">Restart Exam</button>
+        <button class="btn btn--text" id="results-home">Return Home</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       MISSED QUESTION REVIEW
+       ═══════════════════════════════════════════════════ -->
+  <main id="view-missed" class="view">
+    <div class="missed-content">
+      <div class="missed-topbar">
+        <button class="btn btn--text btn--back" id="missed-back">&larr; Back</button>
+        <span class="missed-counter" id="missed-counter"></span>
+      </div>
+      <div class="question-area">
+        <div class="question-header" id="missed-header"></div>
+        <div class="question-level-tag" id="missed-level-tag"></div>
+        <p class="question-text" id="missed-question"></p>
+        <div class="choices" id="missed-choices"></div>
+        <div class="question-meta" id="missed-meta"></div>
+      </div>
+      <div class="nav-bar">
+        <div class="nav-primary">
+          <button class="btn btn--nav" id="missed-prev">Previous Missed</button>
+          <button class="btn btn--nav" id="missed-next">Next Missed</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       MODAL (confirmation dialogs)
+       ═══════════════════════════════════════════════════ -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal" role="dialog" aria-modal="true">
+      <p class="modal-message" id="modal-message"></p>
+      <div class="modal-actions" id="modal-actions"></div>
+    </div>
+  </div>
+
+  <script src="js/questions.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
