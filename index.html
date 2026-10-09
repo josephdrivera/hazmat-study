@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>HazMat Awareness / Operational — Academy Practice</title>
+  <title>HazMat Awareness / Operational — Study and Practice Tests</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
       <header class="home-header">
         <h1 class="brand">HazMat</h1>
         <p class="brand-sub">Awareness / Operational</p>
-        <p class="brand-tagline">100-Question Academy Practice</p>
+        <p class="brand-tagline">Study and practice tests</p>
       </header>
 
       <div class="home-scores">
@@ -32,21 +32,66 @@
         </div>
       </div>
 
-      <div class="home-actions">
-        <button class="btn btn--primary" id="btn-study">Study Mode</button>
-        <button class="btn btn--primary" id="btn-exam">100-Question Practice Exam</button>
+      <button class="btn btn--primary" id="btn-resume" type="button" hidden>Resume test</button>
+
+      <div class="source-tabs" role="tablist" aria-label="Study sources">
+        <button class="source-tab" id="tab-handouts" type="button" role="tab" aria-selected="true" aria-controls="panel-handouts" tabindex="0">Instructor Handouts</button>
+        <button class="source-tab" id="tab-exam-prep" type="button" role="tab" aria-selected="false" aria-controls="panel-exam-prep" tabindex="-1">Hazardous Materials Exam Prep</button>
+        <button class="source-tab" id="tab-tests" type="button" role="tab" aria-selected="false" aria-controls="panel-tests" tabindex="-1">Practice Tests</button>
       </div>
 
-      <div class="home-quizzes">
-        <button class="btn btn--secondary" id="btn-quiz1">
-          <strong>Quiz #1</strong>
-          <span>General — 50 Questions</span>
-        </button>
-        <button class="btn btn--secondary" id="btn-quiz2">
-          <strong>Quiz #2</strong>
-          <span>Hazardous Materials Properties and Effects — 50 Questions</span>
-        </button>
-      </div>
+      <section class="source-panel" id="panel-handouts" role="tabpanel" aria-labelledby="tab-handouts">
+        <h2 class="source-title" id="source-handout-title">Instructor Handouts</h2>
+        <p class="source-desc" id="source-handout-desc">Academy quiz sheets.</p>
+        <button class="btn btn--primary" id="btn-study" type="button">Study the handout</button>
+        <div class="home-quizzes" id="handout-quizzes"></div>
+        <p class="source-note">Practice tests from this handout are generated on the Practice Tests tab.</p>
+      </section>
+
+      <section class="source-panel" id="panel-exam-prep" role="tabpanel" aria-labelledby="tab-exam-prep" hidden>
+        <h2 class="source-title">Hazardous Materials Exam Prep</h2>
+        <h3 class="source-exam" id="exam-prep-title">Six book examinations</h3>
+        <p class="source-desc" id="exam-prep-summary"></p>
+        <button class="btn btn--primary" id="btn-study-exam" type="button">Study all eligible questions</button>
+        <button class="btn btn--secondary" id="btn-review-content" type="button">Content review</button>
+        <div class="home-quizzes" id="exam-prep-exams"></div>
+        <details class="exam-directions">
+          <summary>Reading lists, directions, and source notes</summary>
+          <div id="exam-prep-intro"></div>
+        </details>
+      </section>
+
+      <section class="source-panel" id="panel-tests" role="tabpanel" aria-labelledby="tab-tests" hidden>
+        <h2 class="source-title">Practice Tests</h2>
+        <p class="source-desc">Choose a source, then generate a test. A test uses each question once.</p>
+
+        <fieldset class="option-set">
+          <legend>Question source</legend>
+          <label class="option"><input type="radio" name="test-source" value="instructor-handouts" checked> Instructor Handouts</label>
+          <label class="option"><input type="radio" name="test-source" value="hazardous-materials-exam-prep"> Hazardous Materials Exam Prep</label>
+          <label class="option"><input type="radio" name="test-source" value="both"> Both Sources</label>
+        </fieldset>
+        <div class="option-set book-filter-row" id="book-filter-row" hidden>
+          <label class="book-filter-label" for="test-book-filter">Book exams to draw from</label>
+          <select id="test-book-filter" class="filter-select"></select>
+        </div>
+        <p class="source-note" id="eligible-count" aria-live="polite"></p>
+        <p class="source-note" id="source-unavailable" hidden></p>
+
+        <fieldset class="option-set">
+          <legend>Test mode</legend>
+          <label class="option"><input type="radio" name="test-mode" value="practice" checked> Practice — check an answer to see the source answer</label>
+          <label class="option"><input type="radio" name="test-mode" value="exam"> Exam — answers stay hidden until you submit</label>
+        </fieldset>
+
+        <div class="generate-row" id="test-generate">
+          <button class="btn btn--secondary" type="button" data-count="10">Generate 10 Questions</button>
+          <button class="btn btn--secondary" type="button" data-count="50">Generate 50 Questions</button>
+          <button class="btn btn--secondary" type="button" data-count="150">Generate 150 Questions</button>
+        </div>
+        <p class="limit-message" id="test-limit-message" hidden></p>
+        <button class="btn btn--primary" id="btn-generate-all" type="button" hidden>Generate all available questions</button>
+      </section>
 
       <div class="home-util">
         <button class="btn btn--text" id="btn-clear-progress">Clear Saved Progress</button>
@@ -73,10 +118,9 @@
             <option value="Operations">Operations</option>
           </select>
           <select id="filter-quiz" class="filter-select" aria-label="Filter by quiz">
-            <option value="all">All 100</option>
-            <option value="1">Quiz #1 — General</option>
-            <option value="2">Quiz #2 — Properties and Effects</option>
+            <option value="all">Entire handout</option>
           </select>
+          <select id="filter-exam" class="filter-select" aria-label="Filter by book exam" hidden></select>
           <label class="shuffle-label">
             <input type="checkbox" id="filter-shuffle"> Shuffle
           </label>
@@ -89,6 +133,7 @@
         <div class="question-header" id="study-header"></div>
         <div class="question-level-tag" id="study-level-tag"></div>
         <p class="question-text" id="study-question"></p>
+        <ol class="statements" id="study-statements" hidden></ol>
         <div class="choices" id="study-choices"></div>
         <div class="feedback" id="study-feedback"></div>
         <div class="question-meta" id="study-meta"></div>
@@ -115,24 +160,34 @@
     <div class="exam-content">
 
       <div class="exam-topbar">
-        <button class="btn btn--text btn--back" id="exam-home">&larr; Home</button>
+        <button class="btn btn--text btn--back" id="exam-home" type="button">&larr; Home</button>
         <div class="exam-header-text" id="exam-header"></div>
       </div>
 
+      <p class="exam-progress-text" id="exam-progress-text" aria-live="polite"></p>
       <div class="exam-progress-bar">
         <div class="exam-progress-fill" id="exam-progress-fill"></div>
       </div>
 
       <div class="question-area">
         <div class="question-level-tag" id="exam-level-tag"></div>
+        <p class="question-kicker" id="exam-kicker"></p>
         <p class="question-text" id="exam-question"></p>
-        <div class="choices" id="exam-choices"></div>
+        <ol class="statements" id="exam-statements" hidden></ol>
+        <div id="exam-choices"></div>
+        <div class="flag-row">
+          <label class="option"><input type="checkbox" id="exam-mark"> Mark for review</label>
+          <label class="option"><input type="checkbox" id="exam-guess"> Mark as guessed</label>
+        </div>
+        <div class="feedback" id="exam-feedback" aria-live="polite"></div>
+        <div class="reference-block" id="exam-references"></div>
+        <button class="btn btn--secondary" id="exam-check" type="button" hidden>Check answer</button>
       </div>
 
       <div class="nav-bar">
         <div class="nav-primary">
-          <button class="btn btn--nav" id="exam-prev">Previous</button>
-          <button class="btn btn--nav" id="exam-next">Next</button>
+          <button class="btn btn--nav" id="exam-prev" type="button">Previous</button>
+          <button class="btn btn--nav" id="exam-next" type="button">Next</button>
         </div>
       </div>
 
@@ -154,9 +209,11 @@
       <div class="results-counts" id="results-counts"></div>
       <div class="results-band" id="results-band"></div>
       <div class="results-actions">
-        <button class="btn btn--primary" id="results-review-missed">Review Missed Questions</button>
-        <button class="btn btn--nav" id="results-restart">Restart Exam</button>
-        <button class="btn btn--text" id="results-home">Return Home</button>
+        <button class="btn btn--primary" id="results-review-all" type="button">Review answers</button>
+        <button class="btn btn--nav" id="results-retry-missed" type="button">Retry Missed Questions</button>
+        <button class="btn btn--nav" id="results-retake" type="button">Retake this test</button>
+        <button class="btn btn--nav" id="results-another" type="button">Generate Another Test</button>
+        <button class="btn btn--text" id="results-home" type="button">Return Home</button>
       </div>
     </div>
   </main>
@@ -167,14 +224,22 @@
   <main id="view-missed" class="view">
     <div class="missed-content">
       <div class="missed-topbar">
-        <button class="btn btn--text btn--back" id="missed-back">&larr; Back</button>
+        <button class="btn btn--text btn--back" id="missed-back" type="button">&larr; Back</button>
         <span class="missed-counter" id="missed-counter"></span>
+      </div>
+      <div class="review-filters" id="review-filters" hidden>
+        <button class="btn btn--text btn--small" type="button" data-filter="all">All</button>
+        <button class="btn btn--text btn--small" type="button" data-filter="missed">Missed</button>
+        <button class="btn btn--text btn--small" type="button" data-filter="unanswered">Unanswered</button>
+        <button class="btn btn--text btn--small" type="button" data-filter="flagged">Marked or guessed</button>
       </div>
       <div class="question-area">
         <div class="question-header" id="missed-header"></div>
         <div class="question-level-tag" id="missed-level-tag"></div>
         <p class="question-text" id="missed-question"></p>
+        <ol class="statements" id="missed-statements" hidden></ol>
         <div class="choices" id="missed-choices"></div>
+        <div class="reference-block" id="missed-references"></div>
         <div class="question-meta" id="missed-meta"></div>
       </div>
       <div class="nav-bar">
@@ -183,6 +248,20 @@
           <button class="btn btn--nav" id="missed-next">Next Missed</button>
         </div>
       </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       CONTENT REVIEW
+       ═══════════════════════════════════════════════════ -->
+  <main id="view-review" class="view">
+    <div class="review-content">
+      <div class="study-topbar">
+        <button class="btn btn--text btn--back" id="review-home" type="button">&larr; Exam Prep</button>
+      </div>
+      <h2 class="source-title">Content review</h2>
+      <p class="source-desc" id="review-summary"></p>
+      <div id="review-list"></div>
     </div>
   </main>
 
@@ -197,6 +276,15 @@
   </div>
 
   <script src="js/questions.js"></script>
+  <script src="js/exam-prep-common.js"></script>
+  <script src="js/exam-prep-i1.js"></script>
+  <script src="js/exam-prep-i2.js"></script>
+  <script src="js/exam-prep-i3.js"></script>
+  <script src="js/exam-prep-ii1.js"></script>
+  <script src="js/exam-prep-ii2.js"></script>
+  <script src="js/exam-prep-ii3.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/test-engine.js"></script>
   <script src="js/validate.js"></script>
   <script src="js/app.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>
