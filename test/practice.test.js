@@ -313,7 +313,7 @@ test("generates unique questions and refuses a size the bank cannot fill", () =>
   assert.equal(tooBig.questions.length, 0);
   assert.match(tooBig.message, new RegExp("Only " + BOOK_DISTINCT + " unique questions are available"));
 
-  [10, 50, 150].forEach((size) => {
+  [10, 50, 100, 150].forEach((size) => {
     const result = TestEngine.generateTest(prep, size, TestEngine.lcg(3));
     assert.equal(result.ok, true, "size " + size);
     assert.equal(result.questions.length, size);
@@ -356,6 +356,83 @@ test("balances both sources and fills from the larger bank", () => {
   assert.equal(narrowCounts[BOOK], 51);
   assert.equal(narrowCounts[HANDOUTS], 99);
   narrow.questions.filter((q) => q.sourceId === BOOK).forEach((q) => assert.equal(q.examId, "awareness-i1"));
+});
+
+test("generates 100 unique questions from every source selection", () => {
+  const selections = [
+    { ids: [HANDOUTS], sources: [HANDOUTS] },
+    { ids: [BOOK], sources: [BOOK] },
+    { ids: [HANDOUTS, BOOK], sources: [HANDOUTS, BOOK] }
+  ];
+  selections.forEach(({ ids, sources }) => {
+    const result = TestEngine.generateTest(pools(ids), 100, TestEngine.lcg(11));
+    const label = ids.join("+");
+    assert.equal(result.ok, true, label);
+    assert.equal(result.requested, 100, label);
+    assert.equal(result.questions.length, 100, label);
+    assert.equal(new Set(result.questions.map((q) => q.id)).size, 100, label + " ids");
+    assert.equal(new Set(result.questions.map((q) => q.canonicalKey)).size, 100, label + " canonical keys");
+    result.questions.forEach((q) => {
+      assert.ok(sources.includes(q.sourceId), label + " only draws from the chosen sources");
+      assert.equal(TestEngine.isEligible(q), true, q.id);
+    });
+  });
+
+  const both = TestEngine.generateTest(pools([HANDOUTS, BOOK]), 100, TestEngine.lcg(11));
+  const counts = Object.fromEntries(both.sourceCounts.map((entry) => [entry.sourceId, entry.count]));
+  assert.equal(counts[HANDOUTS], 50);
+  assert.equal(counts[BOOK], 50);
+
+  // Same seed, same test — the saved/retake path depends on this.
+  const repeat = TestEngine.generateTest(pools([HANDOUTS, BOOK]), 100, TestEngine.lcg(11));
+  assert.deepEqual(Array.from(repeat.questions, (q) => q.id), Array.from(both.questions, (q) => q.id));
+
+  // Grading a 100-question run scores out of 100.
+  const answers = {};
+  both.questions.slice(0, 73).forEach((q) => { answers[q.id] = q.correctChoiceId; });
+  const grade = TestEngine.gradeTest(both.questions, answers);
+  assert.equal(grade.total, 100);
+  assert.equal(grade.correct, 73);
+  assert.equal(grade.unanswered, 27);
+  assert.equal(grade.percentage, 73);
+
+  // Serialising keeps the requested size for resume and "Generate Another Test".
+  const saved = TestEngine.serializeSession({
+    questions: both.questions, sourceIds: [HANDOUTS, BOOK], mode: "practice", requestedCount: 100, inProgress: true
+  });
+  assert.equal(saved.requestedCount, 100);
+  assert.equal(saved.questionIds.length, 100);
+  const restored = TestEngine.restoreSession(saved, HazmatCatalog.byId);
+  assert.equal(restored.requestedCount, 100);
+  assert.deepEqual(restored.questions.map((q) => q.id), saved.questionIds);
+});
+
+test("refuses 100 questions when the chosen filter has fewer and reports the available count", () => {
+  // A single book exam never reaches 100 eligible questions.
+  const narrow = pools([BOOK], "operations-ii2");
+  const available = TestEngine.countEligible(narrow);
+  assert.ok(available < 100);
+  const result = TestEngine.generateTest(narrow, 100, TestEngine.lcg(2));
+  assert.equal(result.ok, false);
+  assert.equal(result.requested, 100);
+  assert.equal(result.available, available);
+  assert.equal(result.questions.length, 0, "nothing is generated — no padding, no repeats");
+  assert.match(result.message, new RegExp("Only " + available + " unique questions are available"));
+
+  // The "generate all available" fallback uses the reported count and fills exactly.
+  const all = TestEngine.generateTest(narrow, available, TestEngine.lcg(2));
+  assert.equal(all.ok, true);
+  assert.equal(all.questions.length, available);
+  assert.equal(new Set(all.questions.map((q) => q.canonicalKey)).size, available);
+  all.questions.forEach((q) => assert.equal(q.examId, "operations-ii2"));
+
+  // Adding the handouts (Both Sources) with the same filter is enough for 100.
+  const widened = TestEngine.generateTest(pools([HANDOUTS, BOOK], "operations-ii2"), 100, TestEngine.lcg(2));
+  assert.equal(widened.ok, true);
+  assert.equal(widened.questions.length, 100);
+  const counts = Object.fromEntries(widened.sourceCounts.map((entry) => [entry.sourceId, entry.count]));
+  assert.equal(counts[BOOK], 50);
+  assert.equal(counts[HANDOUTS], 50);
 });
 
 test("grades by choice id and counts blank answers as incorrect", () => {
