@@ -34,8 +34,29 @@
     return { text: text, incomplete: !!incomplete };
   }
 
-  function image(description) {
-    return { required: true, asset: null, description: description };
+  var ILLUSTRATION_DIR = "assets/illustrations/";
+  var REDRAWN_NOTE = "The illustration shown is a redrawn standardized graphic that matches the " +
+    "answer key, not the book's original art.";
+
+  /**
+   * Illustration record. With only a description the item still needs its
+   * picture and is excluded from scored tests. Pass a file name and alt text
+   * to attach a drawing from assets/illustrations/.
+   */
+  function image(description, file, alt) {
+    return {
+      required: true,
+      asset: file ? ILLUSTRATION_DIR + file : null,
+      alt: alt || null,
+      description: description,
+      redrawn: !!file
+    };
+  }
+
+  function toIllustration(spec) {
+    if (!spec) return null;
+    if (typeof spec === "string") return image(spec);
+    return image(spec.description, spec.file, spec.alt);
   }
 
   function parseKeyHeader(header) {
@@ -126,7 +147,7 @@
         sourceAnswer: spec.sourceAnswer == null ? spec.a : spec.sourceAnswer,
         eligible: !spec.hold,
         status: status,
-        illustration: spec.image ? image(spec.image) : null,
+        illustration: toIllustration(spec.image),
         notes: spec.notes,
         issues: spec.issues,
         references: refs,
@@ -148,6 +169,7 @@
       choices: choices,
       cite: cite,
       image: image,
+      redrawnNote: REDRAWN_NOTE,
       register: register,
       nfpa: NFPA,
       ifsta: IFSTA,
@@ -162,6 +184,7 @@
     choices: choices,
     cite: cite,
     image: image,
+    redrawnNote: REDRAWN_NOTE,
     parseKeyHeader: parseKeyHeader,
     SOURCE_ID: SOURCE_ID,
     SOURCE_LABEL: SOURCE_LABEL

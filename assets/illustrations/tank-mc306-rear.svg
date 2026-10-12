@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 170" role="img" aria-label="Cargo tank trailer, rear view">
+  <g stroke="#1c2430" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- overturn protection on top -->
+    <rect x="116" y="24" width="88" height="7" rx="3" fill="#b8c0cc"/>
+    <path d="M146 31a14 8 0 0 1 28 0z" fill="#d9dee5"/>
+    <!-- wide, flattened elliptical tank head -->
+    <ellipse cx="160" cy="82" rx="118" ry="50" fill="#e9edf2"/>
+    <ellipse cx="160" cy="82" rx="104" ry="40" fill="none" stroke-dasharray="4 4"/>
+    <!-- rear valve box -->
+    <rect x="140" y="122" width="40" height="12" fill="#9aa3b0"/>
+    <!-- bumper, axle, dual wheels -->
+    <line x1="60" y1="140" x2="260" y2="140"/>
+    <rect x="72" y="128" width="22" height="30" rx="4" fill="#3a4250"/>
+    <rect x="96" y="128" width="22" height="30" rx="4" fill="#3a4250"/>
+    <rect x="202" y="128" width="22" height="30" rx="4" fill="#3a4250"/>
+    <rect x="226" y="128" width="22" height="30" rx="4" fill="#3a4250"/>
+  </g>
+</svg>

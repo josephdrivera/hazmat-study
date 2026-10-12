@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createContext, runInContext } from "node:vm";
@@ -34,19 +34,39 @@ const { TestEngine, HazmatCatalog } = app;
 const BOOK = "hazardous-materials-exam-prep";
 const HANDOUTS = "instructor-handouts";
 
-// Verified after import: 450 records, 399 eligible, 307 distinct once exact
-// duplicates across exams are grouped. Handouts: 642 records, 639 unique
-// scorable (one exact duplicate pair, one duplicate pair with conflicting keys).
+// Verified after import: 450 records, 412 eligible (399 text-only plus 13
+// illustration items restored with redrawn standardized graphics), 319
+// distinct once exact duplicates across exams are grouped. Handouts: 642
+// records, 639 unique scorable (one exact duplicate pair, one duplicate pair
+// with conflicting keys).
 const EXPECTED_EXAMS = [
-  { id: "awareness-i1", prefix: "exam-i1", level: "awareness", eligible: 51, held: 24 },
-  { id: "awareness-i2", prefix: "exam-i2", level: "awareness", eligible: 70, held: 5 },
-  { id: "awareness-i3", prefix: "exam-i3", level: "awareness", eligible: 70, held: 5 },
+  { id: "awareness-i1", prefix: "exam-i1", level: "awareness", eligible: 60, held: 15 },
+  { id: "awareness-i2", prefix: "exam-i2", level: "awareness", eligible: 72, held: 3 },
+  { id: "awareness-i3", prefix: "exam-i3", level: "awareness", eligible: 72, held: 3 },
   { id: "operations-ii1", prefix: "exam-ii1", level: "operations", eligible: 70, held: 5 },
   { id: "operations-ii2", prefix: "exam-ii2", level: "operations", eligible: 74, held: 1 },
   { id: "operations-ii3", prefix: "exam-ii3", level: "operations", eligible: 64, held: 11 }
 ];
-const BOOK_DISTINCT = 307;
+const BOOK_DISTINCT = 319;
 const HANDOUT_UNIQUE = 639;
+
+// Exam-prep items whose stem points at a drawing. These are scorable only
+// because a redrawn standardized graphic that matches the answer key is attached.
+const ILLUSTRATED = [
+  ["awareness-i1", 7, "nfpa-704-numbered.svg", "B"],
+  ["awareness-i1", 26, "placard-nonflammable-gas.svg", "B"],
+  ["awareness-i1", 27, "placard-corrosive.svg", "D"],
+  ["awareness-i1", 28, "placard-flammable-liquid.svg", "C"],
+  ["awareness-i1", 45, "placard-radioactive.svg", "A"],
+  ["awareness-i1", 54, "tank-mc307.svg", "B"],
+  ["awareness-i1", 56, "tank-mc331.svg", "D"],
+  ["awareness-i1", 57, "tank-mc306-rear.svg", "C"],
+  ["awareness-i1", 68, "label-radioactive-yellow-iii.svg", "A"],
+  ["awareness-i2", 3, "label-radioactive-yellow-iii.svg", "A"],
+  ["awareness-i2", 20, "tank-mc312.svg", "C"],
+  ["awareness-i3", 32, "placard-flammable-solid.svg", "C"],
+  ["awareness-i3", 33, "placard-dangerous-when-wet.svg", "A"]
+];
 
 function exam(id) {
   return HazmatCatalog.bookExamById(id).questions;
@@ -87,7 +107,7 @@ test("keeps invalid and unresolved records out of scored tests", () => {
   assert.equal(q9.correctChoiceId, null);
   assert.equal(TestEngine.isEligible(q9), false);
 
-  [7, 8, 9, 10, 11, 26, 27, 28, 38, 40, 44, 45, 46, 48, 51, 52, 54, 56, 57, 59, 62, 68, 69, 70]
+  [8, 9, 10, 11, 38, 40, 44, 46, 48, 51, 52, 59, 62, 69, 70]
     .forEach((number) => {
       const question = byNumber(number);
       assert.equal(question.reviewStatus, "unresolved", "question " + number);
@@ -147,14 +167,53 @@ test("imports all six book exams with 75 records each and per-exam eligibility",
 
   const overall = HazmatCatalog.bookReport();
   assert.equal(overall.imported, 450);
-  assert.equal(overall.eligible, 399);
+  assert.equal(overall.eligible, 412);
   assert.equal(overall.distinctEligible, BOOK_DISTINCT);
-  assert.equal(overall.held, 51);
+  assert.equal(overall.held, 38);
+});
+
+test("illustrated items are scorable only when a drawn asset is attached", () => {
+  ILLUSTRATED.forEach(([examId, n, file, letter]) => {
+    const q = byNumber(n, examId);
+    const label = examId + " Q" + n;
+    assert.ok(q.illustration, label + " has an illustration record");
+    assert.equal(q.illustration.required, true, label);
+    assert.equal(q.illustration.asset, "assets/illustrations/" + file, label);
+    assert.equal(q.illustration.redrawn, true, label);
+    assert.ok(q.illustration.alt && q.illustration.alt.length > 20, label + " has alt text");
+    assert.ok(existsSync(join(root, q.illustration.asset)), label + " asset file exists");
+    assert.equal(q.reviewStatus, "needs_review", label + " stays flagged for review");
+    assert.equal(q.correctChoiceId, letter, label);
+    assert.equal(TestEngine.isEligible(q), true, label);
+    assert.ok(q.reviewNotes.some((note) => /redrawn standardized graphic/.test(note)), label + " carries the redrawn note");
+  });
+
+  // The remaining illustration items cannot be recovered from the key and stay out.
+  [8, 9, 10, 46].forEach((n) => {
+    const q = byNumber(n);
+    assert.equal(q.illustration.required, true, "I-1 Q" + n);
+    assert.equal(q.reviewStatus, "unresolved", "I-1 Q" + n);
+    assert.equal(TestEngine.isEligible(q), false, "I-1 Q" + n);
+  });
+  // The NFPA 704 drawing is still shown on Q8–Q10 so they read correctly in review.
+  [8, 10].forEach((n) => assert.equal(byNumber(n).illustration.asset, "assets/illustrations/nfpa-704-numbered.svg"));
+  assert.equal(byNumber(46).illustration.asset, null);
+
+  // Every eligible book question either needs no drawing or has one attached.
+  HazmatCatalog.sourceById(BOOK).questions.filter(TestEngine.isEligible).forEach((q) => {
+    if (q.illustration && q.illustration.required) {
+      assert.ok(q.illustration.asset, q.id + " eligible illustration item must have an asset");
+    }
+  });
+  // Every SVG referenced anywhere in the bank exists on disk.
+  const referenced = new Set(HazmatCatalog.sourceById(BOOK).questions
+    .map((q) => q.illustration && q.illustration.asset).filter(Boolean));
+  referenced.forEach((asset) => assert.ok(existsSync(join(root, asset)), asset));
 });
 
 test("keeps the awareness I-1 corrections and holds the known problem items in the new exams", () => {
   // I-2
-  assert.equal(byNumber(3, "awareness-i2").reviewStatus, "unresolved");
+  assert.equal(byNumber(3, "awareness-i2").reviewStatus, "needs_review");
   assert.equal(byNumber(3, "awareness-i2").illustration.required, true);
   assert.equal(byNumber(9, "awareness-i2").correctChoiceId, null);
   assert.equal(byNumber(36, "awareness-i2").correctChoiceId, null);
@@ -247,11 +306,11 @@ test("book filters narrow the pool before eligible counts", () => {
 
   const awareness = TestEngine.countEligible(pools([BOOK], "awareness"));
   const operations = TestEngine.countEligible(pools([BOOK], "operations"));
-  assert.equal(awareness, 187);
+  assert.equal(awareness, 199);
   assert.equal(operations, 154);
   assert.ok(awareness + operations > BOOK_DISTINCT, "awareness and operations share questions");
   assert.equal(TestEngine.countEligible(pools([BOOK], "operations-ii2")), 74);
-  assert.equal(TestEngine.countEligible(pools([BOOK], "awareness-i1")), 51);
+  assert.equal(TestEngine.countEligible(pools([BOOK], "awareness-i1")), 60);
 
   const onlyAwareness = TestEngine.generateTest(pools([BOOK], "awareness"), 150, TestEngine.lcg(5));
   assert.equal(onlyAwareness.ok, true);
@@ -353,8 +412,8 @@ test("balances both sources and fills from the larger bank", () => {
   const narrow = TestEngine.generateTest(pools([HANDOUTS, BOOK], "awareness-i1"), 150, TestEngine.lcg(9));
   assert.equal(narrow.ok, true);
   const narrowCounts = Object.fromEntries(narrow.sourceCounts.map((entry) => [entry.sourceId, entry.count]));
-  assert.equal(narrowCounts[BOOK], 51);
-  assert.equal(narrowCounts[HANDOUTS], 99);
+  assert.equal(narrowCounts[BOOK], 60);
+  assert.equal(narrowCounts[HANDOUTS], 90);
   narrow.questions.filter((q) => q.sourceId === BOOK).forEach((q) => assert.equal(q.examId, "awareness-i1"));
 });
 

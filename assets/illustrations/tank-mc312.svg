@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 170" role="img" aria-label="Cargo tank trailer, side view">
+  <g stroke="#1c2430" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- top-rear manhole with splash box -->
+    <rect x="236" y="40" width="40" height="10" fill="#b8c0cc"/>
+    <path d="M244 40a12 6 0 0 1 24 0z" fill="#d9dee5"/>
+    <!-- small-diameter round body -->
+    <rect x="16" y="50" width="288" height="62" rx="31" fill="#e9edf2"/>
+    <!-- external stiffening rings -->
+    <g fill="#b8c0cc">
+      <rect x="56" y="45" width="7" height="72" rx="2"/>
+      <rect x="96" y="45" width="7" height="72" rx="2"/>
+      <rect x="136" y="45" width="7" height="72" rx="2"/>
+      <rect x="176" y="45" width="7" height="72" rx="2"/>
+      <rect x="216" y="45" width="7" height="72" rx="2"/>
+    </g>
+    <!-- rear outlet -->
+    <rect x="256" y="112" width="12" height="10" fill="#9aa3b0"/>
+    <!-- chassis, landing gear, wheels -->
+    <line x1="40" y1="122" x2="300" y2="122"/>
+    <rect x="48" y="122" width="6" height="22" fill="#9aa3b0"/>
+    <circle cx="232" cy="142" r="16" fill="#3a4250"/>
+    <circle cx="232" cy="142" r="6" fill="#d9dee5"/>
+    <circle cx="272" cy="142" r="16" fill="#3a4250"/>
+    <circle cx="272" cy="142" r="6" fill="#d9dee5"/>
+  </g>
+</svg>

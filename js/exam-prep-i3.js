@@ -202,17 +202,25 @@
       o: "31. Hazard Class 3 includes: A. black powder. B. gasoline. C. ammonium nitrate. D. magnesium." }),
     rec({ n: 32, key: "32. 4.2.1 RECOGNIZE & ID 88",
       q: "Which hazard class is represented by the placard drawing below?",
-      c: ["Explosives", "Nonflammable gases", "Flammable solids", "Oxidizers"], a: "C", hold: true,
-      image: "Placard drawing referenced by the stem (\"the placard drawing below\"); the OCR shows only \"4 N\" where the drawing sits. The scan does not include the drawing.",
-      issues: [{ summary: "The question depends on a placard drawing that is not in the scan.", excerpt: "32. Which hazard class is represented by the placard drawing below? 4 N", correction: "Add the placard drawing before scoring." },
-        { summary: "The IFSTA page citation is cut off.", excerpt: "5th Edition, pages 76,", correction: "Restore the page range from the key." }],
+      c: ["Explosives", "Nonflammable gases", "Flammable solids", "Oxidizers"], a: "C", status: "needs_review",
+      image: {
+        description: "Placard drawing referenced by the stem (\"the placard drawing below\"); the OCR shows only \"4 N\" where the drawing sits.",
+        file: "placard-flammable-solid.svg",
+        alt: "Diamond-shaped placard with alternating vertical red and white stripes, a black flame symbol in the upper half, and the number 4 at the bottom."
+      },
+      notes: [bank.redrawnNote, "The stray \"4\" in the OCR matches the class number on the keyed placard."],
+      issues: [{ summary: "The IFSTA page citation is cut off.", excerpt: "5th Edition, pages 76,", correction: "Restore the page range from the key." }],
       r: ["4.2.1 (A-10) (B-5), 5.2.1 (A-3) (B-5).", { t: "pages 76, [cut off].", x: true }, "page 35. Fig. 2-25."],
       o: "32. Which hazard class is represented by the placard drawing below? 4 N A. Explosives B. Nonflammable gases C. Flammable solids D. Oxidizers" }),
     rec({ n: 33, key: "33. 4.2.1 RECOGNIZE & ID 91",
       q: "The hazard class represented by the placard illustration below is:",
-      c: ["dangerous when wet.", "combustibles.", "health hazard.", "oxidizers."], a: "A", hold: true,
-      image: "Placard illustration referenced by the stem (\"the placard illustration below\"). The scan does not include the illustration.",
-      issues: [{ summary: "The question depends on a placard illustration that is not in the scan.", excerpt: "33. The hazard class represented by the placard illustration below is:", correction: "Add the placard illustration before scoring." }],
+      c: ["dangerous when wet.", "combustibles.", "health hazard.", "oxidizers."], a: "A", status: "needs_review",
+      image: {
+        description: "Placard illustration referenced by the stem (\"the placard illustration below\").",
+        file: "placard-dangerous-when-wet.svg",
+        alt: "Diamond-shaped placard with a blue background, a white flame symbol in the upper half, and the number 4 at the bottom."
+      },
+      notes: [bank.redrawnNote],
       r: ["4.2.1 (A-10) (B-5), 5.2.1 (A-3).", "pages 75, 186-188. Fig. 4.68, Table 4.8.", "page 35. Fig. 2-25."],
       o: "33. The hazard class represented by the placard illustration below is: A. dangerous when wet. B. combustibles. C. health hazard. ~ _- D. oxidizers." }),
     rec({ n: 34, key: "34. 4.3.1 INIT PROT ACT 2",
@@ -475,7 +483,7 @@
     sourceNotes: [
       "The printed directions say \"There should be 100 exam items\", but the exam ends at question 75 and the key has 75 entries. No records were invented for the missing 25.",
       "Key entry 4 has no answer line and key entry 14's answer is unreadable; both questions are held for review.",
-      "Questions 32 and 33 depend on placard drawings that are not in the scan.",
+      "Questions 32 and 33 depend on placard drawings that are not in the scan; redrawn standardized placards matching the answer key are shown in their place.",
       "Questions 4 and 47 are printed as unlabeled choice columns; their A–D letters cannot be confirmed from the scan."
     ]
   };

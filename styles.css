@@ -362,6 +362,43 @@ body {
   display: none;
 }
 
+.question-illustration {
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.question-illustration img {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+.question-illustration figcaption {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.question-illustration--review {
+  margin-top: 8px;
+  padding: 10px;
+}
+
+.question-illustration--review img {
+  max-width: 180px;
+}
+
+.question-illustration[hidden] {
+  display: none;
+}
+
 .question-kicker,
 .exam-progress-text {
   font-size: 0.82rem;

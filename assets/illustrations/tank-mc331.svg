@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 170" role="img" aria-label="Cargo tank trailer, side view">
+  <g stroke="#1c2430" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- large single-shell pressure vessel with hemispherical heads, no top fittings -->
+    <rect x="24" y="28" width="272" height="92" rx="46" fill="#f4f6f8"/>
+    <!-- head seam lines -->
+    <path d="M70 30q-14 44 0 88" fill="none" stroke-dasharray="4 5"/>
+    <path d="M250 30q14 44 0 88" fill="none" stroke-dasharray="4 5"/>
+    <!-- bolted rear manway -->
+    <circle cx="268" cy="74" r="17" fill="#d9dee5"/>
+    <circle cx="268" cy="74" r="10" fill="#f4f6f8"/>
+    <g fill="#1c2430" stroke="none">
+      <circle cx="268" cy="59" r="1.8"/><circle cx="268" cy="89" r="1.8"/>
+      <circle cx="253" cy="74" r="1.8"/><circle cx="283" cy="74" r="1.8"/>
+      <circle cx="257.4" cy="63.4" r="1.8"/><circle cx="278.6" cy="84.6" r="1.8"/>
+      <circle cx="278.6" cy="63.4" r="1.8"/><circle cx="257.4" cy="84.6" r="1.8"/>
+    </g>
+    <!-- small valve cabinet underneath -->
+    <rect x="150" y="120" width="40" height="12" fill="#9aa3b0"/>
+    <!-- chassis, landing gear, wheels -->
+    <line x1="40" y1="132" x2="300" y2="132"/>
+    <rect x="48" y="132" width="6" height="14" fill="#9aa3b0"/>
+    <circle cx="232" cy="146" r="16" fill="#3a4250"/>
+    <circle cx="232" cy="146" r="6" fill="#d9dee5"/>
+    <circle cx="272" cy="146" r="16" fill="#3a4250"/>
+    <circle cx="272" cy="146" r="6" fill="#d9dee5"/>
+  </g>
+</svg>

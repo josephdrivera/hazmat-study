@@ -27,6 +27,11 @@
   var choices = bank.choices;
   var cite = bank.cite;
   var image = bank.image;
+  var REDRAWN = bank.redrawnNote;
+  var NFPA_704_ART = {
+    file: "nfpa-704-numbered.svg",
+    alt: "An outlined NFPA 704 diamond divided into four smaller diamonds. The left diamond is numbered 1, the top diamond 2, the right diamond 3, and the bottom diamond 4. No colors are shown."
+  };
   var nfpa = bank.nfpa;
   var ifsta = bank.ifsta;
   var jb = bank.jb;
@@ -187,17 +192,15 @@
         "special information (white).",
         "reactivity (yellow)."
       ),
-      answer: null,
+      answer: "B",
       sourceAnswer: "B",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Numbered NFPA 704 placard used for questions 7–10. No matching image is in this project. Position numbers were not assigned."),
-      notes: ["Excluded because the numbered placard is missing. The source key says B. That letter was not applied to a scored item."],
-      issues: [{
-        summary: "Requires the numbered NFPA 704 illustration.",
-        excerpt: "Directions: Given the illustration below of a National Fire Protection Association 704 placard, answer this and the following three questions.",
-        correction: "Add the original numbered NFPA 704 illustration and its accessible description. Do not invent which corner is position 1, 2, 3, or 4."
-      }],
+      eligible: true,
+      status: "needs_review",
+      illustration: image("Numbered NFPA 704 placard used for questions 7–10.", NFPA_704_ART.file, NFPA_704_ART.alt),
+      notes: [
+        REDRAWN,
+        "Position numbers follow the answer key: key B (health, blue) for position 1, key A (flammability, red) for position 2, and key D (special information, white) for position 4 fix the numbering as left, top, right, bottom."
+      ],
       references: [
         cite(nfpa + ", 4.2.1 (A-4) (B- )", true),
         cite(ifsta + ", page 87."),
@@ -223,12 +226,12 @@
       sourceAnswer: "A",
       eligible: false,
       status: "unresolved",
-      illustration: image("Same numbered NFPA 704 placard as questions 7–10. Image not in this project."),
-      notes: ["Choice B keeps the unreadable color word \"titre.\" Choice D keeps \"(ye).\" Neither was rewritten."],
+      illustration: image("Same numbered NFPA 704 placard as questions 7–10.", NFPA_704_ART.file, NFPA_704_ART.alt),
+      notes: [REDRAWN, "Choice B keeps the unreadable color word \"titre.\" Choice D keeps \"(ye).\" Neither was rewritten."],
       issues: [{
-        summary: "Requires the placard, and two choice colors are unreadable.",
+        summary: "Two choice colors are unreadable.",
         excerpt: "B. health (titre). D. special Inforrriation (ye),",
-        correction: "Add the original illustration. Confirm choice B and choice D from the book before this item is scored."
+        correction: "Confirm choice B and choice D from the book before this item is scored."
       }],
       references: [
         cite(nfpa + ", 4.2.1 (A-4) (B-5)."),
@@ -254,12 +257,12 @@
       sourceAnswer: "G",
       eligible: false,
       status: "unresolved",
-      illustration: image("Same numbered NFPA 704 placard as questions 7–10. Image not in this project."),
-      notes: ["The key reads Answer: G. G is not an A–D choice. It was not changed to C or to any other letter."],
+      illustration: image("Same numbered NFPA 704 placard as questions 7–10.", NFPA_704_ART.file, NFPA_704_ART.alt),
+      notes: [REDRAWN, "The key reads Answer: G. G is not an A–D choice. It was not changed to C or to any other letter."],
       issues: [{
-        summary: "The printed answer is G, which is not a valid A–D choice. The placard is also missing.",
+        summary: "The printed answer is G, which is not a valid A–D choice.",
         excerpt: "9. 4.2.1 RECOGNIZE & ID 19 ... Answer: G",
-        correction: "Confirm the answer letter from a clean copy of the key. Add the original illustration. Do not treat G as C."
+        correction: "Confirm the answer letter from a clean copy of the key. Do not treat G as C."
       }],
       references: [
         cite(nfpa + ", 4.2.1 (A-4) (B-5)."),
@@ -285,12 +288,12 @@
       sourceAnswer: "D",
       eligible: false,
       status: "unresolved",
-      illustration: image("Same numbered NFPA 704 placard as questions 7–10. Image not in this project."),
-      notes: ["Choice D keeps the unreadable word \"umits.\" It was not changed to white."],
+      illustration: image("Same numbered NFPA 704 placard as questions 7–10.", NFPA_704_ART.file, NFPA_704_ART.alt),
+      notes: [REDRAWN, "Choice D keeps the unreadable word \"umits.\" It was not changed to white."],
       issues: [{
-        summary: "Requires the placard, and choice D is unreadable.",
+        summary: "Choice D, the keyed answer, is unreadable.",
         excerpt: "D. special information (umits).",
-        correction: "Add the original illustration and confirm choice D from the book."
+        correction: "Confirm choice D from the book."
       }],
       references: [
         cite(nfpa + ", 4.2.1 (A-4) (B-5)."),
@@ -642,16 +645,16 @@
       referenceId: "87",
       question: "The placard drawing below represents which hazard class?",
       choices: choices("Explosives", "Nonflammable gas", "Flammable solid", "Oxidizer"),
-      answer: null,
+      answer: "B",
       sourceAnswer: "B",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Placard drawing for question 26. No matching image is in this project."),
-      issues: [{
-        summary: "Requires the original placard drawing.",
-        excerpt: "26. The placard drawing below represents which hazard class? BACKGROUND",
-        correction: "Add the original placard image and an accessible description. Do not substitute a different placard."
-      }],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Placard drawing for question 26.",
+        "placard-nonflammable-gas.svg",
+        "Diamond-shaped placard with a green background, a white gas cylinder symbol in the upper half, and the number 2 at the bottom."
+      ),
+      notes: [REDRAWN],
       references: [
         cite(nfpa + ", 4.2.1 (A-4, 6, 10) (B-1, 5), 5.2.1 (A-1, 3) (B-5)."),
         cite(ifsta + ", page 75."),
@@ -667,16 +670,20 @@
       referenceId: "93",
       question: "The placard drawing below represents:",
       choices: choices("Poisons", "Oxidizer", "Flammable gases", "Corrosives"),
-      answer: null,
+      answer: "D",
       sourceAnswer: "D",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Placard drawing for question 27. No matching image is in this project."),
-      notes: ["The scan numbered this item 7. It was restored to exam question 27 to match the answer key. The placard is still missing."],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Placard drawing for question 27.",
+        "placard-corrosive.svg",
+        "Diamond-shaped placard with a white upper half and black lower half. Two test tubes pour liquid onto a hand and onto a metal bar. The number 8 is at the bottom."
+      ),
+      notes: [REDRAWN, "The scan numbered this item 7. It was restored to exam question 27 to match the answer key."],
       issues: [{
-        summary: "Requires the original placard. The printed number was 7.",
+        summary: "The printed number was 7.",
         excerpt: "7. The placard drawing below represents:",
-        correction: "Add the original placard. The exam number 27 comes from the answer key, not from the stray 7 in the question text."
+        correction: "The exam number 27 comes from the answer key, not from the stray 7 in the question text."
       }],
       references: [
         cite(nfpa + ", 4.2.1 (A-3) (B-5)."),
@@ -698,16 +705,16 @@
         "Flammable liquids/combustibles",
         "Explosives"
       ),
-      answer: null,
+      answer: "C",
       sourceAnswer: "C",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Placard illustration for question 28. No matching image is in this project."),
-      issues: [{
-        summary: "Requires the original placard illustration.",
-        excerpt: "28. The placard illustration below represents: BACKGROUND",
-        correction: "Add the original placard image and an accessible description."
-      }],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Placard illustration for question 28.",
+        "placard-flammable-liquid.svg",
+        "Diamond-shaped placard with a red background, a white flame symbol in the upper half, and the number 3 at the bottom."
+      ),
+      notes: [REDRAWN],
       references: [
         cite(nfpa + ", 4.2.1 (A-3) (B-5)."),
         cite(ifsta + ", pages 75, 184-186. Tables 4.6, 4.7"),
@@ -1121,16 +1128,16 @@
         "flammable liquids.",
         "corrosives."
       ),
-      answer: null,
+      answer: "A",
       sourceAnswer: "A",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Placard illustration for question 45. The scan shows the word BACKGROUND where the art would be. No image is in this project."),
-      issues: [{
-        summary: "Requires the original placard illustration.",
-        excerpt: "45. The hazard class represented by the placard illustration below is: BACKGROUND",
-        correction: "Add the original placard and an accessible description."
-      }],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Placard illustration for question 45. The scan shows the word BACKGROUND where the art would be.",
+        "placard-radioactive.svg",
+        "Diamond-shaped placard with a yellow upper half and white lower half, a black trefoil symbol in the upper half, and the number 7 at the bottom."
+      ),
+      notes: [REDRAWN],
       references: [
         cite(nfpa + ", 5.2.1 (A-1, 3, 4, 8, 10) (B-1, 2, 5), 4.2.1 (A-10) (B-5)."),
         cite(ifsta + ", pages 194-196. Fig. 4.75, 4.76. Tables 4.12, 4.13."),
@@ -1373,16 +1380,20 @@
         "MC 312/DOT 412",
         "MC 331"
       ),
-      answer: null,
+      answer: "B",
       sourceAnswer: "B",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Carrier picture for question 54. No matching image is in this project."),
-      notes: ["The key header is damaged. Reference id 44 was read from \"ID POT HAZARD 44\" and was not used as the exam number."],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Carrier picture for question 54.",
+        "tank-mc307.svg",
+        "Side view of a cargo tank trailer with a round cross-section. A single manhole sits inside a rectangular flashing box with rollover protection on top of the tank."
+      ),
+      notes: [REDRAWN, "The key header is damaged. Reference id 44 was read from \"ID POT HAZARD 44\" and was not used as the exam number."],
       issues: [{
-        summary: "Requires the carrier picture. The citation block is also unreadable.",
+        summary: "The citation block is unreadable.",
         excerpt: "54. A single manhoie assembly protected by a flash box and roll-over protection is an identification feature of an carrier shown in the picture.",
-        correction: "Add the original picture. Restore the citations from a clean key. Do not copy question 55's pages onto this item."
+        correction: "Restore the citations from a clean key. Do not copy question 55's pages onto this item."
       }],
       references: [
         cite("Citations for question 54 are unreadable on the key.", true)
@@ -1433,16 +1444,16 @@
         "MC 312/DOT 412.",
         "MC 331."
       ),
-      answer: null,
+      answer: "D",
       sourceAnswer: "D",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Vessel illustration for question 56. No matching image is in this project."),
-      issues: [{
-        summary: "Requires the original vessel illustration.",
-        excerpt: "56. A non-insulated, single-shell vessel illustrated below, which carries gases that have been liquefied, is a:",
-        correction: "Add the original illustration and an accessible description."
-      }],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Vessel illustration for question 56.",
+        "tank-mc331.svg",
+        "Side view of a large, smooth, single-shell cargo tank with rounded hemispherical ends, a bolted circular manway on the rear head, and no fittings on top."
+      ),
+      notes: [REDRAWN],
       references: [
         cite(nfpa + ", 5.2.1 (A-2) (B-1), 4.2.1 (A-3).", true),
         cite(ifsta + ", page 243."),
@@ -1463,16 +1474,16 @@
         "MC 306/DOT 406",
         "MC 331"
       ),
-      answer: null,
+      answer: "C",
       sourceAnswer: "C",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Rear view of a liquid carrier for question 57. No matching image is in this project."),
-      issues: [{
-        summary: "Requires the original carrier picture.",
-        excerpt: "57. Viewed from the rear, a liquid carrier has an elliptical shape. This shape, pictured below, indicates what type of carrier?",
-        correction: "Add the original picture and an accessible description."
-      }],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Rear view of a liquid carrier for question 57.",
+        "tank-mc306-rear.svg",
+        "Rear view of a cargo tank trailer. The tank head is a wide, flattened ellipse with an overturn protection rail on top, sitting above dual wheels."
+      ),
+      notes: [REDRAWN],
       references: [
         cite(nfpa + ", 5.2.1 (A-2) (B-1).", true),
         cite(ifsta + ", page 247. Fig. 5.46."),
@@ -1730,16 +1741,16 @@
         "maximum radiation levels.",
         "number of radioactive atoms."
       ),
-      answer: null,
+      answer: "A",
       sourceAnswer: "A",
-      eligible: false,
-      status: "unresolved",
-      illustration: image("Label or placard with vertical stripes. The scan says the top half background is yellow and the bottom half background color is unreadable. No image is in this project."),
-      issues: [{
-        summary: "Requires the striped-label illustration.",
-        excerpt: "68. The item that is represented by the vertical stripes indicates the: Top half Background is Yellow / Bottom half Background",
-        correction: "Add the original illustration, including the bottom-half color, and an accessible description."
-      }],
+      eligible: true,
+      status: "needs_review",
+      illustration: image(
+        "Label with vertical stripes. The scan says the top half background is yellow; the bottom half is white on the matching I-2 item.",
+        "label-radioactive-yellow-iii.svg",
+        "Diamond-shaped package label with a yellow upper half and white lower half. A black trefoil is in the upper half. In the lower half, three vertical red bars follow a title line, above blank fields and a small box, with the number 7 at the bottom."
+      ),
+      notes: [REDRAWN, "The bottom-half color was unreadable here; it was taken as white from the same item in Examination I-2."],
       references: [
         cite(nfpa + ", 5.2.1 (A-3, 8(i)) (B-1, 5)."),
         cite(ifsta + ", pages 194, 195. Fig. 4.76."),

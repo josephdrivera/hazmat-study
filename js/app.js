@@ -112,6 +112,29 @@
     }).join("");
   }
 
+  function illustrationHtml(q, opts) {
+    var art = q && q.illustration;
+    if (!art || !art.asset) return "";
+    var caption = opts && opts.caption;
+    var html = "<img src=\"" + escapeHtml(art.asset) + "\" alt=\"" + escapeHtml(art.alt || art.description || "") + "\" loading=\"lazy\">";
+    if (caption && art.redrawn) {
+      html += "<figcaption>Redrawn standardized graphic.</figcaption>";
+    }
+    return html;
+  }
+
+  function renderIllustration(el, q) {
+    if (!el) return;
+    var html = illustrationHtml(q, { caption: true });
+    if (!html) {
+      el.hidden = true;
+      el.innerHTML = "";
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = html;
+  }
+
   function referenceHtml(q) {
     var lines = (q.references || []).filter(function (ref) { return ref && ref.text; });
     var html = "<p class=\"answer-note\">Source-provided answer. It has not been independently verified.</p>";
@@ -255,6 +278,7 @@
       $("study-meta").innerHTML = "";
       $("study-statements").hidden = true;
       $("study-statements").innerHTML = "";
+      renderIllustration($("study-illustration"), null);
       $("study-level-tag").textContent = "";
       $("study-level-tag").className = "question-level-tag";
       return;
@@ -264,6 +288,7 @@
     var correct = correctChoice(q);
     $("study-header").textContent = questionLabel(q) + "\u2003\u2003Question " + (state.studyIndex + 1) + " of " + list.length;
     $("study-question").textContent = q.question;
+    renderIllustration($("study-illustration"), q);
     renderStatements($("study-statements"), q);
     renderLevelTag($("study-level-tag"), levelText(q));
 
@@ -633,6 +658,7 @@
     $("exam-header").textContent = list.length + " questions · " + modeLabel + (counts ? " · " + counts : "");
     $("exam-kicker").textContent = examKicker(q);
     $("exam-question").textContent = q.question;
+    renderIllustration($("exam-illustration"), q);
     renderStatements($("exam-statements"), q);
     renderLevelTag($("exam-level-tag"), levelText(q));
     renderExamChoices(q);
@@ -842,6 +868,7 @@
   function renderMissedQuestion() {
     var list = state.missedQuestions;
     $("missed-statements").hidden = true;
+    renderIllustration($("missed-illustration"), null);
     $("missed-references").innerHTML = "";
     if (list.length === 0) {
       $("missed-counter").textContent = "No questions in this filter";
@@ -863,6 +890,7 @@
       (state.missedIndex + 1) + " of " + list.length;
     $("missed-header").textContent = questionLabel(q) + "\u2003\u2003Original #" + q.originalNumber;
     $("missed-question").textContent = q.question;
+    renderIllustration($("missed-illustration"), q);
     renderStatements($("missed-statements"), q);
     renderLevelTag($("missed-level-tag"), levelText(q));
 
@@ -910,7 +938,10 @@
     if (q.sourceAnswerLetter) {
       html += "<p>Source answer letter: " + escapeHtml(q.sourceAnswerLetter) + ".</p>";
     }
-    if (q.illustration && q.illustration.required && !q.illustration.asset) {
+    if (q.illustration && q.illustration.asset) {
+      html += "<figure class=\"question-illustration question-illustration--review\">" +
+        illustrationHtml(q, { caption: true }) + "</figure>";
+    } else if (q.illustration && q.illustration.required) {
       html += "<p><strong>Needs an illustration that is not in the import.</strong> " +
         escapeHtml(q.illustration.description || "") + "</p>";
     }

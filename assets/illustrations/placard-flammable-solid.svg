@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Hazard placard">
+  <defs>
+    <clipPath id="d"><polygon points="100,4 196,100 100,196 4,100"/></clipPath>
+  </defs>
+  <polygon points="100,4 196,100 100,196 4,100" fill="#fff"/>
+  <g clip-path="url(#d)" fill="#d52b1e">
+    <rect x="4" y="0" width="14.8" height="200"/>
+    <rect x="33.5" y="0" width="14.8" height="200"/>
+    <rect x="63" y="0" width="14.8" height="200"/>
+    <rect x="92.6" y="0" width="14.8" height="200"/>
+    <rect x="122.2" y="0" width="14.8" height="200"/>
+    <rect x="151.7" y="0" width="14.8" height="200"/>
+    <rect x="181.2" y="0" width="14.8" height="200"/>
+  </g>
+  <polygon points="100,4 196,100 100,196 4,100" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <!-- flame on a white field -->
+  <circle cx="100" cy="68" r="38" fill="#fff"/>
+  <path d="M100 34c7 12 22 20 22 38 0 13-10 24-22 24s-22-11-22-24c0-9 5-15 10-20 0 8 3 12 8 13-3-11 1-21 4-31z" fill="#111"/>
+  <rect x="76" y="99" width="48" height="3" fill="#111"/>
+  <rect x="80" y="148" width="40" height="40" fill="#fff"/>
+  <text x="100" y="178" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#111">4</text>
+</svg>

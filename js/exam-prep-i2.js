@@ -38,9 +38,13 @@
       o: "2. The products that IM 102 intermodal portable tanks typically carry are: A. nonregulated materials. B. flammable gases. C. hydrogen. D. radioactive materials," }),
     rec({ n: 3, key: "3. 5.2.1 ID POT HAZARD 89",
       q: "The item that is represented by the vertical stripes indicates the:",
-      c: ["radioactive levels.", "Hazard Class.", "maximum radiation levels.", "number of radioactive atoms."], a: "A", hold: true,
-      image: "Radioactive label drawing with vertical stripes; the OCR caption reads \"Top half Background is Yellow / Bottom half Background is white\". The scan does not include the drawing.",
-      issues: [{ summary: "The question depends on a label illustration that is not in the scan.", excerpt: "The item that is represented by the vertical stripes indicates the: C Top half ., Background 9. Whe is Yellow Bottorn half . Background is white", correction: "Add the radioactive label illustration (IFSTA Fig. 4.76 / Jones and Bartlett Fig. 4-42) before scoring." }],
+      c: ["radioactive levels.", "Hazard Class.", "maximum radiation levels.", "number of radioactive atoms."], a: "A", status: "needs_review",
+      image: {
+        description: "Radioactive label drawing with vertical stripes; the OCR caption reads \"Top half Background is Yellow / Bottom half Background is white\".",
+        file: "label-radioactive-yellow-iii.svg",
+        alt: "Diamond-shaped package label with a yellow upper half and white lower half. A black trefoil is in the upper half. In the lower half, three vertical red bars follow a title line, above blank fields and a small box, with the number 7 at the bottom."
+      },
+      notes: [bank.redrawnNote, "Drawn after IFSTA Fig. 4.76 / Jones and Bartlett Fig. 4-42 as cited by the key."],
       r: ["5.2.1 (A-3, 8(j)) (B-1, 5).", "pages 194, 195. Fig. 4.76.", "pages 95, 96. Fig. 4-42."],
       o: "3. The item that is represented by the vertical stripes indicates the: C Top half ., Background 9. Whe is Yellow Bottorn half . Background is white A. radioactive levels. B. Hazard Class. C. maximum radiation levels. D. number of radioactive atoms." }),
     rec({ n: 4, key: "4. 5.2.1 ID POT HAZARD 90",
@@ -140,9 +144,13 @@
       o: "19. In an emergency at a facility with bulk chemical storage, where the Safety Data Sheet is not available on site, the firefighter may obtain information from: A. an Environmental Protection Association Alert. B. the chemical abstract services. C. the Department of Transportation. D. the Chemical Transportation Emergency Center." }),
     rec({ n: 20, key: "20. 5.2.1 ID POT HAZARD 120",
       q: "What would be the major concern if you were to come upon a leaking tanker of the type pictured below?",
-      c: ["Frost bite", "Ignition of vapors", "Encountering corrosives", "Encountering bulk solids"], a: "C", hold: true,
-      image: "Cargo tank truck photograph referenced by the stem (\"pictured below\"); the key cites IFSTA Fig. 5.5 and Jones and Bartlett Fig. 4-16. The scan does not include the picture.",
-      issues: [{ summary: "The question depends on a tanker picture that is not in the scan.", excerpt: "a leaking tanker of the type pictured below?", correction: "Add the tanker picture before scoring." }],
+      c: ["Frost bite", "Ignition of vapors", "Encountering corrosives", "Encountering bulk solids"], a: "C", status: "needs_review",
+      image: {
+        description: "Cargo tank truck photograph referenced by the stem (\"pictured below\"); the key cites IFSTA Fig. 5.5 and Jones and Bartlett Fig. 4-16.",
+        file: "tank-mc312.svg",
+        alt: "Side view of a cargo tank trailer with a small-diameter round tank, several external stiffening rings around the body, and a single manhole with a splash box at the top rear."
+      },
+      notes: [bank.redrawnNote, "The keyed answer (corrosives) identifies the pictured carrier as an MC 312/DOT 412 corrosive-liquid tank, which is what the drawing shows."],
       r: ["5.2.1 (A-2) (B-1).", "page 249. Fig. 5.5.", "page 78. Fig. 4-16."],
       o: "20. What would be the major concern if you were to come upon a leaking tanker of the type pictured below? A. Frost bite B. Ignition of vapors C. Encountering corrosives D. Encountering bulk solids" }),
     rec({ n: 21, key: "21. 5.2.1 ID POT HAZARD 121",
@@ -480,7 +488,7 @@
     directions: "Examination I-2 has 75 items. The book says to remove it from the manual, take it in a quiet place without interruptions, and follow the Phase III time-management directions. Mark one answer, A–D, mark guesses, score the exam from the key, then review missed and guessed items.",
     sourceNotes: [
       "Key entries 9 and 36 have no answer line in the scan; both questions are held for review.",
-      "Questions 3 and 20 depend on illustrations that are not in the scan."
+      "Questions 3 and 20 depend on illustrations that are not in the scan; redrawn standardized graphics matching the answer key are shown in their place."
     ]
   };
 

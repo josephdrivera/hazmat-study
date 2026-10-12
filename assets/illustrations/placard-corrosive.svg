@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Hazard placard">
+  <polygon points="100,4 196,100 100,196 4,100" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="4,100 196,100 100,196" fill="#111"/>
+  <!-- left test tube pouring onto a hand -->
+  <g transform="rotate(-35 70 52)">
+    <rect x="63" y="28" width="14" height="40" rx="6" fill="#111"/>
+    <rect x="60" y="26" width="20" height="5" fill="#111"/>
+  </g>
+  <ellipse cx="54" cy="68" rx="2.5" ry="4" fill="#111"/>
+  <ellipse cx="50" cy="78" rx="2.5" ry="4" fill="#111"/>
+  <path d="M30 96c0-8 6-12 14-12h10c6 0 10 3 12 7l-4 4H38c-4 0-8 1-8 1z" fill="#111"/>
+  <rect x="36" y="78" width="4" height="10" rx="2" fill="#111"/>
+  <rect x="43" y="76" width="4" height="12" rx="2" fill="#111"/>
+  <rect x="50" y="78" width="4" height="10" rx="2" fill="#111"/>
+  <!-- right test tube pouring onto a metal bar -->
+  <g transform="rotate(35 130 52)">
+    <rect x="123" y="28" width="14" height="40" rx="6" fill="#111"/>
+    <rect x="120" y="26" width="20" height="5" fill="#111"/>
+  </g>
+  <ellipse cx="146" cy="68" rx="2.5" ry="4" fill="#111"/>
+  <ellipse cx="150" cy="78" rx="2.5" ry="4" fill="#111"/>
+  <path d="M134 92h34l6-6h-30z" fill="#111"/>
+  <rect x="134" y="92" width="34" height="5" fill="#111"/>
+  <text x="100" y="178" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#fff">8</text>
+</svg>
