@@ -98,8 +98,18 @@
         <button class="btn btn--text" id="btn-clear-progress">Clear Saved Progress</button>
       </div>
 
+      <section class="updates" id="updates" aria-labelledby="updates-title">
+        <h2 class="source-title" id="updates-title">Updates</h2>
+        <div class="updates-latest" id="updates-latest"></div>
+        <details class="exam-directions updates-earlier" id="updates-earlier">
+          <summary>Earlier updates</summary>
+          <div id="updates-earlier-list"></div>
+        </details>
+      </section>
+
       <footer class="disclaimer">
         <p class="credit">Developed by <a href="https://josephdrivera.com/" target="_blank" rel="noopener">Joseph Rivera</a></p>
+        <p class="version-line">Version <span id="footer-version"></span></p>
       </footer>
     </div>
   </main>
@@ -279,6 +289,23 @@
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════
+       WHAT'S NEW SPLASH (shown once per version)
+       ═══════════════════════════════════════════════════ -->
+  <div id="whats-new-overlay" class="modal-overlay hidden">
+    <div class="modal modal--whats-new" role="dialog" aria-modal="true" aria-labelledby="whats-new-title">
+      <p class="whats-new-kicker">What's new</p>
+      <h2 class="whats-new-title" id="whats-new-title"></h2>
+      <p class="whats-new-meta" id="whats-new-meta"></p>
+      <ul class="whats-new-list" id="whats-new-list"></ul>
+      <div class="modal-actions modal-actions--split">
+        <button class="btn btn--text" id="whats-new-all" type="button">See all updates</button>
+        <button class="btn btn--primary" id="whats-new-dismiss" type="button">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/changelog.js"></script>
   <script src="js/questions.js"></script>
   <script src="js/exam-prep-common.js"></script>
   <script src="js/exam-prep-i1.js"></script>

@@ -12,6 +12,7 @@ function loadApp() {
   context.globalThis = context;
   const ctx = createContext(context);
   [
+    "js/changelog.js",
     "js/questions.js",
     "js/exam-prep-common.js",
     "js/exam-prep-i1.js",
@@ -29,7 +30,7 @@ function loadApp() {
 }
 
 const app = loadApp();
-const { TestEngine, HazmatCatalog } = app;
+const { TestEngine, HazmatCatalog, HazmatChangelog } = app;
 
 const BOOK = "hazardous-materials-exam-prep";
 const HANDOUTS = "instructor-handouts";
@@ -83,6 +84,44 @@ function byNumber(n, examId) {
 function pools(ids, bookFilter) {
   return HazmatCatalog.poolsForSources(ids, { bookFilter });
 }
+
+test("changelog lists releases newest first with valid versions, dates, and notes", () => {
+  const { versions, current, latest } = HazmatChangelog;
+  assert.ok(versions.length >= 1);
+  assert.equal(current, versions[0].version);
+  assert.equal(latest, versions[0]);
+
+  const semver = /^\d+\.\d+\.\d+$/;
+  const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+  const parse = (v) => v.split(".").map(Number);
+  const newer = (a, b) => {
+    const [x, y] = [parse(a), parse(b)];
+    for (let i = 0; i < 3; i++) if (x[i] !== y[i]) return x[i] > y[i];
+    return false;
+  };
+
+  versions.forEach((release, index) => {
+    const label = "release " + release.version;
+    assert.match(release.version, semver, label);
+    assert.match(release.date, isoDate, label + " date");
+    assert.ok(!Number.isNaN(Date.parse(release.date)), label + " date parses");
+    assert.ok(release.title && release.title.trim().length > 0, label + " has a title");
+    assert.ok(Array.isArray(release.items) && release.items.length > 0, label + " has at least one note");
+    release.items.forEach((item) => assert.ok(typeof item === "string" && item.trim().length > 0, label + " note"));
+    if (index > 0) {
+      const prev = versions[index - 1];
+      assert.ok(newer(prev.version, release.version), prev.version + " must be newer than " + release.version);
+      assert.ok(prev.date >= release.date, prev.version + " must not be dated before " + release.version);
+    }
+  });
+  assert.equal(new Set(versions.map((r) => r.version)).size, versions.length, "versions are unique");
+
+  // index.html loads the changelog before app.js so the splash has data.
+  const html = readFileSync(join(root, "index.html"), "utf8");
+  assert.ok(html.indexOf('src="js/changelog.js"') < html.indexOf('src="js/app.js"'));
+  assert.match(html, /id="whats-new-overlay"/);
+  assert.match(html, /id="updates"/);
+});
 
 test("imports all 75 exam questions once and maps each key by question number", () => {
   const questions = book();

@@ -1193,8 +1193,12 @@
 
   /* ─── 9. KEYBOARD SHORTCUTS ─────────────────────── */
 
+  function isWhatsNewOpen() {
+    return !$("whats-new-overlay").classList.contains("hidden");
+  }
+
   function isModalOpen() {
-    return !$("modal-overlay").classList.contains("hidden");
+    return !$("modal-overlay").classList.contains("hidden") || isWhatsNewOpen();
   }
 
   function isInputFocused() {
@@ -1250,7 +1254,8 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && isModalOpen()) {
       e.preventDefault();
-      hideModal();
+      if (isWhatsNewOpen()) hideWhatsNew();
+      else hideModal();
       return;
     }
 
@@ -1315,6 +1320,93 @@
   // Close modal on overlay click
   $("modal-overlay").addEventListener("click", function (e) {
     if (e.target === $("modal-overlay")) hideModal();
+  });
+
+  /* ─── 10b. UPDATES / WHAT'S NEW ─────────────────── */
+
+  var SEEN_VERSION_KEY = "hazmat-study-seen-version";
+  var changelog = (typeof HazmatChangelog !== "undefined") ? HazmatChangelog : null;
+
+  function formatReleaseDate(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
+    if (!m) return iso || "";
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return months[parseInt(m[2], 10) - 1] + " " + parseInt(m[3], 10) + ", " + m[1];
+  }
+
+  function releaseHtml(release, opts) {
+    var heading = opts && opts.headingTag ? opts.headingTag : "h3";
+    var html = "<article class=\"release\">";
+    html += "<div class=\"release-head\">";
+    html += "<span class=\"version-badge\">v" + escapeHtml(release.version) + "</span>";
+    html += "<span class=\"release-date\">" + escapeHtml(formatReleaseDate(release.date)) + "</span>";
+    html += "</div>";
+    html += "<" + heading + " class=\"release-title\">" + escapeHtml(release.title) + "</" + heading + ">";
+    html += "<ul class=\"release-items\">" + (release.items || []).map(function (item) {
+      return "<li>" + escapeHtml(item) + "</li>";
+    }).join("") + "</ul>";
+    html += "</article>";
+    return html;
+  }
+
+  function renderUpdates() {
+    if (!changelog || !changelog.versions.length) {
+      $("updates").hidden = true;
+      return;
+    }
+    var latest = changelog.latest;
+    var earlier = changelog.versions.slice(1);
+    $("footer-version").textContent = latest.version;
+    $("updates-latest").innerHTML = releaseHtml(latest);
+    if (earlier.length) {
+      $("updates-earlier").hidden = false;
+      $("updates-earlier-list").innerHTML = earlier.map(function (release) {
+        return releaseHtml(release);
+      }).join("");
+    } else {
+      $("updates-earlier").hidden = true;
+    }
+  }
+
+  function seenVersion() {
+    try { return localStorage.getItem(SEEN_VERSION_KEY); } catch (e) { return null; }
+  }
+
+  function markVersionSeen() {
+    if (!changelog) return;
+    try { localStorage.setItem(SEEN_VERSION_KEY, changelog.current); } catch (e) {}
+  }
+
+  function showWhatsNew() {
+    if (!changelog) return;
+    var latest = changelog.latest;
+    $("whats-new-title").textContent = latest.title;
+    $("whats-new-meta").textContent = "Version " + latest.version + " · " + formatReleaseDate(latest.date);
+    $("whats-new-list").innerHTML = (latest.items || []).map(function (item) {
+      return "<li>" + escapeHtml(item) + "</li>";
+    }).join("");
+    $("whats-new-overlay").classList.remove("hidden");
+    $("whats-new-dismiss").focus();
+  }
+
+  function hideWhatsNew() {
+    $("whats-new-overlay").classList.add("hidden");
+    markVersionSeen();
+  }
+
+  function maybeShowWhatsNew() {
+    if (!changelog) return;
+    if (seenVersion() === changelog.current) return;
+    showWhatsNew();
+  }
+
+  $("whats-new-dismiss").addEventListener("click", hideWhatsNew);
+  $("whats-new-all").addEventListener("click", function () {
+    hideWhatsNew();
+    $("updates").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  $("whats-new-overlay").addEventListener("click", function (e) {
+    if (e.target === $("whats-new-overlay")) hideWhatsNew();
   });
 
   /* ─── HELPER: escape HTML ───────────────────────── */
@@ -1515,6 +1607,7 @@
     configureSources();
     refreshEligibility();
     updateResumeButton();
+    renderUpdates();
     selectTab("handouts");
 
     SOURCE_TABS.forEach(function (tab) {
@@ -1720,6 +1813,7 @@
     });
 
     showView("view-home");
+    maybeShowWhatsNew();
   }
 
   // Boot

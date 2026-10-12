@@ -24,9 +24,14 @@ Then visit `http://localhost:8080`.
 index.html          Main page (single-page app, all views)
 styles.css          All styles
 js/
-  questions.js      100-question data bank (Quiz #1 + #2)
+  changelog.js      Release notes (version, date, items) — newest first
+  questions.js      Instructor handout question bank
+  exam-prep-*.js    Exam-prep book examinations I-1 … II-3
+  catalog.js        Groups sources, exams, and duplicate questions
+  test-engine.js    Test generation, eligibility, and scoring
   app.js            Application logic (study, exam, scoring, localStorage)
   validate.js       Dev-only data integrity checks
+assets/illustrations/  Redrawn placards, labels, and cargo tank SVGs
 source/
   *.pdf             Instructor-provided source PDF (not served to users)
 ```
@@ -53,6 +58,19 @@ All 100 questions are in `js/questions.js` as the `QUESTION_BANK` array. Each qu
 4. Update the filter dropdowns in `index.html` to include Quiz #3
 5. Update the home screen quiz links section
 6. Update the exam logic if the exam should include the new quiz
+
+## Shipping an Update
+
+Every change that reaches users gets a version number and an entry in `js/changelog.js`. The home screen shows the entries under **Updates**, and the newest entry is shown once as a "What's new" splash the first time someone loads the site after a release (tracked per browser in `localStorage` under `hazmat-study-seen-version`).
+
+1. Add a new object to the **top** of the `versions` array in `js/changelog.js`.
+2. Bump the version (`MAJOR.MINOR.PATCH`):
+   - `PATCH` — typo fixes, corrections to question text or answer keys
+   - `MINOR` — new questions, features, or illustrations
+   - `MAJOR` — anything that resets or breaks saved progress
+3. Set `date` to today (`YYYY-MM-DD`) and write `items` for students — what changed for them.
+4. Run `node --test test/practice.test.js`; the changelog test checks ordering, uniqueness, and formats.
+5. Commit and push. The splash shows automatically because its key is the current version.
 
 ## Deploying to Vercel
 
