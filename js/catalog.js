@@ -73,6 +73,7 @@
       references: question.objective
         ? [{ text: question.objective, incomplete: false }]
         : [],
+      explanation: question.explanation || null,
       standard: "NFPA 472",
       standardSection: question.objective || "",
       topic: question.level || "",

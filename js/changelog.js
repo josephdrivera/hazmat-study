@@ -21,6 +21,18 @@
 
   var versions = [
     {
+      version: "1.5.0",
+      date: "2026-10-12",
+      title: "Full review when you finish a test or study set",
+      items: [
+        "Finishing a practice test now gives you a completion note and a Full Review page: every question in order, marked right, wrong, or unanswered, with your pick and the correct answer highlighted.",
+        "Each card tells you where to find the material: the NFPA 1072 section plus IFSTA and Jones & Bartlett page references for exam-prep questions, or the NFPA 472 objective and quiz for handout questions.",
+        "A section-by-section breakdown shows which quizzes or exams you missed the most on.",
+        "Answering the last question in a study set pops up a completion summary with a link to the same Full Review. A Full Review button is also in the study screen at any time.",
+        "Filter the review to just the ones you got wrong, and print it or save it as a PDF to study from."
+      ]
+    },
+    {
       version: "1.4.0",
       date: "2026-10-12",
       title: "Update notes and a what's-new message",

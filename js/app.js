@@ -50,12 +50,19 @@
     examBookFilter: "all",
     examRequestedCount: 0,
     examSourceCounts: [],
+    examCompletedAt: null,
 
     // Review
     missedQuestions: [],
     missedIndex: 0,
     missedSource: "",
-    reviewFilter: "all"
+    reviewFilter: "all",
+
+    // Completion report
+    reportSource: "",
+    reportFilter: "all",
+    reportReturnView: "view-home",
+    studyCompletedKey: ""
   };
 
   /* ─── 2. UTILITY HELPERS ────────────────────────── */
@@ -211,7 +218,7 @@
 
   /* ─── 3. VIEW MANAGEMENT ────────────────────────── */
 
-  var views = ["view-home", "view-study", "view-exam", "view-results", "view-missed", "view-review"];
+  var views = ["view-home", "view-study", "view-exam", "view-results", "view-missed", "view-report", "view-review"];
 
   function showView(id) {
     views.forEach(function (v) {
@@ -378,6 +385,57 @@
     renderStudyQuestion();
     renderStudyProgress();
     saveState();
+    maybeShowStudyCompletion();
+  }
+
+  function studySetLabel() {
+    if (state.studyBank === "exam-prep") {
+      return "Exam prep · " + HazmatCatalog.bookFilterLabel(state.studyFilterExam);
+    }
+    var label;
+    if (state.studyFilterQuiz === "all") {
+      label = "Entire handout";
+    } else {
+      var first = state.studyFiltered[0];
+      label = first && first.quiz ? questionLabel(first) : "Quiz #" + state.studyFilterQuiz;
+    }
+    if (state.studyFilterLevel !== "all") label += " · " + state.studyFilterLevel + " only";
+    return label;
+  }
+
+  function studySetKey() {
+    return [state.studyBank, state.studyFilterQuiz, state.studyFilterLevel, state.studyFilterExam,
+      state.studyFiltered.length].join("|");
+  }
+
+  function studyAnsweredCount() {
+    var n = 0;
+    state.studyFiltered.forEach(function (q) {
+      if (state.studyAnswers[q.id] !== undefined) n++;
+    });
+    return n;
+  }
+
+  function maybeShowStudyCompletion() {
+    var list = state.studyFiltered;
+    if (!list.length || studyAnsweredCount() !== list.length) return;
+    var key = studySetKey();
+    if (state.studyCompletedKey === key) return; // already shown for this set
+    state.studyCompletedKey = key;
+    var grade = gradeList(list, state.studyAnswers);
+    var band = getResultBand(grade.percentage);
+    showModal(
+      "Study set complete. You answered all " + grade.total + " questions in " + studySetLabel() +
+      ". You got " + grade.correct + " right and " + grade.incorrect + " wrong (" + grade.percentage + "%, " +
+      band.label.toLowerCase() + "). The full review lists every question with the correct answer and where to find it in the source.",
+      [
+        { label: "Keep studying", cls: "btn--nav", action: hideModal },
+        { label: "See full review", cls: "btn--primary", action: function () {
+          hideModal();
+          enterReport("study");
+        }}
+      ]
+    );
   }
 
   function studyNextUnanswered() {
@@ -567,6 +625,7 @@
     state.examIndex = 0;
     state.examInProgress = true;
     state.examSubmitted = false;
+    state.examCompletedAt = null;
     state.examMode = options.mode || "exam";
     state.examSourceIds = options.sourceIds || [];
     state.examBookFilter = options.bookFilter || "all";
@@ -761,9 +820,30 @@
     hideModal();
     state.examInProgress = false;
     state.examSubmitted = true;
+    state.examCompletedAt = new Date().toISOString();
     updateResumeButton();
     saveState();
     showResults();
+  }
+
+  function examSessionLabel() {
+    var parts = [];
+    var labels = (state.examSourceCounts || []).map(function (entry) { return entry.label; });
+    if (labels.length) parts.push(labels.join(" + "));
+    if (bookSelected(state.examSourceIds) && state.examBookFilter && state.examBookFilter !== "all") {
+      parts.push(HazmatCatalog.bookFilterLabel(state.examBookFilter));
+    }
+    parts.push(state.examQuestions.length + " questions");
+    parts.push(state.examMode === "practice" ? "Practice mode" : "Exam mode");
+    return parts.join(" · ");
+  }
+
+  function formatCompletedAt(iso) {
+    if (!iso) return "";
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    return d.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) +
+      " at " + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
   }
 
   function currentGrade() {
@@ -775,6 +855,8 @@
   function showResults() {
     var grade = currentGrade();
     var band = getResultBand(grade.percentage);
+    var when = formatCompletedAt(state.examCompletedAt);
+    $("results-note").textContent = "Test complete · " + examSessionLabel() + (when ? " · " + when : "");
     $("results-score").textContent = grade.percentage + "%";
     $("results-counts").innerHTML =
       grade.correct + " correct of " + grade.total + "<br>" +
@@ -807,6 +889,7 @@
     state.examIndex = 0;
     state.examInProgress = true;
     state.examSubmitted = false;
+    state.examCompletedAt = null;
     saveState();
     updateResumeButton();
     resumeExam();
@@ -924,6 +1007,297 @@
 
     $("missed-prev").disabled = state.missedIndex === 0;
     $("missed-next").disabled = state.missedIndex >= list.length - 1;
+  }
+
+  /* ─── 7b. COMPLETION REPORT (full right / wrong review) ── */
+
+  function questionStatus(q, answer) {
+    if (answer === undefined || answer === null || answer === "") return "unanswered";
+    return answer === correctChoice(q) ? "correct" : "incorrect";
+  }
+
+  function gradeList(questions, answers) {
+    var given = answers || {};
+    var statuses = {};
+    var correct = 0;
+    var wrong = 0;
+    var unanswered = 0;
+    (questions || []).forEach(function (q) {
+      var status = questionStatus(q, given[q.id]);
+      statuses[q.id] = status;
+      if (status === "correct") correct++;
+      else if (status === "incorrect") wrong++;
+      else unanswered++;
+    });
+    var total = (questions || []).length;
+    return {
+      correct: correct,
+      wrong: wrong,
+      unanswered: unanswered,
+      incorrect: total - correct,
+      total: total,
+      percentage: total === 0 ? 0 : Math.round((correct / total) * 100),
+      statuses: statuses
+    };
+  }
+
+  function reportData() {
+    if (state.reportSource === "study") {
+      return {
+        source: "study",
+        questions: state.studyFiltered,
+        answers: state.studyAnswers,
+        flags: { markedForReview: {}, guessed: {} }
+      };
+    }
+    return {
+      source: "practice",
+      questions: state.examQuestions,
+      answers: state.examAnswers,
+      flags: practiceFlags()
+    };
+  }
+
+  function enterReport(source) {
+    state.reportSource = source === "study" ? "study" : "practice";
+    state.reportFilter = "all";
+    state.reportReturnView = state.reportSource === "study" ? "view-study" : "view-results";
+    var data = reportData();
+    if (!data.questions.length) return;
+    renderReport(data);
+    showView("view-report");
+  }
+
+  function statusLabel(status) {
+    if (status === "correct") return "Correct";
+    if (status === "incorrect") return "Wrong";
+    return "Unanswered";
+  }
+
+  function isHandout(q) {
+    // Raw QUESTION_BANK items carry `quiz`; catalog records carry the standard.
+    return !!(q.quiz || q.standard === "NFPA 472" || q.sourceId === "instructor-handouts");
+  }
+
+  function lookupHtml(q) {
+    var html = '<div class="report-lookup">';
+    html += '<p class="report-lookup-title">Where to find it</p>';
+    if (isHandout(q)) {
+      var bits = [];
+      if (q.objective) {
+        var objective = String(q.objective);
+        bits.push(/^NFPA/i.test(objective) ? "Objective " + escapeHtml(objective) : "NFPA 472 objective " + escapeHtml(objective));
+      }
+      if (q.level) bits.push(escapeHtml(q.level) + " level");
+      bits.push(escapeHtml(questionLabel(q)) + " handout, question " + escapeHtml(String(q.originalNumber)));
+      html += "<p>" + bits.join(" · ") + ".</p>";
+      html += '<p class="report-lookup-note">Look up the NFPA 472 objective in the instructor handout and the matching chapter of your text to read why this answer is correct.</p>';
+    } else {
+      var refs = (q.references || []).filter(function (ref) { return ref && ref.text; });
+      if (refs.length) {
+        html += "<ul>";
+        refs.forEach(function (ref) {
+          html += "<li>" + escapeHtml(ref.text);
+          if (ref.incomplete) html += ' <span class="ref-flag">Part of this citation could not be read.</span>';
+          html += "</li>";
+        });
+        html += "</ul>";
+      } else {
+        html += "<p>The source key gives no page reference for this question.</p>";
+      }
+      html += '<p class="report-lookup-note">Answer letter and page references come from the Hazardous Materials Exam Prep answer key and have not been independently verified. Read the cited pages for the reasoning behind the answer.</p>';
+    }
+    html += "</div>";
+    if (q.explanation) {
+      html += '<div class="report-why"><p class="report-lookup-title">Why</p><p>' + escapeHtml(q.explanation) + "</p></div>";
+    }
+    return html;
+  }
+
+  function reportKicker(q) {
+    var parts = [];
+    if (isHandout(q)) {
+      parts.push(questionLabel(q));
+    } else {
+      if (q.sourceLabel) parts.push(q.sourceLabel);
+      if (q.examShort) parts.push(q.examShort);
+    }
+    parts.push("Original #" + q.originalNumber);
+    var level = levelText(q);
+    if (level) parts.push(level);
+    return parts.join(" · ");
+  }
+
+  function reportCardHtml(q, index, status, userAnswer, flags) {
+    var correct = correctChoice(q);
+    var html = '<article class="report-card report-card--' + status + '" id="report-q-' + (index + 1) + '">';
+    html += '<header class="report-card-head">';
+    html += '<span class="report-card-num">Question ' + (index + 1) + "</span>";
+    html += '<span class="report-status report-status--' + status + '">' + statusLabel(status) + "</span>";
+    html += "</header>";
+    html += '<p class="question-kicker">' + escapeHtml(reportKicker(q)) + "</p>";
+    html += '<p class="report-question">' + escapeHtml(q.question) + "</p>";
+    if (q.illustration && q.illustration.asset) {
+      html += '<figure class="question-illustration question-illustration--report">' +
+        illustrationHtml(q, { caption: true }) + "</figure>";
+    }
+    var statements = (q.statements || []).filter(function (s) { return s && s.text; });
+    if (statements.length) {
+      html += '<ol class="statements">' + statements.map(function (s) {
+        return "<li>" + escapeHtml(s.text) + "</li>";
+      }).join("") + "</ol>";
+    }
+    html += '<div class="choices">';
+    choiceEntries(q).forEach(function (choice) {
+      var cls = "choice choice--locked";
+      if (choice.id === correct) cls += " choice--correct";
+      if (choice.id === userAnswer && userAnswer !== correct) cls += " choice--incorrect";
+      html += '<div class="' + cls + '">';
+      html += '<span class="choice-letter">' + choice.id + ".</span>";
+      html += '<span class="choice-text">' + escapeHtml(choice.text) + "</span>";
+      if (choice.id === correct) html += '<span class="choice-tag choice-tag--correct">Correct</span>';
+      else if (choice.id === userAnswer) html += '<span class="choice-tag choice-tag--yours">Your pick</span>';
+      html += "</div>";
+    });
+    html += "</div>";
+    html += '<div class="report-answers">';
+    if (status === "unanswered") {
+      html += '<span class="report-your report-your--none">Not answered</span>';
+    } else {
+      html += '<span class="report-your' + (status === "correct" ? " report-your--right" : "") + '">Your answer: ' +
+        escapeHtml(userAnswer) + "</span>";
+    }
+    html += '<span class="report-correct">Correct answer: ' + escapeHtml(correct || "\u2014") + "</span>";
+    html += "</div>";
+    html += lookupHtml(q);
+    var marks = [];
+    if (flags.markedForReview && flags.markedForReview[q.id]) marks.push("You marked this for review");
+    if (flags.guessed && flags.guessed[q.id]) marks.push("You marked this as a guess");
+    if (marks.length) html += '<p class="report-flags">' + marks.join(" · ") + "</p>";
+    html += "</article>";
+    return html;
+  }
+
+  function reportBreakdownHtml(questions, grade) {
+    var groups = [];
+    var index = {};
+    questions.forEach(function (q) {
+      var label = questionLabel(q);
+      if (index[label] == null) {
+        index[label] = groups.length;
+        groups.push({ label: label, total: 0, correct: 0 });
+      }
+      var group = groups[index[label]];
+      group.total++;
+      if (grade.statuses[q.id] === "correct") group.correct++;
+    });
+    if (groups.length < 2) return "";
+    groups.sort(function (a, b) {
+      var pa = a.correct / a.total;
+      var pb = b.correct / b.total;
+      return pa - pb || a.label.localeCompare(b.label);
+    });
+    return groups.map(function (group) {
+      var pct = Math.round((group.correct / group.total) * 100);
+      var band = getBand(pct);
+      return '<div class="breakdown-row">' +
+        '<span class="breakdown-label">' + escapeHtml(group.label) + "</span>" +
+        '<span class="breakdown-bar"><span class="breakdown-fill breakdown-fill--' + band.cls + '" style="width:' + pct + '%"></span></span>' +
+        '<span class="breakdown-count">' + group.correct + " / " + group.total + " · " + pct + "%</span>" +
+        "</div>";
+    }).join("");
+  }
+
+  function renderReportActions(data, grade) {
+    var el = $("report-actions");
+    el.innerHTML = "";
+    function add(label, cls, action) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "btn " + cls;
+      btn.textContent = label;
+      btn.addEventListener("click", action);
+      el.appendChild(btn);
+    }
+    if (data.source === "practice") {
+      if (grade.correct < grade.total) add("Retry the questions you missed", "btn--primary", retryMissed);
+      add("Retake this test", "btn--nav", retakeTest);
+      add("Generate another test", "btn--nav", generateAnother);
+      add("Back to score", "btn--nav", function () { showView("view-results"); });
+    } else {
+      add("Keep studying", "btn--primary", function () { showView("view-study"); });
+      if (grade.wrong > 0) add("Step through missed questions", "btn--nav", function () { enterMissedReview("study"); });
+    }
+    add("Return home", "btn--text", function () {
+      selectTab(data.source === "practice" ? "tests" : state.activeTab);
+      showView("view-home");
+    });
+  }
+
+  function renderReport(data) {
+    var grade = gradeList(data.questions, data.answers);
+    var band = getResultBand(grade.percentage);
+    var complete = grade.unanswered === 0;
+
+    if (data.source === "practice") {
+      var when = formatCompletedAt(state.examCompletedAt);
+      $("report-kicker").textContent = "Practice test · " + examSessionLabel() + (when ? " · " + when : "");
+      $("report-title").textContent = "Test complete";
+    } else {
+      $("report-kicker").textContent = "Study session · " + studySetLabel();
+      $("report-title").textContent = complete ? "Study set complete" : "Study review so far";
+    }
+    $("report-score").textContent = grade.percentage + "%";
+    var bandEl = $("report-band");
+    bandEl.textContent = band.label;
+    bandEl.className = "results-band results-band--" + band.cls;
+
+    $("report-stats").innerHTML =
+      '<span class="report-stat report-stat--correct"><strong>' + grade.correct + "</strong> right</span>" +
+      '<span class="report-stat report-stat--wrong"><strong>' + grade.wrong + "</strong> wrong</span>" +
+      '<span class="report-stat report-stat--unanswered"><strong>' + grade.unanswered + "</strong> unanswered</span>" +
+      '<span class="report-stat"><strong>' + grade.total + "</strong> total</span>";
+
+    var note;
+    if (grade.correct === grade.total) {
+      note = "You answered every question correctly. Read back through the review below so the reasoning sticks, not just the letters.";
+    } else if (data.source === "practice") {
+      note = "You missed " + grade.incorrect + " of " + grade.total + ". Every question is listed below with the correct answer and where to find the material in the source text. Unanswered questions count as wrong, the same as on the real exam.";
+    } else {
+      note = "You missed " + grade.wrong + " of " + grade.total + (complete ? "" : " answered so far") +
+        ". Every question is listed below with the correct answer and where to find the material in the source text.";
+    }
+    $("report-note").textContent = note;
+
+    var breakdown = reportBreakdownHtml(data.questions, grade);
+    $("report-breakdown-section").hidden = !breakdown;
+    $("report-breakdown").innerHTML = breakdown;
+
+    renderReportActions(data, grade);
+    renderReportList(data, grade);
+  }
+
+  function renderReportList(data, grade) {
+    data = data || reportData();
+    grade = grade || gradeList(data.questions, data.answers);
+    var filter = state.reportFilter;
+    document.querySelectorAll("#report-filters [data-filter]").forEach(function (btn) {
+      btn.classList.toggle("is-active", btn.getAttribute("data-filter") === filter);
+    });
+    var html = "";
+    var shown = 0;
+    data.questions.forEach(function (q, index) {
+      var status = grade.statuses[q.id];
+      if (filter === "correct" && status !== "correct") return;
+      if (filter === "missed" && status !== "incorrect") return;
+      if (filter === "unanswered" && status !== "unanswered") return;
+      shown++;
+      html += reportCardHtml(q, index, status, data.answers[q.id], data.flags);
+    });
+    if (!shown) {
+      html = '<p class="report-empty">No questions match this filter.</p>';
+    }
+    $("report-list").innerHTML = html;
   }
 
   function reviewCardHtml(q) {
@@ -1083,6 +1457,7 @@
         studyShuffled: state.studyShuffled,
         studySeed: state.studySeed,
         examBookFilter: state.examBookFilter,
+        examCompletedAt: state.examCompletedAt,
         practiceSession: TestEngine.serializeSession({
           questions: state.examQuestions,
           answers: state.examAnswers,
@@ -1118,6 +1493,7 @@
       state.studyShuffled = data.studyShuffled || false;
       state.studySeed = data.studySeed || null;
       state.examBookFilter = data.examBookFilter || "all";
+      state.examCompletedAt = data.examCompletedAt || null;
 
       if (data.practiceSession && data.practiceSession.questionIds) {
         var session = TestEngine.restoreSession(data.practiceSession, HazmatCatalog.byId);
@@ -1183,6 +1559,8 @@
           state.examBookFilter = "all";
           state.examRequestedCount = 0;
           state.examSourceCounts = [];
+          state.examCompletedAt = null;
+          state.studyCompletedKey = "";
           setBookFilterValue("all");
           updateResumeButton();
           refreshEligibility();
@@ -1657,6 +2035,7 @@
     $("study-next").addEventListener("click", studyNext);
     $("study-next-unanswered").addEventListener("click", studyNextUnanswered);
     $("study-review-missed").addEventListener("click", function () { enterMissedReview("study"); });
+    $("study-full-review").addEventListener("click", function () { enterReport("study"); });
 
     $("study-choices").addEventListener("click", function (e) {
       var el = e.target.closest(".choice");
@@ -1784,6 +2163,7 @@
       }
     });
 
+    $("results-full-review").addEventListener("click", function () { enterReport("practice"); });
     $("results-review-all").addEventListener("click", function () { enterMissedReview("practice"); });
     $("results-retry-missed").addEventListener("click", retryMissed);
     $("results-retake").addEventListener("click", retakeTest);
@@ -1810,6 +2190,15 @@
     $("review-home").addEventListener("click", function () {
       selectTab("exam-prep");
       showView("view-home");
+    });
+
+    $("report-back").addEventListener("click", function () { showView(state.reportReturnView); });
+    $("report-print").addEventListener("click", function () { window.print(); });
+    $("report-filters").addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-filter]");
+      if (!btn) return;
+      state.reportFilter = btn.getAttribute("data-filter");
+      renderReportList();
     });
 
     showView("view-home");

@@ -159,6 +159,7 @@
         <div class="nav-secondary">
           <button class="btn btn--text btn--small" id="study-next-unanswered">Next Unanswered</button>
           <button class="btn btn--text btn--small" id="study-review-missed">Review Missed</button>
+          <button class="btn btn--text btn--small" id="study-full-review">Full Review</button>
         </div>
       </div>
 
@@ -218,11 +219,13 @@
        ═══════════════════════════════════════════════════ -->
   <main id="view-results" class="view">
     <div class="results-content">
+      <p class="results-note" id="results-note"></p>
       <div class="results-score" id="results-score"></div>
       <div class="results-counts" id="results-counts"></div>
       <div class="results-band" id="results-band"></div>
       <div class="results-actions">
-        <button class="btn btn--primary" id="results-review-all" type="button">Review answers</button>
+        <button class="btn btn--primary" id="results-full-review" type="button">Full review of every question</button>
+        <button class="btn btn--nav" id="results-review-all" type="button">Step through one at a time</button>
         <button class="btn btn--nav" id="results-retry-missed" type="button">Retry Missed Questions</button>
         <button class="btn btn--nav" id="results-retake" type="button">Retake this test</button>
         <button class="btn btn--nav" id="results-another" type="button">Generate Another Test</button>
@@ -262,6 +265,48 @@
           <button class="btn btn--nav" id="missed-next">Next Missed</button>
         </div>
       </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════
+       COMPLETION REPORT (full right / wrong review)
+       ═══════════════════════════════════════════════════ -->
+  <main id="view-report" class="view">
+    <div class="report-content">
+      <div class="study-topbar report-topbar">
+        <button class="btn btn--text btn--back" id="report-back" type="button">&larr; Back</button>
+        <button class="btn btn--text btn--small" id="report-print" type="button">Print / save as PDF</button>
+      </div>
+
+      <header class="report-header">
+        <p class="report-kicker" id="report-kicker"></p>
+        <h2 class="report-title" id="report-title"></h2>
+        <div class="report-scoreline">
+          <span class="report-score" id="report-score"></span>
+          <span class="results-band" id="report-band"></span>
+        </div>
+        <div class="report-stats" id="report-stats"></div>
+        <p class="report-note" id="report-note"></p>
+      </header>
+
+      <section class="report-section" id="report-breakdown-section">
+        <h3 class="report-section-title">How you did by section</h3>
+        <div class="report-breakdown" id="report-breakdown"></div>
+      </section>
+
+      <section class="report-section">
+        <h3 class="report-section-title">Question-by-question review</h3>
+        <p class="report-howto">Every question is listed below in the order you saw it. The correct answer is highlighted in green. A wrong pick is marked in red. Each card ends with where to find the material in the source text so you can read why the answer is what it is.</p>
+        <div class="review-filters report-filters" id="report-filters">
+          <button class="btn btn--text btn--small" type="button" data-filter="all">All</button>
+          <button class="btn btn--text btn--small" type="button" data-filter="correct">Correct</button>
+          <button class="btn btn--text btn--small" type="button" data-filter="missed">Wrong</button>
+          <button class="btn btn--text btn--small" type="button" data-filter="unanswered">Unanswered</button>
+        </div>
+        <div class="report-list" id="report-list"></div>
+      </section>
+
+      <div class="results-actions report-actions" id="report-actions"></div>
     </div>
   </main>
 

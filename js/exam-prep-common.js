@@ -91,6 +91,7 @@
         sourceAnswerLetter: spec.sourceAnswer == null ? answer : spec.sourceAnswer,
         illustration: spec.illustration || null,
         references: spec.references || [],
+        explanation: spec.explanation || null,
         originalCitation: spec.originalCitation || "",
         standard: NFPA,
         standardSection: spec.section,
@@ -118,7 +119,9 @@
      * Compact record. Fields:
      *   n, key, q, c (4 strings), a (letter or null), r ([nfpa, ifsta, jb]),
      *   o (original OCR text), plus optional status, notes, issues, hold
-     *   (true = exclude), image, statements, extraRefs, origCite, sourceAnswer.
+     *   (true = exclude), image, statements, extraRefs, origCite, sourceAnswer,
+     *   explanation (plain-language "why", shown in the completion report
+     *   when present; the source keys do not include one).
      */
     function rec(spec) {
       var parsed = parseKeyHeader(spec.key);
@@ -151,6 +154,7 @@
         notes: spec.notes,
         issues: spec.issues,
         references: refs,
+        explanation: spec.explanation,
         originalCitation: spec.origCite,
         original: spec.o
       });

@@ -1210,6 +1210,328 @@ body {
   color: var(--green-correct);
 }
 
+/* ── COMPLETION REPORT ─────────────────────────────── */
+.results-note {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.report-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.report-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.report-kicker {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.report-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.report-scoreline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.report-score {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.report-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.report-stat strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.report-stat--correct strong { color: var(--green-correct); }
+.report-stat--wrong strong { color: var(--red-accent); }
+
+.report-note {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.report-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.report-section[hidden] {
+  display: none;
+}
+
+.report-section-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--slate);
+}
+
+.report-howto {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.report-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.breakdown-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px auto;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.84rem;
+}
+
+.breakdown-label {
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.breakdown-bar {
+  display: block;
+  height: 8px;
+  background: var(--surface-alt);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.breakdown-fill {
+  display: block;
+  height: 100%;
+  background: var(--slate);
+}
+
+.breakdown-fill--below { background: var(--red-accent); }
+.breakdown-fill--passing { background: var(--slate); }
+.breakdown-fill--target { background: var(--target-gold); }
+.breakdown-fill--strong { background: var(--green-correct); }
+
+.breakdown-count {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.report-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.report-card--correct { border-left-color: var(--green-correct); }
+.report-card--incorrect { border-left-color: var(--red-accent); }
+.report-card--unanswered { border-left-color: var(--target-gold); }
+
+.report-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.report-card-num {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--slate);
+}
+
+.report-status {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+}
+
+.report-status--correct {
+  background: var(--green-light);
+  color: var(--green-correct);
+}
+
+.report-status--incorrect {
+  background: var(--red-light);
+  color: var(--red-accent);
+}
+
+.report-status--unanswered {
+  background: var(--target-gold-bg);
+  color: var(--target-gold);
+}
+
+.report-question {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.question-illustration--report img {
+  max-width: 180px;
+}
+
+.report-card .choice {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  min-height: 0;
+}
+
+.choice-tag {
+  margin-left: auto;
+  align-self: center;
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.choice-tag--correct { color: var(--green-correct); }
+.choice-tag--yours { color: var(--red-accent); }
+
+.report-answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.report-your { color: var(--red-accent); }
+.report-your--right { color: var(--green-correct); }
+.report-your--none { color: var(--target-gold); }
+.report-correct { color: var(--green-correct); }
+
+.report-lookup,
+.report-why {
+  background: var(--surface-alt);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.report-lookup ul {
+  margin: 0 0 0 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.report-lookup-title {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--slate);
+}
+
+.report-lookup-note {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.report-flags {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.report-empty {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 20px 0;
+}
+
+.report-actions {
+  max-width: 360px;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .view,
+  .modal-overlay,
+  #whats-new-overlay {
+    display: none !important;
+  }
+
+  #view-report.active {
+    display: block !important;
+    max-width: none;
+    padding: 0;
+  }
+
+  .report-topbar,
+  .report-filters,
+  .report-actions {
+    display: none !important;
+  }
+
+  .report-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
 /* ── MODAL ─────────────────────────────────────────── */
 .modal-overlay {
   position: fixed;
