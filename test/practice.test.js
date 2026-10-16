@@ -250,6 +250,34 @@ test("illustrated items are scorable only when a drawn asset is attached", () =>
   referenced.forEach((asset) => assert.ok(existsSync(join(root, asset)), asset));
 });
 
+test("every exam-prep statement is a renderable { number, text } object", () => {
+  const allBook = HazmatCatalog.bookExams.flatMap((e) => e.questions);
+  const withStatements = allBook.filter((q) => q.statements.length);
+  assert.equal(withStatements.length, 6);
+  withStatements.forEach((q) => {
+    q.statements.forEach((statement, index) => {
+      assert.equal(typeof statement, "object", q.id);
+      assert.equal(statement.number, index + 1, q.id);
+      assert.equal(typeof statement.text, "string", q.id);
+      assert.doesNotMatch(statement.text, /^Statement\s+\d/i, q.id);
+      if (!statement.missing) assert.ok(statement.text.length > 0, q.id + " statement " + statement.number);
+    });
+  });
+  // Items that direct the reader to statements must carry them (I-1 #40 holds a missing statement 2).
+  allBook.forEach((q) => {
+    if (/read the (following )?statements/i.test(q.question)) {
+      assert.equal(q.statements.length, 3, q.id);
+    }
+  });
+  // The two records written in the compact string form render the same as the object form.
+  const heat = byNumber(20, "operations-ii2");
+  assert.equal(heat.statements[0].text, "Heat exhaustion occurs because the body is unable to dissipate excessive heat and becomes overheated.");
+  assert.equal(heat.statements[2].missing, false);
+  const vapor = byNumber(67, "awareness-i3");
+  assert.equal(vapor.statements[1].text, "Vapor dispersion is always a good idea when flammable substances are the problem.");
+  assert.equal(byNumber(40, "awareness-i1").statements[1].missing, true);
+});
+
 test("keeps the awareness I-1 corrections and holds the known problem items in the new exams", () => {
   // I-2
   assert.equal(byNumber(3, "awareness-i2").reviewStatus, "needs_review");

@@ -21,6 +21,15 @@
 
   var versions = [
     {
+      version: "1.6.1",
+      date: "2026-10-16",
+      title: "Missing statements restored on two exam-prep questions",
+      items: [
+        "Examination I-3 #67 (vapor dispersion) and Examination II-2 #20 (excessive heat disorders) said \"Read the following statements\" but showed no statements. All three statements now appear above the choices in practice tests, exam mode, missed-question review, and the Full Review report.",
+        "Every exam-prep question that directs you to read statements was checked; all six carry their statements. I-1 #40 is still held for review because statement 2 is missing from the source scan."
+      ]
+    },
+    {
       version: "1.6.0",
       date: "2026-10-16",
       title: "Awareness-only and Operations-only practice tests",

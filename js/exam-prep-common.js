@@ -65,6 +65,33 @@
     return { section: match[1], topic: match[2], referenceId: match[3] };
   }
 
+  /**
+   * Statements may be written either as { number, text, missing } objects or
+   * as plain strings such as "Statement 2: ...". The renderer only reads
+   * objects, so every entry is normalized here. A leading "Statement N:" label
+   * on a string is used for the number and removed from the displayed text,
+   * because the <ol> already numbers each statement.
+   */
+  function normalizeStatements(statements) {
+    return (statements || []).map(function (statement, index) {
+      if (statement && typeof statement === "object") {
+        return {
+          number: statement.number || index + 1,
+          text: statement.text || "",
+          missing: statement.missing === true
+        };
+      }
+      var text = statement == null ? "" : String(statement).trim();
+      var number = index + 1;
+      var match = /^Statement\s+(\d+)\s*[:.]\s*/i.exec(text);
+      if (match) {
+        number = parseInt(match[1], 10);
+        text = text.slice(match[0].length).trim();
+      }
+      return { number: number, text: text, missing: text === "" };
+    });
+  }
+
   function createExam(config) {
     var examId = config.examId;
     var idPrefix = config.idPrefix;
@@ -85,7 +112,7 @@
         answerKeyNumber: spec.n,
         keyHeader: spec.keyHeader,
         question: spec.question,
-        statements: spec.statements || [],
+        statements: normalizeStatements(spec.statements),
         choices: spec.choices,
         correctChoiceId: eligible ? answer : (status === "unresolved" ? null : answer),
         sourceAnswerLetter: spec.sourceAnswer == null ? answer : spec.sourceAnswer,
