@@ -47,7 +47,10 @@
     examGuessed: {},
     examRevealed: {},
     examSourceIds: [],
-    examBookFilter: "all",
+    examBookFilter: "all",     // recorded with the session when a test starts
+    examLevelFilter: "both",   // recorded with the session when a test starts
+    pickBookFilter: "all",     // current selection in the generator panel
+    pickLevelFilter: "both",   // current selection in the generator panel
     examRequestedCount: 0,
     examSourceCounts: [],
     examCompletedAt: null,
@@ -480,12 +483,26 @@
   function selectedBookFilter() {
     var select = $("test-book-filter");
     var value = select && select.value ? select.value : "all";
-    state.examBookFilter = value;
+    state.pickBookFilter = value;
     return value;
   }
 
+  function selectedLevelFilter() {
+    var selected = document.querySelector('input[name="test-level"]:checked');
+    var value = HazmatCatalog.normalizeLevelFilter(selected ? selected.value : "both");
+    state.pickLevelFilter = value;
+    return value;
+  }
+
+  function setLevelFilterValue(value) {
+    var level = HazmatCatalog.normalizeLevelFilter(value);
+    var radio = document.querySelector('input[name="test-level"][value="' + level + '"]');
+    if (radio) radio.checked = true;
+    state.pickLevelFilter = level;
+  }
+
   function poolOptions() {
-    return { bookFilter: selectedBookFilter() };
+    return { bookFilter: selectedBookFilter(), levelFilter: selectedLevelFilter() };
   }
 
   function currentPools() {
@@ -497,7 +514,7 @@
     if (!select) return;
     select.value = value || "all";
     if (select.value !== (value || "all")) select.value = "all";
-    state.examBookFilter = select.value;
+    state.pickBookFilter = select.value;
   }
 
   function fillBookFilterSelect(select) {
@@ -541,7 +558,8 @@
   function refreshEligibility() {
     var ids = selectedSourceIds();
     $("book-filter-row").hidden = !bookSelected(ids);
-    var pools = HazmatCatalog.poolsForSources(ids, poolOptions());
+    var options = poolOptions();
+    var pools = HazmatCatalog.poolsForSources(ids, options);
     var available = TestEngine.countEligible(pools);
     var parts = pools.map(function (pool) {
       var eligible = TestEngine.eligibleQuestions(pool.questions);
@@ -555,10 +573,36 @@
       return label + ": " + count;
     });
     var text = "Eligible: " + available + " unique question" + (available === 1 ? "" : "s");
+    if (options.levelFilter !== "both") text += ", " + HazmatCatalog.levelFilterLabel(options.levelFilter).toLowerCase();
     if (parts.length) text += " (" + parts.join("; ") + ")";
     $("eligible-count").textContent = text;
+    renderLevelNote(ids, options);
     $("test-limit-message").hidden = true;
     $("btn-generate-all").hidden = true;
+  }
+
+  function renderLevelNote(ids, options) {
+    var note = $("level-note");
+    if (!note) return;
+    var level = options.levelFilter;
+    var bookFilter = options.bookFilter || "all";
+    var conflict = bookSelected(ids) && level !== "both" &&
+      (bookFilter === "awareness" || bookFilter === "operations") && bookFilter !== level;
+    if (conflict) {
+      note.hidden = false;
+      note.textContent = "The book exam filter is set to " + HazmatCatalog.bookFilterLabel(bookFilter) +
+        ", which has no " + level + " questions. Change one of the two to get book questions.";
+      return;
+    }
+    if (level === "both") {
+      note.hidden = true;
+      note.textContent = "";
+      return;
+    }
+    note.hidden = false;
+    note.textContent = level === "awareness"
+      ? "Handout questions tagged Awareness (including ones tagged Awareness and Operations) and the book\u2019s Awareness exams I-1, I-2, and I-3."
+      : "Handout questions tagged Operations (including ones tagged Awareness and Operations) and the book\u2019s Operations exams II-1, II-2, and II-3.";
   }
 
   function showLimit(available) {
@@ -600,8 +644,8 @@
 
   function startGeneratedTest(count) {
     var ids = selectedSourceIds();
-    var bookFilter = selectedBookFilter();
-    var pools = HazmatCatalog.poolsForSources(ids, { bookFilter: bookFilter });
+    var options = poolOptions();
+    var pools = HazmatCatalog.poolsForSources(ids, options);
     var result = TestEngine.generateTest(pools, count);
     if (!result.ok) {
       showLimit(result.available);
@@ -610,7 +654,8 @@
     beginTest(result.questions, {
       mode: selectedTestMode(),
       sourceIds: ids,
-      bookFilter: bookFilter,
+      bookFilter: options.bookFilter,
+      levelFilter: options.levelFilter,
       requestedCount: count,
       sourceCounts: result.sourceCounts
     });
@@ -629,6 +674,7 @@
     state.examMode = options.mode || "exam";
     state.examSourceIds = options.sourceIds || [];
     state.examBookFilter = options.bookFilter || "all";
+    state.examLevelFilter = HazmatCatalog.normalizeLevelFilter(options.levelFilter);
     state.examRequestedCount = options.requestedCount || questions.length;
     state.examSourceCounts = options.sourceCounts || TestEngine.sourceCounts(questions);
     saveState();
@@ -833,6 +879,9 @@
     if (bookSelected(state.examSourceIds) && state.examBookFilter && state.examBookFilter !== "all") {
       parts.push(HazmatCatalog.bookFilterLabel(state.examBookFilter));
     }
+    if (state.examLevelFilter && state.examLevelFilter !== "both") {
+      parts.push(HazmatCatalog.levelFilterLabel(state.examLevelFilter));
+    }
     parts.push(state.examQuestions.length + " questions");
     parts.push(state.examMode === "practice" ? "Practice mode" : "Exam mode");
     return parts.join(" · ");
@@ -876,6 +925,7 @@
       mode: state.examMode,
       sourceIds: state.examSourceIds,
       bookFilter: state.examBookFilter,
+      levelFilter: state.examLevelFilter,
       requestedCount: missed.length,
       sourceCounts: TestEngine.sourceCounts(missed)
     });
@@ -910,6 +960,7 @@
     var modeRadio = document.querySelector('input[name="test-mode"][value="' + state.examMode + '"]');
     if (modeRadio) modeRadio.checked = true;
     setBookFilterValue(state.examBookFilter);
+    setLevelFilterValue(state.examLevelFilter);
     refreshEligibility();
     requestExam(count);
   }
@@ -1438,6 +1489,7 @@
     state.examMode = session.mode || "exam";
     state.examSourceIds = session.sourceIds || [];
     state.examBookFilter = session.bookFilter || "all";
+    state.examLevelFilter = HazmatCatalog.normalizeLevelFilter(session.levelFilter);
     state.examRequestedCount = session.requestedCount || state.examQuestions.length;
     state.examInProgress = !!session.inProgress;
     state.examSubmitted = !!session.submitted;
@@ -1456,7 +1508,8 @@
         studyFilterExam: state.studyFilterExam,
         studyShuffled: state.studyShuffled,
         studySeed: state.studySeed,
-        examBookFilter: state.examBookFilter,
+        examBookFilter: state.pickBookFilter,
+        examLevelFilter: state.pickLevelFilter,
         examCompletedAt: state.examCompletedAt,
         practiceSession: TestEngine.serializeSession({
           questions: state.examQuestions,
@@ -1468,6 +1521,7 @@
           mode: state.examMode,
           sourceIds: state.examSourceIds,
           bookFilter: state.examBookFilter,
+          levelFilter: state.examLevelFilter,
           requestedCount: state.examRequestedCount,
           inProgress: state.examInProgress,
           submitted: state.examSubmitted
@@ -1492,7 +1546,8 @@
       state.studyFilterExam = data.studyFilterExam || "all";
       state.studyShuffled = data.studyShuffled || false;
       state.studySeed = data.studySeed || null;
-      state.examBookFilter = data.examBookFilter || "all";
+      state.pickBookFilter = data.examBookFilter || "all";
+      state.pickLevelFilter = HazmatCatalog.normalizeLevelFilter(data.examLevelFilter);
       state.examCompletedAt = data.examCompletedAt || null;
 
       if (data.practiceSession && data.practiceSession.questionIds) {
@@ -1557,11 +1612,15 @@
           state.examSubmitted = false;
           state.examSourceIds = [];
           state.examBookFilter = "all";
+          state.examLevelFilter = "both";
+          state.pickBookFilter = "all";
+          state.pickLevelFilter = "both";
           state.examRequestedCount = 0;
           state.examSourceCounts = [];
           state.examCompletedAt = null;
           state.studyCompletedKey = "";
           setBookFilterValue("all");
+          setLevelFilterValue("both");
           updateResumeButton();
           refreshEligibility();
         }}
@@ -1964,7 +2023,8 @@
 
   function renderBookFilters() {
     fillBookFilterSelect($("test-book-filter"));
-    setBookFilterValue(state.examBookFilter);
+    setBookFilterValue(state.pickBookFilter);
+    setLevelFilterValue(state.pickLevelFilter);
 
     var studySelect = $("filter-exam");
     fillBookFilterSelect(studySelect);
@@ -2021,9 +2081,16 @@
       input.addEventListener("change", refreshEligibility);
     });
     $("test-book-filter").addEventListener("change", function () {
-      state.examBookFilter = this.value || "all";
+      state.pickBookFilter = this.value || "all";
       refreshEligibility();
       saveState();
+    });
+    document.querySelectorAll('input[name="test-level"]').forEach(function (input) {
+      input.addEventListener("change", function () {
+        state.pickLevelFilter = HazmatCatalog.normalizeLevelFilter(this.value);
+        refreshEligibility();
+        saveState();
+      });
     });
 
     // ── STUDY ──

@@ -365,6 +365,62 @@ test("book filters narrow the pool before eligible counts", () => {
   assert.equal(TestEngine.countEligible(handoutsOnly), HANDOUT_UNIQUE);
 });
 
+test("level filter narrows both sources by awareness or operations", () => {
+  const levelPools = (ids, levelFilter, bookFilter) =>
+    HazmatCatalog.poolsForSources(ids, { bookFilter: bookFilter || "all", levelFilter });
+
+  // "both" is a no-op and matches the unfiltered pools.
+  assert.equal(TestEngine.countEligible(levelPools([HANDOUTS], "both")), HANDOUT_UNIQUE);
+  assert.equal(TestEngine.countEligible(levelPools([BOOK], "both")), BOOK_DISTINCT);
+  assert.equal(HazmatCatalog.normalizeLevelFilter("garbage"), "both");
+
+  // Book: level filter is equivalent to the awareness/operations exam groups.
+  assert.equal(TestEngine.countEligible(levelPools([BOOK], "awareness")), TestEngine.countEligible(pools([BOOK], "awareness")));
+  assert.equal(TestEngine.countEligible(levelPools([BOOK], "operations")), TestEngine.countEligible(pools([BOOK], "operations")));
+
+  // Handouts: every picked question carries the level word; dual-tagged items appear in both.
+  const handout = HazmatCatalog.sourceById(HANDOUTS).questions;
+  const dual = handout.filter((q) => /awareness/i.test(q.level) && /operations/i.test(q.level));
+  assert.ok(dual.length > 0);
+  const hAware = levelPools([HANDOUTS], "awareness")[0].questions;
+  const hOps = levelPools([HANDOUTS], "operations")[0].questions;
+  hAware.forEach((q) => assert.match(q.level, /awareness/i));
+  hOps.forEach((q) => assert.match(q.level, /operations/i));
+  dual.forEach((q) => {
+    assert.ok(hAware.includes(q));
+    assert.ok(hOps.includes(q));
+  });
+  const technicianOnly = handout.filter((q) => !/awareness|operations/i.test(q.level));
+  technicianOnly.forEach((q) => {
+    assert.ok(!hAware.includes(q));
+    assert.ok(!hOps.includes(q));
+  });
+  assert.ok(hAware.length + hOps.length - dual.length + technicianOnly.length === handout.length);
+
+  // Combined sources honour the filter and still produce a full test.
+  const combined = levelPools([HANDOUTS, BOOK], "awareness");
+  assert.equal(combined.length, 2);
+  combined.forEach((pool) => assert.equal(pool.levelFilter, "awareness"));
+  const run = TestEngine.generateTest(combined, 100, TestEngine.lcg(9));
+  assert.equal(run.ok, true);
+  run.questions.forEach((q) => assert.ok(HazmatCatalog.matchesLevel(q, "awareness")));
+  assert.ok(run.questions.some((q) => q.sourceId === HANDOUTS));
+  assert.ok(run.questions.some((q) => q.sourceId === BOOK));
+
+  // A conflicting book group yields no book questions rather than throwing.
+  const conflict = levelPools([BOOK], "awareness", "operations");
+  assert.equal(TestEngine.countEligible(conflict), 0);
+
+  // The level choice survives a save/restore round trip.
+  const saved = TestEngine.serializeSession({
+    questions: run.questions, sourceIds: [HANDOUTS, BOOK], bookFilter: "all", levelFilter: "awareness",
+    requestedCount: 100, inProgress: true
+  });
+  assert.equal(saved.levelFilter, "awareness");
+  assert.equal(TestEngine.restoreSession(saved, HazmatCatalog.byId).levelFilter, "awareness");
+  assert.equal(TestEngine.restoreSession({ questionIds: [] }, HazmatCatalog.byId).levelFilter, "both");
+});
+
 test("lists every instructor handout quiz from the source packet", () => {
   const source = HazmatCatalog.sourceById("instructor-handouts");
   const expected = [

@@ -282,6 +282,7 @@
       mode: session.mode || "exam",
       sourceIds: session.sourceIds || [],
       bookFilter: session.bookFilter || "all",
+      levelFilter: session.levelFilter || "both",
       requestedCount: session.requestedCount,
       inProgress: !!session.inProgress,
       submitted: !!session.submitted
@@ -305,6 +306,7 @@
       mode: data.mode || "exam",
       sourceIds: data.sourceIds || [],
       bookFilter: data.bookFilter || "all",
+      levelFilter: data.levelFilter || "both",
       requestedCount: data.requestedCount,
       inProgress: !!data.inProgress,
       submitted: !!data.submitted

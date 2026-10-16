@@ -21,6 +21,16 @@
 
   var versions = [
     {
+      version: "1.6.0",
+      date: "2026-10-16",
+      title: "Awareness-only and Operations-only practice tests",
+      items: [
+        "Practice Tests has a new Level choice: Awareness and Operations, Awareness only, or Operations only. It works with every source, including Both Sources.",
+        "Awareness only pulls handout questions tagged Awareness plus book exams I-1, I-2, and I-3. Operations only pulls handout questions tagged Operations plus book exams II-1, II-2, and II-3. Handout questions tagged both levels appear in either.",
+        "The eligible-question count and the completion report show which level you chose, and Generate Another Test keeps it."
+      ]
+    },
+    {
       version: "1.5.0",
       date: "2026-10-12",
       title: "Full review when you finish a test or study set",

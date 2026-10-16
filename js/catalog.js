@@ -268,14 +268,64 @@
     return "All book exams";
   }
 
+  /* ── Level filter (applies to every source) ─────────────────────────
+     Handout items carry a free-text `level` ("Awareness", "Operations",
+     "Awareness, Operations", occasionally "Technician" etc.). Book items
+     carry `examLevel` ("awareness" | "operations"). A question matches a
+     level when that word appears in whichever field it has; "both" means
+     no filtering at all, so Technician-only handout items stay in. */
+
+  var LEVEL_FILTERS = [
+    { value: "both", label: "Awareness and Operations" },
+    { value: "awareness", label: "Awareness only" },
+    { value: "operations", label: "Operations only" }
+  ];
+
+  function normalizeLevelFilter(value) {
+    return value === "awareness" || value === "operations" ? value : "both";
+  }
+
+  function questionLevelText(question) {
+    if (!question) return "";
+    if (question.level) return String(question.level);
+    if (question.examLevel) return String(question.examLevel);
+    return "";
+  }
+
+  function matchesLevel(question, levelFilter) {
+    var level = normalizeLevelFilter(levelFilter);
+    if (level === "both") return true;
+    return questionLevelText(question).toLowerCase().indexOf(level) !== -1;
+  }
+
+  function filterByLevel(questions, levelFilter) {
+    var level = normalizeLevelFilter(levelFilter);
+    if (level === "both") return questions;
+    return questions.filter(function (question) { return matchesLevel(question, level); });
+  }
+
+  function levelFilterLabel(value) {
+    var level = normalizeLevelFilter(value);
+    for (var i = 0; i < LEVEL_FILTERS.length; i++) {
+      if (LEVEL_FILTERS[i].value === level) return LEVEL_FILTERS[i].label;
+    }
+    return LEVEL_FILTERS[0].label;
+  }
+
+  function sourceQuestions(source, options) {
+    var bookFilter = options && options.bookFilter;
+    var levelFilter = options && options.levelFilter;
+    var base = source.id === BOOK_SOURCE_ID ? bookQuestionsForFilter(bookFilter) : source.questions;
+    return filterByLevel(base, levelFilter);
+  }
+
   function questionsForSources(sourceIds, options) {
     var wanted = {};
     (sourceIds || []).forEach(function (id) { wanted[id] = true; });
-    var filter = options && options.bookFilter;
     var questions = [];
     sources.forEach(function (source) {
       if (!wanted[source.id]) return;
-      questions = questions.concat(source.id === BOOK_SOURCE_ID ? bookQuestionsForFilter(filter) : source.questions);
+      questions = questions.concat(sourceQuestions(source, options));
     });
     return questions;
   }
@@ -284,6 +334,7 @@
     var wanted = {};
     (sourceIds || []).forEach(function (id) { wanted[id] = true; });
     var filter = options && options.bookFilter;
+    var levelFilter = normalizeLevelFilter(options && options.levelFilter);
     return sources.filter(function (source) {
       return wanted[source.id];
     }).map(function (source) {
@@ -292,7 +343,8 @@
         sourceId: source.id,
         label: source.label,
         bookFilter: isBook ? (filter || "all") : null,
-        questions: isBook ? bookQuestionsForFilter(filter) : source.questions
+        levelFilter: levelFilter,
+        questions: sourceQuestions(source, options)
       };
     });
   }
@@ -393,6 +445,11 @@
     bookQuestionsForFilter: bookQuestionsForFilter,
     questionsForSources: questionsForSources,
     poolsForSources: poolsForSources,
+    levelFilters: LEVEL_FILTERS,
+    normalizeLevelFilter: normalizeLevelFilter,
+    matchesLevel: matchesLevel,
+    filterByLevel: filterByLevel,
+    levelFilterLabel: levelFilterLabel,
     duplicateGroups: duplicateGroups,
     canonicalKey: canonicalKey,
     normalizeText: normalizeText,

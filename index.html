@@ -63,7 +63,7 @@
 
       <section class="source-panel" id="panel-tests" role="tabpanel" aria-labelledby="tab-tests" hidden>
         <h2 class="source-title">Practice Tests</h2>
-        <p class="source-desc">Choose a source, then generate a test. A test uses each question once.</p>
+        <p class="source-desc">Choose a source and a level, then generate a test. A test uses each question once.</p>
 
         <fieldset class="option-set">
           <legend>Question source</legend>
@@ -75,6 +75,14 @@
           <label class="book-filter-label" for="test-book-filter">Book exams to draw from</label>
           <select id="test-book-filter" class="filter-select"></select>
         </div>
+
+        <fieldset class="option-set">
+          <legend>Level</legend>
+          <label class="option"><input type="radio" name="test-level" value="both" checked> Awareness and Operations</label>
+          <label class="option"><input type="radio" name="test-level" value="awareness"> Awareness only</label>
+          <label class="option"><input type="radio" name="test-level" value="operations"> Operations only</label>
+          <p class="source-note level-note" id="level-note" hidden></p>
+        </fieldset>
         <p class="source-note" id="eligible-count" aria-live="polite"></p>
         <p class="source-note" id="source-unavailable" hidden></p>
 

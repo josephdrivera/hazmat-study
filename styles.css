@@ -259,6 +259,15 @@ body {
   display: none;
 }
 
+.level-note {
+  margin-top: 2px;
+  padding-left: 26px;
+}
+
+.level-note[hidden] {
+  display: none;
+}
+
 .book-filter-label {
   font-size: 0.78rem;
   font-weight: 700;
