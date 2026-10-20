@@ -244,6 +244,14 @@
   }
 
   function examIdsForBookFilter(filter) {
+    if (Array.isArray(filter)) {
+      var wanted = {};
+      filter.forEach(function (value) {
+        examIdsForBookFilter(value).forEach(function (id) { wanted[id] = true; });
+      });
+      return bookExams.filter(function (exam) { return wanted[exam.id]; })
+        .map(function (exam) { return exam.id; });
+    }
     var value = filter || "all";
     if (value === "all") return bookExams.map(function (exam) { return exam.id; });
     if (value === "awareness" || value === "operations") {
@@ -254,6 +262,26 @@
       .map(function (exam) { return exam.id; });
   }
 
+  function sameExamIds(left, right) {
+    if (left.length !== right.length) return false;
+    for (var i = 0; i < left.length; i++) {
+      if (left[i] !== right[i]) return false;
+    }
+    return true;
+  }
+
+  /* Collapse a selection to the shortest saved form: "all", a level group,
+     one exam id, or a list of exam ids in book order. */
+  function normalizeBookFilter(filter) {
+    var ids = examIdsForBookFilter(filter);
+    if (!ids.length) return [];
+    if (sameExamIds(ids, examIdsForBookFilter("all"))) return "all";
+    if (sameExamIds(ids, examIdsForBookFilter("awareness"))) return "awareness";
+    if (sameExamIds(ids, examIdsForBookFilter("operations"))) return "operations";
+    if (ids.length === 1) return ids[0];
+    return ids;
+  }
+
   function bookQuestionsForFilter(filter) {
     var wanted = {};
     examIdsForBookFilter(filter).forEach(function (id) { wanted[id] = true; });
@@ -261,6 +289,17 @@
   }
 
   function bookFilterLabel(filter) {
+    if (Array.isArray(filter)) {
+      var normalized = normalizeBookFilter(filter);
+      if (!Array.isArray(normalized)) return bookFilterLabel(normalized);
+      if (!normalized.length) return "No book exams";
+      var names = normalized.map(function (id) {
+        var exam = bookExamById(id);
+        var name = exam ? (exam.shortLabel || exam.label || id) : id;
+        return String(name).replace(/^Examination\s+/, "");
+      });
+      return "Examinations " + names.join(", ");
+    }
     var options = bookFilterOptions();
     for (var i = 0; i < options.length; i++) {
       if (options[i].value === (filter || "all")) return options[i].label;
@@ -441,6 +480,7 @@
     bookExamById: bookExamById,
     bookFilterOptions: bookFilterOptions,
     bookFilterLabel: bookFilterLabel,
+    normalizeBookFilter: normalizeBookFilter,
     examIdsForBookFilter: examIdsForBookFilter,
     bookQuestionsForFilter: bookQuestionsForFilter,
     questionsForSources: questionsForSources,

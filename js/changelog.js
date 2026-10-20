@@ -21,6 +21,32 @@
 
   var versions = [
     {
+      version: "1.9.0",
+      date: "2026-10-20",
+      title: "25-question practice tests",
+      items: [
+        "Added a Generate 25 Questions button between the 10 and 50 options, for a quick test that is longer than 10 questions but shorter than 50."
+      ]
+    },
+    {
+      version: "1.8.0",
+      date: "2026-10-19",
+      title: "Instant answers in practice mode",
+      items: [
+        "In Practice mode, the answer is shown the moment you pick a choice: right or wrong, the source answer, and where to find it. There is no Check answer button to press. Your first pick is the one that counts.",
+        "Exam mode is unchanged. Answers stay hidden until you submit."
+      ]
+    },
+    {
+      version: "1.7.0",
+      date: "2026-10-17",
+      title: "Check more than one book exam",
+      items: [
+        "Book exams to draw from is now a checklist. Check Awareness and Operations together, or any mix of Examinations I-1 through II-3. A test draws from every exam you leave checked.",
+        "Both Sources lists the instructor handouts and the exam-prep book on separate lines, and that choice is remembered the next time you open the page."
+      ]
+    },
+    {
       version: "1.6.1",
       date: "2026-10-16",
       title: "Missing statements restored on two exam-prep questions",

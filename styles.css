@@ -276,6 +276,20 @@ body {
   color: var(--text-secondary);
 }
 
+.book-exam-option--group {
+  font-weight: 600;
+}
+
+.book-exam-option:not(.book-exam-option--group) {
+  padding-left: 26px;
+}
+
+#eligible-count {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .filter-select[hidden] {
   display: none;
 }

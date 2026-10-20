@@ -393,6 +393,46 @@ test("book filters narrow the pool before eligible counts", () => {
   assert.equal(TestEngine.countEligible(handoutsOnly), HANDOUT_UNIQUE);
 });
 
+test("a checked set of book exams draws from every exam in the set", () => {
+  const pair = ["operations-ii2", "awareness-i1"];
+  assert.deepEqual(
+    Array.from(HazmatCatalog.examIdsForBookFilter(pair)),
+    ["awareness-i1", "operations-ii2"]
+  );
+  assert.deepEqual(
+    Array.from(HazmatCatalog.examIdsForBookFilter(["awareness", "operations"])),
+    EXPECTED_EXAMS.map((exam) => exam.id)
+  );
+  assert.deepEqual(Array.from(HazmatCatalog.normalizeBookFilter(pair)), ["awareness-i1", "operations-ii2"]);
+  assert.equal(
+    HazmatCatalog.normalizeBookFilter(EXPECTED_EXAMS.map((exam) => exam.id)),
+    "all"
+  );
+  assert.equal(HazmatCatalog.normalizeBookFilter(["awareness"]), "awareness");
+  assert.equal(HazmatCatalog.bookFilterLabel(pair), "Examinations I-1, II-2");
+  assert.equal(HazmatCatalog.bookFilterLabel([]), "No book exams");
+
+  const mixed = pools([HANDOUTS, BOOK], pair);
+  assert.equal(mixed.length, 2);
+  const bookPool = mixed.find((pool) => pool.sourceId === BOOK);
+  assert.deepEqual(bookPool.bookFilter, pair);
+  const result = TestEngine.generateTest(mixed, 40, TestEngine.lcg(4));
+  assert.equal(result.ok, true);
+  const counts = Object.fromEntries(result.sourceCounts.map((entry) => [entry.sourceId, entry.count]));
+  assert.equal(counts[HANDOUTS], 20);
+  assert.equal(counts[BOOK], 20);
+  result.questions.filter((question) => question.sourceId === BOOK).forEach((question) => {
+    assert.ok(pair.includes(question.examId), question.examId);
+  });
+
+  const available = TestEngine.countEligible(pools([BOOK], pair));
+  const i1 = TestEngine.countEligible(pools([BOOK], "awareness-i1"));
+  const ii2 = TestEngine.countEligible(pools([BOOK], "operations-ii2"));
+  assert.ok(available <= i1 + ii2);
+  assert.ok(available > i1);
+  assert.ok(available > ii2);
+});
+
 test("level filter narrows both sources by awareness or operations", () => {
   const levelPools = (ids, levelFilter, bookFilter) =>
     HazmatCatalog.poolsForSources(ids, { bookFilter: bookFilter || "all", levelFilter });
@@ -495,7 +535,7 @@ test("generates unique questions and refuses a size the bank cannot fill", () =>
   assert.equal(tooBig.questions.length, 0);
   assert.match(tooBig.message, new RegExp("Only " + BOOK_DISTINCT + " unique questions are available"));
 
-  [10, 50, 100, 150].forEach((size) => {
+  [10, 25, 50, 100, 150].forEach((size) => {
     const result = TestEngine.generateTest(prep, size, TestEngine.lcg(3));
     assert.equal(result.ok, true, "size " + size);
     assert.equal(result.questions.length, size);
