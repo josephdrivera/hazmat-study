@@ -21,6 +21,14 @@
 
   var versions = [
     {
+      version: "2.1.1",
+      date: "2026-11-04",
+      title: "Fire Fighter II tucked away for now",
+      items: [
+        "The header switch shows HazMat and Fire Fighter I only. Fire Fighter II's chapter stays in the site and comes back when that course starts."
+      ]
+    },
+    {
       version: "2.1.0",
       date: "2026-11-04",
       title: "Fire Fighter I practice tests from the exam-prep book",

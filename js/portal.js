@@ -40,7 +40,7 @@
       if (!raw) return emptyStore();
       var data = JSON.parse(raw) || {};
       return {
-        program: programs.byId[data.program] ? data.program : programs.defaultId,
+        program: programs.byId[data.program] && !programs.byId[data.program].hidden ? data.program : programs.defaultId,
         chapters: data.chapters || {},
         recent: Array.isArray(data.recent) ? data.recent : [],
         history: Array.isArray(data.history) ? data.history : []
@@ -194,7 +194,7 @@
   /* ─── 2. PROGRAM SWITCH AND HOME ────────────────── */
 
   function setProgram(id) {
-    if (!programs.byId[id] || id === store.program) {
+    if (!programs.byId[id] || programs.byId[id].hidden || id === store.program) {
       showView("view-home");
       return;
     }
@@ -215,7 +215,7 @@
   function renderSwitch() {
     var nav = $("program-switch");
     if (!nav) return;
-    nav.innerHTML = programs.list.map(function (p) {
+    nav.innerHTML = programs.list.filter(function (p) { return !p.hidden; }).map(function (p) {
       var current = p.id === store.program;
       return '<button type="button" class="program-tab" data-program="' + esc(p.id) + '"' +
         (current ? ' aria-current="true"' : "") + '>' +
@@ -657,6 +657,7 @@
     }
     var hits = [];
     content.chapters.forEach(function (c) {
+      if (programs.get(c.program).hidden) return;
       var title = chapterLabel(c);
       var hay = (title + " " + (c.topics || []).join(" ") + " " + (c.body || "")).toLowerCase();
       if (hay.indexOf(query) !== -1) {

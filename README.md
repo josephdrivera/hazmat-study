@@ -1,6 +1,6 @@
 # Academy Study — HazMat, Fire Fighter I, and Fire Fighter II
 
-Study portal for Hartford County Regional Fire School material. Built for firefighter academy students preparing for the state exams. Three programs share one shell: HazMat Awareness / Operations (instructor handouts, the PTS exam-prep book, practice tests), Fire Fighter I (the PTS exam-prep book's three examinations, chapter notes, practice tests), and Fire Fighter II (chapter notes, with practice questions to follow).
+Study portal for Hartford County Regional Fire School material. Built for firefighter academy students preparing for the state exams. Three programs share one shell: HazMat Awareness / Operations (instructor handouts, the PTS exam-prep book, practice tests), Fire Fighter I (the PTS exam-prep book's three examinations, chapter notes, practice tests), and Fire Fighter II (one chapter of notes so far; hidden from the header with `hidden: true` in `js/programs.js` until it is in use).
 
 This is a private study copy. The deployment is meant to stay access-restricted to its owner; the exam-prep banks are transcribed from books the owner holds and are not for public distribution.
 

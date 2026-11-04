@@ -5,8 +5,9 @@
  * a chapter library under content/<id>/, a glossary filter, and a resource
  * list. `sources` says the program has question banks to study; `handouts`
  * says one of them is the instructor handout packet; `tests` turns on the
- * practice-test builder. Fire Fighter II gains all three when its exam
- * questions are supplied.
+ * practice-test builder. `hidden` keeps a program's data in place but takes
+ * it out of the header switch and search. Fire Fighter II is hidden until it
+ * is in use.
  */
 (function () {
   "use strict";
@@ -46,6 +47,7 @@
     },
     {
       id: "firefighter-2",
+      hidden: true, // kept for later; not shown in the header until its course material is in use
       short: "Fire Fighter II",
       label: "Fire Fighter II",
       sub: "NFPA 1001",
@@ -66,6 +68,7 @@
 
   globalThis.StudyPrograms = {
     list: list,
+    visible: list.filter(function (program) { return !program.hidden; }),
     byId: byId,
     defaultId: "hazmat",
     get: function (id) { return byId[id] || byId["hazmat"]; }
