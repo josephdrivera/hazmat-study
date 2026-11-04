@@ -22,6 +22,7 @@
   var BOOK_SOURCE_ID = "hazardous-materials-exam-prep";
   var BOOK_SOURCE_LABEL = "Hazardous Materials Exam Prep";
   var HANDOUT_SOURCE_ID = "instructor-handouts";
+  var HANDOUT_PROGRAM_ID = "hazmat";
 
   function normalizeText(value) {
     return String(value == null ? "" : value)
@@ -61,6 +62,7 @@
       id: "handout-" + question.id,
       sourceId: HANDOUT_SOURCE_ID,
       sourceLabel: "Instructor Handouts",
+      programId: HANDOUT_PROGRAM_ID,
       examId: "handout-quiz-" + question.quiz,
       examLabel: "Quiz #" + question.quiz + " — " + question.quizTitle,
       originalNumber: question.originalNumber,
@@ -115,7 +117,12 @@
     return exams;
   }
 
-  /* ── Build the two sources ─────────────────────────────────────────── */
+  /* ── Build the sources ─────────────────────────────────────────────
+     One handout source (HazMat) plus one book source per exam-prep book.
+     Books register through js/exam-prep-common.js; every record carries the
+     sourceId and programId of its book, so the catalog never has to guess
+     which program a question belongs to. sources[1] is always the HazMat
+     book so older callers that assume two sources keep working. */
 
   var handoutQuestions = (globalThis.QUESTION_BANK || []).map(handoutRecord);
 
@@ -128,20 +135,45 @@
     bookQuestions = bookQuestions.concat(bank || []);
   });
 
+  var bookSources = [];
+  var bookSourceIndex = {};
+  function bookSourceFor(question) {
+    var id = question.sourceId || BOOK_SOURCE_ID;
+    if (bookSourceIndex[id] == null) {
+      bookSourceIndex[id] = bookSources.length;
+      bookSources.push({
+        id: id,
+        label: question.sourceLabel || id,
+        kind: "book",
+        programId: question.programId || "hazmat",
+        standard: question.standard || null,
+        exams: [],
+        questions: []
+      });
+    }
+    return bookSources[bookSourceIndex[id]];
+  }
+  // The HazMat book is created first even when its files are not loaded,
+  // so its position in the source list is stable.
+  bookSourceFor({ sourceId: BOOK_SOURCE_ID, sourceLabel: BOOK_SOURCE_LABEL, programId: "hazmat", standard: "NFPA 1072" });
+  bookQuestions.forEach(function (question) {
+    bookSourceFor(question).questions.push(question);
+  });
+  bookSources.forEach(function (source) {
+    source.exams = groupExams(source.questions, bookMetaById);
+  });
+
   var sources = [
     {
       id: HANDOUT_SOURCE_ID,
       label: "Instructor Handouts",
+      kind: "handouts",
+      programId: HANDOUT_PROGRAM_ID,
+      standard: "NFPA 472",
       exams: groupExams(handoutQuestions, {}),
       questions: handoutQuestions
-    },
-    {
-      id: BOOK_SOURCE_ID,
-      label: BOOK_SOURCE_LABEL,
-      exams: groupExams(bookQuestions, bookMetaById),
-      questions: bookQuestions
     }
-  ];
+  ].concat(bookSources);
 
   var allQuestions = handoutQuestions.concat(bookQuestions);
 
@@ -226,39 +258,68 @@
     });
   }
 
-  /* ── Book exam filters ─────────────────────────────────────────────── */
+  /* ── Book exam filters ─────────────────────────────────────────────
+     Every book source has its own filter: "all", a level group when the
+     book's exams carry levels (HazMat: awareness / operations), one exam id,
+     or a list of exam ids in book order. The sourceId argument defaults to
+     the HazMat book so the original call sites keep working. */
 
   var bookSource = sources[1];
   var bookExams = bookSource.exams;
 
-  function bookFilterOptions() {
-    var options = [
-      { value: "all", label: "All book exams", kind: "group" },
-      { value: "awareness", label: "Awareness only (I-1, I-2, I-3)", kind: "group" },
-      { value: "operations", label: "Operations only (II-1, II-2, II-3)", kind: "group" }
-    ];
-    bookExams.forEach(function (exam) {
+  function bookSourceById(sourceId) {
+    var id = sourceId || BOOK_SOURCE_ID;
+    for (var i = 0; i < bookSources.length; i++) {
+      if (bookSources[i].id === id) return bookSources[i];
+    }
+    return null;
+  }
+
+  function examsForSource(sourceId) {
+    var source = bookSourceById(sourceId);
+    return source ? source.exams : [];
+  }
+
+  function levelGroupsFor(sourceId) {
+    var exams = examsForSource(sourceId);
+    var levels = unique(exams.map(function (exam) { return exam.level; }).filter(Boolean));
+    if (levels.length < 2) return [];
+    return levels.map(function (level) {
+      var names = exams.filter(function (exam) { return exam.level === level; }).map(function (exam) {
+        return String(exam.shortLabel || exam.id).replace(/^Examination\s+/, "");
+      });
+      var title = level.charAt(0).toUpperCase() + level.slice(1);
+      return { value: level, label: title + " only (" + names.join(", ") + ")", kind: "group", level: level };
+    });
+  }
+
+  function bookFilterOptions(sourceId) {
+    var exams = examsForSource(sourceId);
+    var options = [{ value: "all", label: "All book exams", kind: "group" }].concat(levelGroupsFor(sourceId));
+    exams.forEach(function (exam) {
       options.push({ value: exam.id, label: exam.shortLabel, kind: "exam", level: exam.level });
     });
     return options;
   }
 
-  function examIdsForBookFilter(filter) {
+  function examIdsForBookFilter(filter, sourceId) {
+    var exams = examsForSource(sourceId);
     if (Array.isArray(filter)) {
       var wanted = {};
       filter.forEach(function (value) {
-        examIdsForBookFilter(value).forEach(function (id) { wanted[id] = true; });
+        examIdsForBookFilter(value, sourceId).forEach(function (id) { wanted[id] = true; });
       });
-      return bookExams.filter(function (exam) { return wanted[exam.id]; })
+      return exams.filter(function (exam) { return wanted[exam.id]; })
         .map(function (exam) { return exam.id; });
     }
     var value = filter || "all";
-    if (value === "all") return bookExams.map(function (exam) { return exam.id; });
-    if (value === "awareness" || value === "operations") {
-      return bookExams.filter(function (exam) { return exam.level === value; })
+    if (value === "all") return exams.map(function (exam) { return exam.id; });
+    var isLevel = levelGroupsFor(sourceId).some(function (group) { return group.value === value; });
+    if (isLevel) {
+      return exams.filter(function (exam) { return exam.level === value; })
         .map(function (exam) { return exam.id; });
     }
-    return bookExams.filter(function (exam) { return exam.id === value; })
+    return exams.filter(function (exam) { return exam.id === value; })
       .map(function (exam) { return exam.id; });
   }
 
@@ -272,26 +333,30 @@
 
   /* Collapse a selection to the shortest saved form: "all", a level group,
      one exam id, or a list of exam ids in book order. */
-  function normalizeBookFilter(filter) {
-    var ids = examIdsForBookFilter(filter);
+  function normalizeBookFilter(filter, sourceId) {
+    var ids = examIdsForBookFilter(filter, sourceId);
     if (!ids.length) return [];
-    if (sameExamIds(ids, examIdsForBookFilter("all"))) return "all";
-    if (sameExamIds(ids, examIdsForBookFilter("awareness"))) return "awareness";
-    if (sameExamIds(ids, examIdsForBookFilter("operations"))) return "operations";
+    if (sameExamIds(ids, examIdsForBookFilter("all", sourceId))) return "all";
+    var groups = levelGroupsFor(sourceId);
+    for (var i = 0; i < groups.length; i++) {
+      if (sameExamIds(ids, examIdsForBookFilter(groups[i].value, sourceId))) return groups[i].value;
+    }
     if (ids.length === 1) return ids[0];
     return ids;
   }
 
-  function bookQuestionsForFilter(filter) {
+  function bookQuestionsForFilter(filter, sourceId) {
+    var source = bookSourceById(sourceId);
+    if (!source) return [];
     var wanted = {};
-    examIdsForBookFilter(filter).forEach(function (id) { wanted[id] = true; });
-    return bookQuestions.filter(function (question) { return wanted[question.examId]; });
+    examIdsForBookFilter(filter, sourceId).forEach(function (id) { wanted[id] = true; });
+    return source.questions.filter(function (question) { return wanted[question.examId]; });
   }
 
-  function bookFilterLabel(filter) {
+  function bookFilterLabel(filter, sourceId) {
     if (Array.isArray(filter)) {
-      var normalized = normalizeBookFilter(filter);
-      if (!Array.isArray(normalized)) return bookFilterLabel(normalized);
+      var normalized = normalizeBookFilter(filter, sourceId);
+      if (!Array.isArray(normalized)) return bookFilterLabel(normalized, sourceId);
       if (!normalized.length) return "No book exams";
       var names = normalized.map(function (id) {
         var exam = bookExamById(id);
@@ -300,11 +365,36 @@
       });
       return "Examinations " + names.join(", ");
     }
-    var options = bookFilterOptions();
+    var options = bookFilterOptions(sourceId);
     for (var i = 0; i < options.length; i++) {
       if (options[i].value === (filter || "all")) return options[i].label;
     }
     return "All book exams";
+  }
+
+  /* ── Programs ──────────────────────────────────────────────────────── */
+
+  function sourcesForProgram(programId) {
+    return sources.filter(function (source) { return source.programId === programId; });
+  }
+
+  function bookSourceForProgram(programId) {
+    for (var i = 0; i < bookSources.length; i++) {
+      if (bookSources[i].programId === programId) return bookSources[i];
+    }
+    return null;
+  }
+
+  function programForSource(sourceId) {
+    var source = sourceById(sourceId);
+    return source ? source.programId : null;
+  }
+
+  function programHasLevels(programId) {
+    return sourcesForProgram(programId).some(function (source) {
+      if (source.kind === "book") return levelGroupsFor(source.id).length > 0;
+      return source.questions.some(function (question) { return !!question.level; });
+    });
   }
 
   /* ── Level filter (applies to every source) ─────────────────────────
@@ -354,7 +444,7 @@
   function sourceQuestions(source, options) {
     var bookFilter = options && options.bookFilter;
     var levelFilter = options && options.levelFilter;
-    var base = source.id === BOOK_SOURCE_ID ? bookQuestionsForFilter(bookFilter) : source.questions;
+    var base = source.kind === "book" ? bookQuestionsForFilter(bookFilter, source.id) : source.questions;
     return filterByLevel(base, levelFilter);
   }
 
@@ -377,10 +467,11 @@
     return sources.filter(function (source) {
       return wanted[source.id];
     }).map(function (source) {
-      var isBook = source.id === BOOK_SOURCE_ID;
+      var isBook = source.kind === "book";
       return {
         sourceId: source.id,
         label: source.label,
+        programId: source.programId,
         bookFilter: isBook ? (filter || "all") : null,
         levelFilter: levelFilter,
         questions: sourceQuestions(source, options)
@@ -396,8 +487,11 @@
   }
 
   function bookExamById(id) {
-    for (var i = 0; i < bookExams.length; i++) {
-      if (bookExams[i].id === id) return bookExams[i];
+    for (var s = 0; s < bookSources.length; s++) {
+      var exams = bookSources[s].exams;
+      for (var i = 0; i < exams.length; i++) {
+        if (exams[i].id === id) return exams[i];
+      }
     }
     return null;
   }
@@ -446,9 +540,11 @@
     };
   }
 
-  function bookReport() {
-    var exams = bookExams.map(examReport);
-    var eligible = bookQuestions.filter(baseEligible);
+  function bookReport(sourceId) {
+    var source = bookSourceById(sourceId) || bookSource;
+    var exams = source.exams.map(examReport);
+    var sourceQuestionsList = source.questions;
+    var eligible = sourceQuestionsList.filter(baseEligible);
     var seen = {};
     var distinct = 0;
     eligible.forEach(function (q) {
@@ -457,26 +553,35 @@
       distinct += 1;
     });
     return {
+      sourceId: source.id,
+      label: source.label,
       exams: exams,
-      imported: bookQuestions.length,
+      imported: sourceQuestionsList.length,
       eligible: eligible.length,
       distinctEligible: distinct,
-      held: bookQuestions.filter(function (q) { return q.reviewStatus === "unresolved"; }).length,
-      needsReview: bookQuestions.filter(function (q) { return q.reviewStatus === "needs_review"; }).length,
+      held: sourceQuestionsList.filter(function (q) { return q.reviewStatus === "unresolved"; }).length,
+      needsReview: sourceQuestionsList.filter(function (q) { return q.reviewStatus === "needs_review"; }).length,
       duplicateGroups: duplicateGroups.filter(function (group) {
-        return group.sourceIds.indexOf(BOOK_SOURCE_ID) !== -1;
+        return group.sourceIds.indexOf(source.id) !== -1;
       }).length
     };
   }
 
   globalThis.CONTENT_CATALOG = { sources: sources };
-  globalThis.HazmatCatalog = {
+  globalThis.StudyCatalog = globalThis.HazmatCatalog = {
     sources: sources,
     byId: byId,
     sourceById: sourceById,
     bookSourceId: BOOK_SOURCE_ID,
     handoutSourceId: HANDOUT_SOURCE_ID,
     bookExams: bookExams,
+    bookSources: bookSources,
+    bookSourceById: bookSourceById,
+    examsForSource: examsForSource,
+    sourcesForProgram: sourcesForProgram,
+    bookSourceForProgram: bookSourceForProgram,
+    programForSource: programForSource,
+    programHasLevels: programHasLevels,
     bookExamById: bookExamById,
     bookFilterOptions: bookFilterOptions,
     bookFilterLabel: bookFilterLabel,

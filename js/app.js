@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   app.js — HazMat Awareness / Operational Study Portal
+   app.js — Question study and practice tests (HazMat and Fire Fighter I)
    ═══════════════════════════════════════════════════════
    Sections:
      1. State & Constants
@@ -47,11 +47,14 @@
     examGuessed: {},
     examRevealed: {},
     examSourceIds: [],
+    examProgram: "hazmat",     // program the running session belongs to
     examBookFilter: "all",     // recorded with the session when a test starts
     examLevelFilter: "both",   // recorded with the session when a test starts
     pickSource: "instructor-handouts", // current source radio in the generator panel
     pickBookFilter: "all",     // current book-exam checks in the generator panel
     pickLevelFilter: "both",   // current selection in the generator panel
+    pickByProgram: {},         // saved builder choices for programs not on screen
+    studySource: "",           // book source id for an exam-prep study session
     examRequestedCount: 0,
     examSourceCounts: [],
     examCompletedAt: null,
@@ -100,10 +103,17 @@
     return parts.join(" · ");
   }
 
+  function pageRefText(q) {
+    if (!q || q.sourcePage == null) return "";
+    var text = " · book page " + q.sourcePage;
+    if (q.keyPage != null) text += ", key page " + q.keyPage;
+    return text;
+  }
+
   function examKicker(q) {
     var parts = [q.sourceLabel || ""];
     if (q.examShort) parts.push(q.examShort);
-    parts.push("Original #" + q.originalNumber);
+    parts.push("Original #" + q.originalNumber + pageRefText(q));
     return parts.filter(Boolean).join(" · ");
   }
 
@@ -160,14 +170,13 @@
     return html;
   }
 
-  function bookQuestions() {
-    var source = HazmatCatalog.sourceById("hazardous-materials-exam-prep");
-    return source ? source.questions : [];
+  function studySourceId() {
+    return state.studySource || bookSrcId();
   }
 
   function filterQuestions() {
     if (state.studyBank === "exam-prep") {
-      var scoped = HazmatCatalog.bookQuestionsForFilter(state.studyFilterExam);
+      var scoped = HazmatCatalog.bookQuestionsForFilter(state.studyFilterExam, studySourceId());
       var eligible = TestEngine.uniqueQuestions(TestEngine.eligibleQuestions(scoped));
       if (state.studyShuffled) return shuffleArray(eligible, state.studySeed);
       return eligible;
@@ -220,14 +229,58 @@
     return { label: "STRONG PERFORMANCE", cls: "strong" };
   }
 
+  /* ─── 2b. PROGRAM CONTEXT ───────────────────────── */
+
+  // The portal (portal.js) owns which program is on screen. Everything here
+  // that lists sources, exams, or levels asks for that program's slice of
+  // the catalog, so HazMat and Fire Fighter I questions never mix by accident.
+  function activeProgramId() {
+    return globalThis.AcademyPortal ? AcademyPortal.programId() : "hazmat";
+  }
+
+  function programSources(programId) {
+    return HazmatCatalog.sourcesForProgram(programId || activeProgramId());
+  }
+
+  function bookSrcIdFor(programId) {
+    var source = HazmatCatalog.bookSourceForProgram(programId || activeProgramId());
+    return source ? source.id : HazmatCatalog.bookSourceId;
+  }
+
+  function bookSrcId() {
+    return bookSrcIdFor(activeProgramId());
+  }
+
+  function programHasLevels() {
+    return HazmatCatalog.programHasLevels(activeProgramId());
+  }
+
+  function programShortName(programId) {
+    var program = globalThis.StudyPrograms ? StudyPrograms.get(programId) : null;
+    return program ? program.short : programId;
+  }
+
+  function questionProgram(id) {
+    var q = HazmatCatalog.byId[id];
+    return q && q.programId ? q.programId : "hazmat";
+  }
+
   /* ─── 3. VIEW MANAGEMENT ────────────────────────── */
 
-  var views = ["view-home", "view-study", "view-exam", "view-results", "view-missed", "view-report", "view-review"];
-
+  // The practice-test builder is its own screen. Code that used to pick
+  // the "tests" tab and go home now lands on the builder instead.
   function showView(id) {
-    views.forEach(function (v) {
-      var el = $(v);
-      if (el) el.classList.toggle("active", v === id);
+    if (id === "view-home" && state.activeTab === "tests") {
+      state.activeTab = "";
+      id = "view-builder";
+    }
+    if (id === "view-home" && globalThis.AcademyPortal) AcademyPortal.refreshHome();
+    if (globalThis.AcademyPortal) {
+      AcademyPortal.showView(id);
+      return;
+    }
+    document.querySelectorAll(".view").forEach(function (el) {
+      el.classList.toggle("active", el.id === id);
     });
     window.scrollTo(0, 0);
   }
@@ -250,13 +303,16 @@
 
   function enterExamPrepStudy(examFilter) {
     var filter = typeof examFilter === "string" ? examFilter : (state.studyFilterExam || "all");
-    if (state.studyBank !== "exam-prep" || filter !== state.studyFilterExam) state.studyIndex = 0;
+    var sourceId = bookSrcId();
+    if (state.studyBank !== "exam-prep" || filter !== state.studyFilterExam || sourceId !== state.studySource) state.studyIndex = 0;
     state.studyBank = "exam-prep";
+    state.studySource = sourceId;
     state.studyFilterExam = filter;
     state.activeTab = "exam-prep";
     $("filter-quiz").hidden = true;
     $("filter-level").hidden = true;
     $("filter-exam").hidden = false;
+    fillBookFilterSelect($("filter-exam"), sourceId);
     $("filter-exam").value = filter;
     if ($("filter-exam").value !== filter) {
       $("filter-exam").value = "all";
@@ -343,7 +399,7 @@
       $("study-meta").innerHTML = referenceHtml(q);
     } else {
       $("study-meta").innerHTML = "<span>" + escapeHtml((q.examShort ? q.examShort + " · " : "") +
-        "Original question " + q.originalNumber) + "</span>";
+        "Original question " + q.originalNumber + pageRefText(q)) + "</span>";
     }
 
     // Nav state
@@ -394,7 +450,9 @@
 
   function studySetLabel() {
     if (state.studyBank === "exam-prep") {
-      return "Exam prep · " + HazmatCatalog.bookFilterLabel(state.studyFilterExam);
+      var studySource = HazmatCatalog.sourceById(studySourceId());
+      return (studySource ? studySource.label : "Exam prep") + " · " +
+        HazmatCatalog.bookFilterLabel(state.studyFilterExam, studySourceId());
     }
     var label;
     if (state.studyFilterQuiz === "all") {
@@ -463,25 +521,57 @@
 
   /* ─── 5. PRACTICE TESTS ─────────────────────────── */
 
+  function defaultSourceValue() {
+    var sources = programSources();
+    return sources.length ? sources[0].id : "instructor-handouts";
+  }
+
   function currentSourceValue() {
     var selected = document.querySelector('input[name="test-source"]:checked');
-    return selected ? selected.value : (state.pickSource || "instructor-handouts");
+    return selected ? selected.value : (state.pickSource || defaultSourceValue());
   }
 
   function selectedSourceIds() {
     var value = currentSourceValue();
     if (value === "both") {
-      return ["instructor-handouts", "hazardous-materials-exam-prep"];
+      return programSources().map(function (source) { return source.id; });
     }
     return [value];
   }
 
   function setSourceValue(value) {
-    var choice = value || "instructor-handouts";
+    var choice = value || defaultSourceValue();
     var radio = document.querySelector('input[name="test-source"][value="' + choice + '"]');
     if (radio && !radio.disabled) radio.checked = true;
     var selected = document.querySelector('input[name="test-source"]:checked');
     state.pickSource = selected ? selected.value : choice;
+  }
+
+  // One radio per source the program has, plus "All sources" when there are
+  // several. Rendered again whenever the program changes.
+  function renderSourceOptions() {
+    var root = $("test-source-options");
+    if (!root) return;
+    root.replaceChildren();
+    var sources = programSources();
+    sources.forEach(function (source) {
+      root.appendChild(sourceOption(source.id, source.label));
+    });
+    if (sources.length > 1) root.appendChild(sourceOption("both", "All sources"));
+    var first = root.querySelector('input[name="test-source"]');
+    if (first) first.checked = true;
+  }
+
+  function sourceOption(value, text) {
+    var label = document.createElement("label");
+    label.className = "option";
+    var input = document.createElement("input");
+    input.type = "radio";
+    input.name = "test-source";
+    input.value = value;
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(" " + text));
+    return label;
   }
 
   function sourceChoiceFromIds(ids) {
@@ -496,7 +586,7 @@
   }
 
   function bookSelected(ids) {
-    return (ids || selectedSourceIds()).indexOf(HazmatCatalog.bookSourceId) !== -1;
+    return (ids || selectedSourceIds()).indexOf(bookSrcId()) !== -1;
   }
 
   function bookFilterRoot() {
@@ -522,7 +612,7 @@
       if (input.checked) ids[input.dataset.examId] = true;
     });
     root.querySelectorAll("input[data-group]").forEach(function (input) {
-      var members = HazmatCatalog.examIdsForBookFilter(input.dataset.group);
+      var members = HazmatCatalog.examIdsForBookFilter(input.dataset.group, bookSrcId());
       var on = members.filter(function (id) { return ids[id]; }).length;
       input.checked = members.length > 0 && on === members.length;
       input.indeterminate = on > 0 && on < members.length;
@@ -531,7 +621,7 @@
 
   function applyBookFilterChecks(filter) {
     var ids = {};
-    HazmatCatalog.examIdsForBookFilter(filter).forEach(function (id) { ids[id] = true; });
+    HazmatCatalog.examIdsForBookFilter(filter, bookSrcId()).forEach(function (id) { ids[id] = true; });
     bookExamChecks().forEach(function (input) {
       input.checked = !!ids[input.dataset.examId];
     });
@@ -540,12 +630,13 @@
 
   function selectedBookFilter() {
     if (!bookExamChecks().length) return state.pickBookFilter || "all";
-    var value = HazmatCatalog.normalizeBookFilter(checkedExamIds());
+    var value = HazmatCatalog.normalizeBookFilter(checkedExamIds(), bookSrcId());
     state.pickBookFilter = value;
     return value;
   }
 
   function selectedLevelFilter() {
+    if (!programHasLevels()) return "both";
     var selected = document.querySelector('input[name="test-level"]:checked');
     var value = HazmatCatalog.normalizeLevelFilter(selected ? selected.value : "both");
     state.pickLevelFilter = value;
@@ -568,15 +659,15 @@
   }
 
   function setBookFilterValue(value) {
-    var normalized = HazmatCatalog.normalizeBookFilter(value == null || value === "" ? "all" : value);
+    var normalized = HazmatCatalog.normalizeBookFilter(value == null || value === "" ? "all" : value, bookSrcId());
     state.pickBookFilter = normalized;
     if (bookExamChecks().length) applyBookFilterChecks(normalized);
   }
 
-  function fillBookFilterSelect(select) {
+  function fillBookFilterSelect(select, sourceId) {
     if (!select || select.tagName !== "SELECT") return;
     select.replaceChildren();
-    HazmatCatalog.bookFilterOptions().forEach(function (entry) {
+    HazmatCatalog.bookFilterOptions(sourceId || bookSrcId()).forEach(function (entry) {
       var option = document.createElement("option");
       option.value = entry.value;
       option.textContent = entry.label;
@@ -594,7 +685,7 @@
     var root = bookFilterRoot();
     if (!root) return;
     root.replaceChildren();
-    HazmatCatalog.bookFilterOptions().forEach(function (entry) {
+    HazmatCatalog.bookFilterOptions(bookSrcId()).forEach(function (entry) {
       var label = document.createElement("label");
       var group = entry.kind === "group";
       label.className = "option book-exam-option" + (group ? " book-exam-option--group" : "");
@@ -612,7 +703,7 @@
     var input = event.target;
     if (!input || !input.dataset) return;
     if (input.dataset.group) {
-      var members = HazmatCatalog.examIdsForBookFilter(input.dataset.group);
+      var members = HazmatCatalog.examIdsForBookFilter(input.dataset.group, bookSrcId());
       var turnOn = input.checked;
       bookExamChecks().forEach(function (box) {
         if (members.indexOf(box.dataset.examId) !== -1) box.checked = turnOn;
@@ -640,11 +731,13 @@
   function updateResumeButton() {
     var btn = $("btn-resume");
     if (!btn) return;
-    if (state.examQuestions.length > 0 && (state.examInProgress || state.examSubmitted)) {
+    var mine = (state.examProgram || "hazmat") === activeProgramId();
+    if (mine && state.examQuestions.length > 0 && (state.examInProgress || state.examSubmitted)) {
       btn.hidden = false;
-      btn.textContent = state.examInProgress
-        ? "Resume " + state.examQuestions.length + "-question test"
-        : "Review last " + state.examQuestions.length + "-question test";
+      $("resume-title").textContent = state.examInProgress
+        ? "Resume test · " + examAnsweredCount() + " of " + state.examQuestions.length + " answered"
+        : "Review your last test";
+      $("resume-detail").textContent = examSessionLabel();
     } else {
       btn.hidden = true;
     }
@@ -660,8 +753,8 @@
       var eligible = TestEngine.eligibleQuestions(pool.questions);
       var distinct = TestEngine.uniqueQuestions(eligible).length;
       var label = pool.label;
-      if (pool.sourceId === HazmatCatalog.bookSourceId && pool.bookFilter && pool.bookFilter !== "all") {
-        label += " — " + HazmatCatalog.bookFilterLabel(pool.bookFilter);
+      if (pool.sourceId === bookSrcId() && pool.bookFilter && pool.bookFilter !== "all") {
+        label += " — " + HazmatCatalog.bookFilterLabel(pool.bookFilter, bookSrcId());
       }
       var count = String(distinct);
       if (distinct !== eligible.length) count += " distinct of " + eligible.length + " eligible records";
@@ -687,7 +780,7 @@
 
   function bookExamsMissLevel(filter, level) {
     if (!level || level === "both") return false;
-    var ids = HazmatCatalog.examIdsForBookFilter(filter);
+    var ids = HazmatCatalog.examIdsForBookFilter(filter, bookSrcId());
     if (!ids.length) return true;
     return ids.every(function (id) {
       var exam = HazmatCatalog.bookExamById(id);
@@ -709,7 +802,7 @@
     }
     if (bookSelected(ids) && bookExamsMissLevel(bookFilter, level)) {
       note.hidden = false;
-      note.textContent = "The book exams you checked (" + HazmatCatalog.bookFilterLabel(bookFilter) +
+      note.textContent = "The book exams you checked (" + HazmatCatalog.bookFilterLabel(bookFilter, bookSrcId()) +
         ") have no " + level + " questions. Check a " + level + " exam, or change the level.";
       return;
     }
@@ -732,7 +825,7 @@
         : " and the book\u2019s Operations exams II-1, II-2, and II-3.");
       return;
     }
-    note.textContent = handout + ", from " + HazmatCatalog.bookFilterLabel(bookFilter) + ".";
+    note.textContent = handout + ", from " + HazmatCatalog.bookFilterLabel(bookFilter, bookSrcId()) + ".";
   }
 
   function showLimit(available) {
@@ -757,8 +850,11 @@
     $("test-limit-message").hidden = true;
     $("btn-generate-all").hidden = true;
     if (state.examInProgress) {
+      var running = (state.examProgram || "hazmat") === activeProgramId()
+        ? "The test in progress will be replaced."
+        : "Your " + programShortName(state.examProgram || "hazmat") + " test in progress will be replaced.";
       showModal(
-        "Start a new " + count + "-question test? The test in progress will be replaced.",
+        "Start a new " + count + "-question test? " + running,
         [
           { label: "Keep current test", cls: "btn--nav", action: hideModal },
           { label: "Start new test", cls: "btn--primary", action: function () {
@@ -803,6 +899,7 @@
     state.examCompletedAt = null;
     state.examMode = options.mode || "exam";
     state.examSourceIds = options.sourceIds || [];
+    state.examProgram = options.programId || activeProgramId();
     state.examBookFilter = options.bookFilter || "all";
     state.examLevelFilter = HazmatCatalog.normalizeLevelFilter(options.levelFilter);
     state.examRequestedCount = options.requestedCount || questions.length;
@@ -1011,6 +1108,18 @@
     state.examCompletedAt = new Date().toISOString();
     updateResumeButton();
     saveState();
+    if (globalThis.AcademyPortal) {
+      var finished = currentGrade();
+      AcademyPortal.recordTest({
+        at: state.examCompletedAt,
+        program: state.examProgram || "hazmat",
+        percentage: finished.percentage,
+        correct: finished.correct,
+        total: finished.total,
+        label: examSessionLabel(),
+        mode: state.examMode
+      });
+    }
     showResults();
   }
 
@@ -1018,8 +1127,9 @@
     var parts = [];
     var labels = (state.examSourceCounts || []).map(function (entry) { return entry.label; });
     if (labels.length) parts.push(labels.join(" + "));
-    if (bookSelected(state.examSourceIds) && state.examBookFilter && state.examBookFilter !== "all") {
-      parts.push(HazmatCatalog.bookFilterLabel(state.examBookFilter));
+    var sessionBook = bookSrcIdFor(state.examProgram || "hazmat");
+    if (state.examSourceIds.indexOf(sessionBook) !== -1 && state.examBookFilter && state.examBookFilter !== "all") {
+      parts.push(HazmatCatalog.bookFilterLabel(state.examBookFilter, sessionBook));
     }
     if (state.examLevelFilter && state.examLevelFilter !== "both") {
       parts.push(HazmatCatalog.levelFilterLabel(state.examLevelFilter));
@@ -1056,6 +1166,12 @@
     var bandEl = $("results-band");
     bandEl.textContent = band.label;
     bandEl.className = "results-band results-band--" + band.cls;
+    var ring = $("results-ring-fill");
+    if (ring) {
+      var circumference = 2 * Math.PI * 68;
+      ring.setAttribute("class", "ring-fill ring-fill--" + band.cls);
+      ring.setAttribute("stroke-dasharray", (circumference * grade.percentage / 100).toFixed(1) + " 1000");
+    }
     $("results-retry-missed").hidden = grade.correct === grade.total;
     showView("view-results");
   }
@@ -1066,6 +1182,7 @@
     beginTest(missed, {
       mode: state.examMode,
       sourceIds: state.examSourceIds,
+      programId: state.examProgram,
       bookFilter: state.examBookFilter,
       levelFilter: state.examLevelFilter,
       requestedCount: missed.length,
@@ -1300,7 +1417,7 @@
       } else {
         html += "<p>The source key gives no page reference for this question.</p>";
       }
-      html += '<p class="report-lookup-note">Answer letter and page references come from the Hazardous Materials Exam Prep answer key and have not been independently verified. Read the cited pages for the reasoning behind the answer.</p>';
+      html += '<p class="report-lookup-note">Answer letter and page references come from the ' + escapeHtml(q.sourceLabel || "exam prep book") + ' answer key and have not been independently verified. Read the cited pages for the reasoning behind the answer.</p>';
     }
     html += "</div>";
     if (q.explanation) {
@@ -1317,7 +1434,7 @@
       if (q.sourceLabel) parts.push(q.sourceLabel);
       if (q.examShort) parts.push(q.examShort);
     }
-    parts.push("Original #" + q.originalNumber);
+    parts.push("Original #" + q.originalNumber + pageRefText(q));
     var level = levelText(q);
     if (level) parts.push(level);
     return parts.join(" · ");
@@ -1534,14 +1651,15 @@
   }
 
   function renderContentReview() {
-    var report = HazmatCatalog.bookReport();
-    $("review-summary").textContent = report.imported + " imported records across " + report.exams.length +
+    var sourceId = bookSrcId();
+    var report = HazmatCatalog.bookReport(sourceId);
+    $("review-summary").textContent = report.label + ": " + report.imported + " imported records across " + report.exams.length +
       " exams. " + report.eligible + " can be used in a scored test (" + report.distinctEligible +
       " distinct questions after duplicates across exams are grouped). " + report.held +
       " are held for review and excluded; " + report.needsReview +
       " are flagged but still in tests. Source answers are not independently verified.";
     var html = "";
-    HazmatCatalog.bookExams.forEach(function (exam) {
+    HazmatCatalog.examsForSource(sourceId).forEach(function (exam) {
       var examReport = HazmatCatalog.examReport(exam);
       var flagged = exam.questions.filter(function (q) {
         return q.reviewStatus !== "source_imported" || (q.issues && q.issues.length);
@@ -1559,22 +1677,28 @@
   }
 
   function renderExamPrepIntro() {
-    var report = HazmatCatalog.bookReport();
-    var exams = HazmatCatalog.bookExams;
-    if (!exams.length) {
+    var source = HazmatCatalog.bookSourceForProgram(activeProgramId());
+    var cardTitle = $("exam-prep-card-title");
+    if (cardTitle) cardTitle.textContent = source ? source.label : "Exam Prep Book";
+    if (!source || !source.exams.length) {
       $("exam-prep-title").textContent = "No book exams loaded";
       $("exam-prep-summary").textContent = "";
+      $("exam-prep-exams").replaceChildren();
+      $("exam-prep-intro").innerHTML = "";
       return;
     }
+    var report = HazmatCatalog.bookReport(source.id);
+    var exams = source.exams;
     $("exam-prep-title").textContent = exams.length === 1
       ? exams[0].label
       : exams.length + " book examinations: " + exams.map(function (exam) {
         return exam.shortLabel.replace(/^Examination\s+/, "");
       }).join(", ");
-    $("exam-prep-summary").textContent = report.imported + " imported records. " + report.eligible +
+    var summaryText = report.imported + " imported records. " + report.eligible +
       " have a complete question, four choices, and a source answer; " + report.distinctEligible +
       " of those are distinct once duplicate questions across exams are grouped. " + report.held +
       " records are held for review. Source answers are not independently verified.";
+    $("exam-prep-summary").textContent = report.eligible + " scorable · " + exams.length + " exams";
 
     var list = $("exam-prep-exams");
     list.replaceChildren();
@@ -1584,7 +1708,9 @@
       button.type = "button";
       button.className = "btn btn--secondary";
       var title = document.createElement("strong");
-      title.textContent = exam.shortLabel + " — " + (exam.level === "operations" ? "Operations" : "Awareness");
+      var subtitle = exam.level ? (exam.level === "operations" ? "Operations" : "Awareness")
+        : (exam.meta && exam.meta.subtitle ? exam.meta.subtitle : "");
+      title.textContent = exam.shortLabel + (subtitle ? " — " + subtitle : "");
       var detail = document.createElement("span");
       detail.textContent = r.imported + " imported · " + r.eligible + " eligible · " + r.held + " held for review";
       button.appendChild(title);
@@ -1593,7 +1719,8 @@
       list.appendChild(button);
     });
 
-    var html = '<table class="exam-report"><thead><tr><th>Exam</th><th>Imported</th><th>Eligible</th>' +
+    var html = "<p>" + escapeHtml(summaryText) + "</p>";
+    html += '<table class="exam-report"><thead><tr><th>Exam</th><th>Imported</th><th>Eligible</th>' +
       "<th>Held</th><th>Flagged</th></tr></thead><tbody>";
     report.exams.forEach(function (r) {
       html += "<tr><td>" + escapeHtml(r.shortLabel) + "</td><td>" + r.imported + "</td><td>" + r.eligible +
@@ -1606,6 +1733,11 @@
       var meta = exam.meta;
       if (!meta) return;
       html += "<h4>" + escapeHtml(exam.label) + "</h4>";
+      if (meta.subtitle) html += '<p class="source-note">' + escapeHtml(meta.subtitle) + "</p>";
+      if (meta.questionPages && meta.keyPages) {
+        html += '<p class="source-note">Questions on printed pages ' + escapeHtml(meta.questionPages.join("-")) +
+          "; " + escapeHtml(meta.keyAppendix || "answer key") + " entries on printed pages " + escapeHtml(meta.keyPages.join("-")) + ".</p>";
+      }
       if (meta.directions) html += "<p>" + escapeHtml(meta.directions) + "</p>";
       if (meta.answerNote) html += '<p class="source-note">' + escapeHtml(meta.answerNote) + "</p>";
       if (meta.readingList && meta.readingList.length) {
@@ -1632,6 +1764,8 @@
     state.examIndex = session.index || 0;
     state.examMode = session.mode || "exam";
     state.examSourceIds = session.sourceIds || [];
+    state.examProgram = session.programId ||
+      HazmatCatalog.programForSource(state.examSourceIds[0]) || "hazmat";
     state.examBookFilter = session.bookFilter || "all";
     state.examLevelFilter = HazmatCatalog.normalizeLevelFilter(session.levelFilter);
     state.examRequestedCount = session.requestedCount || state.examQuestions.length;
@@ -1642,6 +1776,7 @@
   }
 
   function saveState() {
+    state.pickByProgram = pickSnapshot();
     try {
       var data = {
         studyBank: state.studyBank,
@@ -1652,9 +1787,11 @@
         studyFilterExam: state.studyFilterExam,
         studyShuffled: state.studyShuffled,
         studySeed: state.studySeed,
+        studySource: state.studySource,
         pickSource: state.pickSource,
         examBookFilter: state.pickBookFilter,
         examLevelFilter: state.pickLevelFilter,
+        pickByProgram: pickSnapshot(),
         examCompletedAt: state.examCompletedAt,
         practiceSession: TestEngine.serializeSession({
           questions: state.examQuestions,
@@ -1664,6 +1801,7 @@
           revealed: state.examRevealed,
           index: state.examIndex,
           mode: state.examMode,
+          programId: state.examProgram,
           sourceIds: state.examSourceIds,
           bookFilter: state.examBookFilter,
           levelFilter: state.examLevelFilter,
@@ -1691,9 +1829,19 @@
       state.studyFilterExam = data.studyFilterExam || "all";
       state.studyShuffled = data.studyShuffled || false;
       state.studySeed = data.studySeed || null;
-      state.pickBookFilter = HazmatCatalog.normalizeBookFilter(data.examBookFilter || "all");
+      state.studySource = data.studySource || "";
+      // Older saves kept one set of builder choices (always HazMat). Newer saves keep one per program.
+      state.pickByProgram = data.pickByProgram && typeof data.pickByProgram === "object" ? data.pickByProgram : {};
+      if (!data.pickByProgram && (data.pickSource || data.examBookFilter)) {
+        state.pickByProgram.hazmat = {
+          source: data.pickSource || sourceChoiceFromIds(data.practiceSession && data.practiceSession.sourceIds) || "instructor-handouts",
+          bookFilter: data.examBookFilter || "all"
+        };
+      }
+      var saved = state.pickByProgram[activeProgramId()] || {};
+      state.pickBookFilter = savedBookFilter(saved.bookFilter);
       state.pickLevelFilter = HazmatCatalog.normalizeLevelFilter(data.examLevelFilter);
-      state.pickSource = data.pickSource || sourceChoiceFromIds(data.practiceSession && data.practiceSession.sourceIds) || "instructor-handouts";
+      state.pickSource = saved.source || defaultSourceValue();
       state.examCompletedAt = data.examCompletedAt || null;
 
       if (data.practiceSession && data.practiceSession.questionIds) {
@@ -1732,6 +1880,40 @@
     }
   }
 
+  // A saved book filter that names exams the program on screen does not have
+  // (for example after a program switch) falls back to every exam.
+  function savedBookFilter(value) {
+    var normalized = HazmatCatalog.normalizeBookFilter(value || "all", bookSrcId());
+    if (Array.isArray(normalized) && !normalized.length) return "all";
+    return normalized;
+  }
+
+  // Builder choices for every program, with the on-screen program's current values folded in.
+  function pickSnapshot() {
+    var snapshot = {};
+    Object.keys(state.pickByProgram || {}).forEach(function (key) { snapshot[key] = state.pickByProgram[key]; });
+    snapshot[activeProgramId()] = { source: state.pickSource, bookFilter: state.pickBookFilter };
+    return snapshot;
+  }
+
+  // Called by the portal when the program on screen changes. Re-renders every
+  // panel that lists this program's sources, exams, and levels.
+  function refreshProgram() {
+    var program = activeProgramId();
+    var saved = state.pickByProgram[program] || {};
+    state.pickBookFilter = savedBookFilter(saved.bookFilter);
+    state.pickSource = saved.source || defaultSourceValue();
+    renderSourceOptions();
+    renderExamPrepIntro();
+    renderBookFilters();
+    configureSources();
+    setSourceValue(state.pickSource);
+    var levelFieldset = $("level-fieldset");
+    if (levelFieldset) levelFieldset.hidden = !programHasLevels();
+    refreshEligibility();
+    updateResumeButton();
+  }
+
   function clearProgress() {
     showModal(
       "This will erase all saved progress, including study answers and any in-progress exam. This cannot be undone.",
@@ -1740,6 +1922,7 @@
         { label: "Clear Progress", cls: "btn--primary btn--danger", action: function () {
           hideModal();
           try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+          if (globalThis.AcademyPortal) AcademyPortal.clearProgress();
           state.studyAnswers = {};
           state.studyIndex = 0;
           state.studyFilterLevel = "all";
@@ -1757,6 +1940,9 @@
           state.examInProgress = false;
           state.examSubmitted = false;
           state.examSourceIds = [];
+          state.examProgram = "hazmat";
+          state.pickByProgram = {};
+          state.studySource = "";
           state.examBookFilter = "all";
           state.examLevelFilter = "both";
           state.pickSource = "instructor-handouts";
@@ -2081,13 +2267,6 @@
 
   function selectTab(id) {
     state.activeTab = id;
-    SOURCE_TABS.forEach(function (tab) {
-      var selected = tab.id === id;
-      var tabEl = $(tab.tab);
-      tabEl.setAttribute("aria-selected", selected ? "true" : "false");
-      tabEl.tabIndex = selected ? 0 : -1;
-      $(tab.panel).hidden = !selected;
-    });
   }
 
   function configureSources() {
@@ -2129,7 +2308,7 @@
 
     var desc = $("source-handout-desc");
     if (desc) {
-      desc.textContent = QUESTION_BANK.length + " questions from the academy quiz sheets.";
+      desc.textContent = QUESTION_BANK.length + " questions · " + groups.length + " quizzes";
     }
 
     var list = $("handout-quizzes");
@@ -2148,6 +2327,18 @@
         button.addEventListener("click", function () { enterStudy(String(group.quiz)); });
         list.appendChild(button);
       });
+      if (groups.length > 4) {
+        list.classList.add("is-collapsed");
+        var toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = "btn btn--text btn--small card-list-toggle";
+        toggle.textContent = "Show all " + groups.length + " quizzes";
+        toggle.addEventListener("click", function () {
+          var collapsed = list.classList.toggle("is-collapsed");
+          toggle.textContent = collapsed ? "Show all " + groups.length + " quizzes" : "Show fewer";
+        });
+        list.appendChild(toggle);
+      }
     }
 
     var select = $("filter-quiz");
@@ -2190,28 +2381,8 @@
   function init() {
     loadState();
     renderHandoutQuizzes();
-    renderBookFilters();
-    renderExamPrepIntro();
-    configureSources();
-    setSourceValue(state.pickSource);
-    refreshEligibility();
-    updateResumeButton();
     renderUpdates();
     selectTab("handouts");
-
-    SOURCE_TABS.forEach(function (tab) {
-      $(tab.tab).addEventListener("click", function () { selectTab(tab.id); });
-    });
-    $("tab-handouts").parentElement.addEventListener("keydown", function (e) {
-      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-      var tabs = SOURCE_TABS.map(function (tab) { return $(tab.tab); });
-      var index = tabs.indexOf(document.activeElement);
-      if (index === -1) return;
-      e.preventDefault();
-      var next = e.key === "ArrowRight" ? (index + 1) % tabs.length : (index - 1 + tabs.length) % tabs.length;
-      tabs[next].focus();
-      selectTab(SOURCE_TABS[next].id);
-    });
 
     $("btn-study").addEventListener("click", function () { enterStudy("all"); });
     $("btn-resume").addEventListener("click", resumeExam);
@@ -2228,12 +2399,12 @@
       var available = TestEngine.countEligible(currentPools());
       if (available > 0) requestExam(available);
     });
-    document.querySelectorAll('input[name="test-source"]').forEach(function (input) {
-      input.addEventListener("change", function () {
-        state.pickSource = this.value;
-        refreshEligibility();
-        saveState();
-      });
+    $("test-source-options").addEventListener("change", function (e) {
+      var input = e.target;
+      if (!input || input.name !== "test-source") return;
+      state.pickSource = input.value;
+      refreshEligibility();
+      saveState();
     });
     $("test-book-filter").addEventListener("change", onBookFilterChange);
     document.querySelectorAll('input[name="test-level"]').forEach(function (input) {
@@ -2419,6 +2590,33 @@
       renderReportList();
     });
 
+    globalThis.HazmatStudy = {
+      studiedCount: function (programId) {
+        var program = programId || activeProgramId();
+        return Object.keys(state.studyAnswers || {}).filter(function (id) {
+          return questionProgram(id) === program;
+        }).length;
+      },
+      totalQuestions: function (programId) {
+        return programSources(programId).reduce(function (sum, source) {
+          return sum + TestEngine.eligibleQuestions(source.questions).length;
+        }, 0);
+      },
+      sourceSummary: function (programId) {
+        return programSources(programId).map(function (source) {
+          return TestEngine.eligibleQuestions(source.questions).length + " " +
+            (source.kind === "handouts" ? "handout" : "book");
+        }).join(" · ");
+      },
+      refreshProgram: refreshProgram,
+      openBuilder: function () {
+        refreshEligibility();
+        updateResumeButton();
+        showView("view-builder");
+      }
+    };
+
+    refreshProgram();
     showView("view-home");
     maybeShowWhatsNew();
   }

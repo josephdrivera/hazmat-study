@@ -1,0 +1,1085 @@
+{
+  "exam": "i1",
+  "kind": "questions",
+  "pageRange": [
+    5,
+    14
+  ],
+  "verifiedBy": "Claude Fable 5.1, page photos checked against the OCR draft, 2026-11-04",
+  "pages": [
+    {
+      "page": 5,
+      "photo": "IMG_3022.jpg",
+      "pageNotes": [
+        "Exam I-1 title, reading list (IFSTA Essentials 8th Ed. Chapters 1-6, 9-12, 14; Jones and Bartlett Fundamentals 5th Ed. Chapters 1-7, 12, 14-19), Directions, First/guess/Next paragraphs printed above question 1."
+      ],
+      "questions": [
+        {
+          "n": 1,
+          "stem": "Which would be a program offered by an Employee Assistance Program?",
+          "choices": {
+            "A": "Car Seat Installation Program",
+            "B": "Dealing with personal problems",
+            "C": "Junior firefighter programs",
+            "D": "Juvenile arson setter program"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 2,
+          "stem": "One of the basic duties of an engine company is:",
+          "choices": {
+            "A": "attacking and extinguishing fires.",
+            "B": "forcible entry.",
+            "C": "performing technical rescue.",
+            "D": "performing search and rescue."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 3,
+          "stem": "What is one factor that plays a significant role in the physical demands of a fire fighter's job?",
+          "choices": {
+            "A": "Physical conditioning",
+            "B": "Breakfast habits",
+            "C": "Electrolyte activity",
+            "D": "Posture of a repose"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "photo": "IMG_3024.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 4,
+          "stem": "Every fire fighter accident or injury must be thoroughly investigated to:",
+          "choices": {
+            "A": "determine its classification under the S.I.M.P.L.E. system.",
+            "B": "preclude any civil liability situation.",
+            "C": "determine whether or not a de-facto feasance occurred.",
+            "D": "understand how they are preventable."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 5,
+          "stem": "The Occupational Safety and Health Administration may establish regulations governing fire department activities such as:",
+          "choices": {
+            "A": "work hours.",
+            "B": "anti-discrimination laws.",
+            "C": "the experience required to hold a chief's office.",
+            "D": "health and safety."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 6,
+          "stem": "Critical Incident Stress Management is a:",
+          "choices": {
+            "A": "formal gathering of incident responders and families to defuse and address stress.",
+            "B": "process for managing the short and long-term effects of critical incident stress reactions.",
+            "C": "program that offers professional mental health and other health services to employee families.",
+            "D": "post incident informal critique."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 7,
+          "stem": "One of the primary functions of the truck/ladder company is:",
+          "choices": {
+            "A": "forcible entry.",
+            "B": "directing traffic at fire scene.",
+            "C": "laying supply lines for engine companies.",
+            "D": "fire attack."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 8,
+          "stem": "Which program provides confidential guidance for firefighters?",
+          "choices": {
+            "A": "Employee/Member Assistance Programs",
+            "B": "Collective Bargaining Agreements",
+            "C": "Professional Certifications",
+            "D": "Disciplinary Plan"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 9,
+          "stem": "The agency established to ensure safe working conditions is the:",
+          "choices": {
+            "A": "National Fire Protection Association.",
+            "B": "International Fire Chiefs Association.",
+            "C": "Occupational Safety and Health Administration.",
+            "D": "Department of Homeland Security."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 10,
+          "stem": "What is the difference between basic 911 and enhanced 911?",
+          "choices": {
+            "A": "Enhanced systems have the capability to provide the caller's telephone number and address.",
+            "B": "Enhanced systems are used only in rural areas.",
+            "C": "Basic systems are more dependable than enhanced.",
+            "D": "Basic systems have the capability to provide the caller's telephone number and address."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "photo": "IMG_3025.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 11,
+          "stem": "Main limitations on radio transmissions include:",
+          "choices": {
+            "A": "worker safety.",
+            "B": "installation.",
+            "C": "physical barriers.",
+            "D": "live zones."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 12,
+          "stem": "The central location where emergency 9-1-1 calls are routed is the:",
+          "choices": {
+            "A": "Public Safety Answering Point.",
+            "B": "Communication Action Center.",
+            "C": "Emergency Collection Point.",
+            "D": "Automatic Location Identification."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 13,
+          "stem": "What is another term for communications center dispatchers?",
+          "choices": {
+            "A": "Call originators",
+            "B": "Telecommunicators",
+            "C": "Public interface officials",
+            "D": "Signals technicians"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 14,
+          "stem": "What does the Automatic Number Identification feature of enhanced 9-1-1 do?",
+          "choices": {
+            "A": "Provide the caller's identity",
+            "B": "Lock the caller's phone open",
+            "C": "Show the caller's phone number",
+            "D": "Provide access to real-time language translation"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 15,
+          "stem": "The telecommunicator's first responsibility is to:",
+          "choices": {
+            "A": "obtain the information that is required to dispatch the appropriate units to the correct location.",
+            "B": "reassure the caller that help will be forthcoming shortly and that their problem can be dealt with.",
+            "C": "provide the caller with real-time, emergency instructions such as how to perform CPR.",
+            "D": "obtain status check of resource availability."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 16,
+          "stem": "A predetermined plan for emergency and non-emergency functions is a department's:",
+          "choices": {
+            "A": "Standard Operating Procedures/Standard Operating Guidelines.",
+            "B": "organizational chart.",
+            "C": "prefire plan.",
+            "D": "mission statement."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 17,
+          "stem": "The purpose of a repeater is to:",
+          "choices": {
+            "A": "replay radio signals within the fire building.",
+            "B": "rebroadcast radio signals.",
+            "C": "save and replay radio communications after the incident.",
+            "D": "change signals from analog to digital."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 18,
+          "stem": "What is a dispatch alerting system for a staffed fire station?",
+          "choices": {
+            "A": "Knox box",
+            "B": "Fax machine",
+            "C": "Duplex System",
+            "D": "Radio with alert tone"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "photo": "IMG_3027.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 19,
+          "stem": "What should be on the mind of a firefighter who answers the telephone in a fire department facility?",
+          "choices": {
+            "A": "That the firefighter is a representative of the fire department",
+            "B": "To be brief, so that the incoming phone line will be open to receive emergency calls",
+            "C": "Obtain all information, then hang up first to avoid tying up the phone line",
+            "D": "Leaving the person on hold for as long as it takes to relay and verify information received"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 20,
+          "stem": "In fire departments that have access to multiple radio channels, fireground operations should be:",
+          "choices": {
+            "A": "on multi-channels also.",
+            "B": "run by cell phone so as not to tie up the radio.",
+            "C": "assigned a separate dedicated channel.",
+            "D": "on the original dispatch channel only."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 21,
+          "stem": "What should you do if you answer a telephone call in a fire department facility and determine that the caller has an emergency?",
+          "choices": {
+            "A": "Call a supervisor.",
+            "B": "Immediately dispatch a response.",
+            "C": "Follow your department's established procedures.",
+            "D": "Put the caller on hold and ask for assistance."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 22,
+          "stem": "Before transmitting any information over the fire department radio, a firefighter should:",
+          "choices": {
+            "A": "press the key two or three times to signal the intent to transmit.",
+            "B": "key the microphone and then clear their throat to be sure their voice will be clear.",
+            "C": "turn up the volume control if their voice is naturally soft.",
+            "D": "listen to be sure the channel is not being used."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 23,
+          "stem": "One of the major advantages of an Incident Management System is that it allows agencies to communicate using common:",
+          "choices": {
+            "A": "terminology.",
+            "B": "personnel.",
+            "C": "apparatus.",
+            "D": "equipment."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 24,
+          "stem": "What is a proper radio procedure for fire personnel?",
+          "choices": {
+            "A": "Wait until airwaves are clear if you have an urgent message.",
+            "B": "Hold the radio/microphone 12 inches from the mouth.",
+            "C": "Speak as you key the microphone to save time.",
+            "D": "The receiver should acknowledge the message."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 25,
+          "stem": "The firefighter making the Mayday call should describe the situation, location, and:",
+          "choices": {
+            "A": "time of day.",
+            "B": "GPS coordinates.",
+            "C": "help needed.",
+            "D": "accountability tag number."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "photo": "IMG_3028.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 26,
+          "stem": "Which has the highest priority for a radio transmission?",
+          "choices": {
+            "A": "Notification from dispatch of road closures",
+            "B": "Emergency traffic",
+            "C": "Vital signs of a patient being transported",
+            "D": "Transmission of local forest fire danger notice"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 27,
+          "stem": "The standardized term used to signal the immediate need to clear the radio and transmit critical information is:",
+          "choices": {
+            "A": "Emergency Traffic.",
+            "B": "10-99.",
+            "C": "Signal 2.",
+            "D": "Critical Alert."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 28,
+          "stem": "The only time the _____ call is used is in a situation where there is immediate danger to the lives of firefighters.",
+          "choices": {
+            "A": "attention",
+            "B": "emergency traffic",
+            "C": "urgent traffic",
+            "D": "mayday"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 29,
+          "stem": "What should be initiated when the decision is made to evacuate the firefighting or rescue operations in a building?",
+          "choices": {
+            "A": "Call a mayday",
+            "B": "Call for a 10-99",
+            "C": "All Clear",
+            "D": "Activate the emergency evacuation signal"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 30,
+          "stem": "An emergency evacuation warning should be announced at least:",
+          "choices": {
+            "A": "one time.",
+            "B": "over and over.",
+            "C": "several times.",
+            "D": "four times."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 31,
+          "stem": "When a unit needs to transmit emergency traffic, the:",
+          "choices": {
+            "A": "telecommunicator generates a distinctive alert tone.",
+            "B": "radio operator rapidly keys and releases the push-to-talk button three times.",
+            "C": "telecommunicator verbally asks for traffic to stop.",
+            "D": "unit asks the telecommunicator for permission to do so."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 32,
+          "stem": "A PAR is a:",
+          "choices": {
+            "A": "procedural area reconnaissance.",
+            "B": "property and recovery unit.",
+            "C": "personnel and resources unit.",
+            "D": "personnel accountability report."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 33,
+          "stem": "A distress call for help and an indication that you or a firefighter you are with is in grave danger is a:",
+          "choices": {
+            "A": "Emergency traffic.",
+            "B": "Mayday.",
+            "C": "Help.",
+            "D": "Need assistance."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "photo": "IMG_3029.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 34,
+          "stem": "When using positive pressure self-contained breathing apparatus, a poor seal between the facepiece and the firefighter's face is:",
+          "choices": {
+            "A": "not dangerous, because the positive pressure will keep toxic gases out of the facepiece.",
+            "B": "dangerous, because it is depleting the air supply more quickly.",
+            "C": "not possible, because the positive pressure will seal the facepiece to the face.",
+            "D": "the main cause of deaths on the fireground."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 35,
+          "stem": "When donning a self-contained breathing apparatus, firefighters should check to ensure that the cylinder is at what minimum specified percentage of its capacity of air?",
+          "choices": {
+            "A": "90 percent",
+            "B": "75 percent",
+            "C": "50 percent",
+            "D": "10 percent"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 36,
+          "stem": "A gas which is a product of incomplete combustion is:",
+          "choices": {
+            "A": "carbon monoxide.",
+            "B": "chlorine.",
+            "C": "nitrogen.",
+            "D": "nitrogen oxide."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 37,
+          "stem": "Which is considered to be a hazardous atmosphere encountered during fires?",
+          "choices": {
+            "A": "Oxygen @ 20.5 percent",
+            "B": "Water vapor",
+            "C": "Smoke",
+            "D": "Nitrogen oxide"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 38,
+          "stem": "Which statement about protective breathing apparatus is correct?",
+          "choices": {
+            "A": "Beards or facial hair is allowable as long as it is neat and trim.",
+            "B": "Beards or facial hair cannot be in the seal area.",
+            "C": "Eyeglasses with side frames passing through the seal area of the self-contained breathing apparatus mask are allowable.",
+            "D": "Firefighters do not need to maintain a tight seal as the mask maintains positive pressure."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 39,
+          "stem": "When tightening the straps on a self-contained breathing apparatus facepiece, the _____ straps should be tightened first.",
+          "choices": {
+            "A": "lower",
+            "B": "temple",
+            "C": "upper",
+            "D": "harness"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 40,
+          "stem": "As the oxygen supply in any given area falls below _____ percent, unconsciousness can occur.",
+          "choices": {
+            "A": "21",
+            "B": "17",
+            "C": "12",
+            "D": "9"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 41,
+          "stem": "A feature in using the non-integrated PASS devices is:",
+          "choices": {
+            "A": "firefighters must activate it manually.",
+            "B": "neglecting to attach antennae to homing unit.",
+            "C": "the device is too technical for most firefighters.",
+            "D": "the device is over-pressurized."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "photo": "IMG_3030.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 42,
+          "stem": "All breathing apparatus must be stored in a location so that it is ready to be:",
+          "choices": {
+            "A": "refilled and inspected.",
+            "B": "inspected and cleaned.",
+            "C": "donned and used.",
+            "D": "sanitized and deodorized."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 43,
+          "stem": "The primary function of the bypass/purge valve on self-contained breathing apparatus is:",
+          "choices": {
+            "A": "to enable the wearer to breathe more oxygen.",
+            "B": "for use if the regulator fails.",
+            "C": "to help control excessive heat in the facepiece.",
+            "D": "to facilitate removal of condensation from the lens of the facepiece."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 44,
+          "stem": "The procedure for doffing personal protective clothing is:",
+          "choices": {
+            "A": "optional.",
+            "B": "mandated by the National Fire Protection Association.",
+            "C": "simply a reversal of the donning procedure.",
+            "D": "required for fire department readiness certification."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 45,
+          "stem": "How long does it take for the PASS device to alarm if the wearer becomes inactive?",
+          "choices": {
+            "A": "20 seconds",
+            "B": "30 seconds",
+            "C": "45 seconds",
+            "D": "60 seconds"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 46,
+          "stem": "What are the two general types of self-contained breathing apparatus?",
+          "choices": {
+            "A": "Demand and pressure-demand",
+            "B": "Open-circuit and closed-circuit",
+            "C": "Occupational Safety and Health Administration approved and National Institute for Occupational Safety and Health approved",
+            "D": "Compressed air and liquid oxygen"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 47,
+          "stem": "Structural firefighting personal protective equipment is designed to be worn with:",
+          "choices": {
+            "A": "a ladder belt only.",
+            "B": "self-contained breathing apparatus.",
+            "C": "a flotation vest",
+            "D": "chemical splash suits."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice C is printed without a period."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 48,
+          "stem": "What is a component of an open-circuit breathing apparatus?",
+          "choices": {
+            "A": "Buddy breathing connectors",
+            "B": "Facepiece",
+            "C": "High-pressure alarm",
+            "D": "Oxygen cylinder"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 49,
+          "stem": "Which is a limitation affecting a firefighter's ability to use self-contained breathing apparatus (SCBA) effectively?",
+          "choices": {
+            "A": "Age",
+            "B": "Physical conditioning",
+            "C": "Type of SCBA",
+            "D": "Oxygen cylinder size"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "photo": "IMG_3031.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 50,
+          "stem": "An advantage of a facepiece nosecup is it:",
+          "choices": {
+            "A": "assists in communication.",
+            "B": "helps control internal fogging.",
+            "C": "increases user time.",
+            "D": "makes breathing easier."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 51,
+          "stem": "Which limitations of self-contained breathing apparatus (SCBA) use can be attributed to the physical condition of the user?",
+          "choices": {
+            "A": "Size of the unit making it more difficult for the user to fit into small spaces",
+            "B": "Moving with the extra weight of personal protective equipment and SCBA increases difficulty in completing tasks.",
+            "C": "Breathing through an SCBA is different from normal breathing and causes anxiety.",
+            "D": "An SCBA cylinder will have a realistic useful life of 50 percent of the rated time."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 52,
+          "stem": "Atmospheres are classified as oxygen deficient when they fall below _____ percent oxygen.",
+          "choices": {
+            "A": "25",
+            "B": "19.5",
+            "C": "16",
+            "D": "13.5"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 53,
+          "stem": "What is a characteristic of carbon monoxide?",
+          "choices": {
+            "A": "It is produced by complete combustion.",
+            "B": "It displaces oxygen in the blood stream.",
+            "C": "It has a sharp pungent odor.",
+            "D": "Its immediate danger to life and health is 600 to 1200 ppm."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 54,
+          "stem": "What is a limitation of an SCBA face mask?",
+          "choices": {
+            "A": "Peripheral vision is reduced.",
+            "B": "Low air alarms malfunction frequently.",
+            "C": "Nosecups cause increased fogging.",
+            "D": "Lighter cylinders allow firefighter to penetrate deeper into the building."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 55,
+          "stem": "One self-contained breathing apparatus (SCBA) limitation that the firefighter should be aware of is:",
+          "choices": {
+            "A": "Occupational Safety and Health Administration prohibits spectacles in SCBA masks.",
+            "B": "SCBA and personal protective equipment add 60-70 pounds of weight to the firefighter.",
+            "C": "the degree of training or experience users have with SCBA effects their level of proficiency.",
+            "D": "low air alarms frequently malfunction."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 56,
+          "stem": "Which is a common type of self-contained breathing apparatus?",
+          "choices": {
+            "A": "Nonrebreather",
+            "B": "Open-circuit",
+            "C": "Multi-circuit",
+            "D": "Rebreather"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 57,
+          "stem": "One of the four basic components of self-contained breathing apparatus is:",
+          "choices": {
+            "A": "Nose cup.",
+            "B": "Regulator assembly.",
+            "C": "Manifold assembly.",
+            "D": "Voice box."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "photo": "IMG_3032.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 58,
+          "stem": "Some self-contained breathing apparatus cylinders for fire service use are made of:",
+          "choices": {
+            "A": "aluminum.",
+            "B": "stainless steel.",
+            "C": "titanium.",
+            "D": "plastic composite."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 59,
+          "stem": "What should a firefighter do if their self-contained breathing apparatus becomes damaged or malfunctions?",
+          "choices": {
+            "A": "Use the protective hood as a filter.",
+            "B": "Deactivate the PASS device.",
+            "C": "Remain calm and stay with their team.",
+            "D": "Run for the nearest exit as quickly as possible."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 60,
+          "stem": "All self-contained breathing apparatus should be inspected:",
+          "choices": {
+            "A": "bi-weekly.",
+            "B": "quarterly.",
+            "C": "after each use.",
+            "D": "semi-annually."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 61,
+          "stem": "What is an aspect of high-rise fires that depletes energy?",
+          "choices": {
+            "A": "Walking up many flights of stairs.",
+            "B": "Taking the elevator up only to the floor below the fire",
+            "C": "The inevitable compromise of the heating, ventilation, and air conditioning system",
+            "D": "Establishing staging sometimes many floors below the fire floor"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 62,
+          "stem": "Recharging air cylinders can be done from a bank of large air cylinders is the _____ system.",
+          "choices": {
+            "A": "combination",
+            "B": "cascade",
+            "C": "multiple",
+            "D": "in-line"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 63,
+          "stem": "Which assembly is one of the four basic components of self-contained breathing apparatus?",
+          "choices": {
+            "A": "Voice box",
+            "B": "Manifold",
+            "C": "Facepiece",
+            "D": "Nose cup"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 64,
+          "stem": "The low alarm of the self-contained breathing apparatus will sound when the cylinder's air supply is remaining.",
+          "choices": {
+            "A": "15 percent or 150 liters",
+            "B": "18 - 22 percent or 200 liters",
+            "C": "33 - 35 percent or 792 liters",
+            "D": "30 percent or 750 liters"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "The stem is printed without a blank where one seems intended (\"air supply is remaining\")."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 65,
+          "stem": "At the beginning of the shift, the firefighter should make sure their self-contained breathing apparatus is at least _____ percent full.",
+          "choices": {
+            "A": "75",
+            "B": "80",
+            "C": "85",
+            "D": "90"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "photo": "IMG_3033.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 66,
+          "stem": "There are two methods that can be used to don self-contained breathing apparatus that is stored in a case:",
+          "choices": {
+            "A": "over-the-head and coat method.",
+            "B": "compartment and coat method.",
+            "C": "over-the-head and compartment method.",
+            "D": "jacket and backup mount."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Printing defect: choice C's text is printed on a line marked \"qq\" with the \"C.\" label on the following, otherwise empty, line."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 67,
+          "stem": "A requirement for an individual trained in fire suppression is to:",
+          "choices": {
+            "A": "control a flammable gas cylinder fire.",
+            "B": "be certified as a pumper driver/operator.",
+            "C": "have the ability to use a self-contained breathing apparatus.",
+            "D": "perform annual service tests on fire hoses."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 68,
+          "stem": "Which is true regarding the physical limits of wearing a self-contained breathing apparatus (SCBA)?",
+          "choices": {
+            "A": "Physical and emotional stress has little effect on firefighters wearing SCBAs.",
+            "B": "Different firefighters consume air at the same rates based on physical activities.",
+            "C": "Company officer should assign strenuous activities to the young firefighters.",
+            "D": "Consumption of air at different rates based on their aerobic fitness."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 69,
+          "stem": "What limitations of self-contained breathing apparatus (SCBA) use can be attributed to the psychological boundaries of the user?",
+          "choices": {
+            "A": "Overcome fear and feelings of claustrophobia.",
+            "B": "Size of the unit makes it more difficult for the user to fit into small spaces.",
+            "C": "The realistic useful life of an SCBA cylinder for firefighting operations is usually much less than the rated duration.",
+            "D": "The extra weight of personal protective equipment and SCBA requires additional energy, which in turn increases air consumption and body temperature."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 70,
+          "stem": "The main components of the self-contained breathing apparatus are:",
+          "choices": {
+            "A": "facepiece, regulator, harness, and cylinder.",
+            "B": "facepiece, filter, and head straps.",
+            "C": "facepiece, filter, and regulator.",
+            "D": "facepiece, cylinder, air supply line, air source."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 71,
+          "stem": "Which statement regarding the two self-contained breathing apparatus (SCBA) types in Is use by the fire service correct?",
+          "choices": {
+            "A": "In an open-circuit SCBA, exhaled air is vented to the outside atmosphere.",
+            "B": "An open-circuit SCBA uses an external source for breathing air.",
+            "C": "The closed-circuit type is commonly used for structural firefighting.",
+            "D": "In a closed-circuit SCBA, exhaled air is vented to the outside atmosphere."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Printed stem reads \"types in / Is use by the fire service correct?\" (kept as printed)."
+          ],
+          "ocrCorrections": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1046 @@
+{
+  "exam": "i3",
+  "kind": "questions",
+  "pageRange": [
+    59,
+    67
+  ],
+  "verifiedBy": "Claude Fable 5.1, page photos checked against the OCR draft, 2026-11-04",
+  "pages": [
+    {
+      "page": 59,
+      "photo": "IMG_3075.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 83,
+          "stem": "Which of these procedures can cause serious injury or death when controlling electricity in an emergency incident?",
+          "choices": {
+            "A": "Jumping the meter",
+            "B": "Tripping all the breakers at the main panel",
+            "C": "Shutting down power without lock/tagout devices.",
+            "D": "Using wide fog patterns when attacking the fire"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 84,
+          "stem": "The most acceptable method of controlling electricity at an emergency is to:",
+          "choices": {
+            "A": "pull the meter.",
+            "B": "trip all breakers at the main panel.",
+            "C": "shut the power down at the main panel.",
+            "D": "use wide fog pattern when attacking the fire."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 85,
+          "stem": "Three important factors in ground cover firefighting are fuel, weather, and:",
+          "choices": {
+            "A": "flames.",
+            "B": "topography.",
+            "C": "heat.",
+            "D": "oxygen"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D is printed without a period."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 86,
+          "stem": "Brush, hanging moss, and upright fuels over six feet are:",
+          "choices": {
+            "A": "horizontal fuels.",
+            "B": "aerial fuels.",
+            "C": "surface fuels.",
+            "D": "accelerated fuels."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 87,
+          "stem": "A fire shelter is a:",
+          "choices": {
+            "A": "protective device for one firefighter.",
+            "B": "place where homeowners fleeing a brush fire can gather.",
+            "C": "tent used in wildland firefighting to cover vehicles.",
+            "D": "fixed place of safety for 3-4 wildland firefighters."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 88,
+          "stem": "What directly affects the growth of a wildland fire?",
+          "choices": {
+            "A": "The heel of the fire and fuel",
+            "B": "Subsurface and surface fuels",
+            "C": "Weather conditions and topography",
+            "D": "Fuel compactness and continuity"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 89,
+          "stem": "In wildland firefighting, the term anchor point refers to:",
+          "choices": {
+            "A": "the direction a slope faces given in compass directions.",
+            "B": "a canyon open on one end and closed on the other.",
+            "C": "a safe location from which to begin fire line construction.",
+            "D": "the degree of incline or vertical rise of a given piece of land."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 90,
+          "stem": "A suppression action taken by a firefighter around the perimeter of a wildland fire is a:",
+          "choices": {
+            "A": "black line.",
+            "B": "direct attack.",
+            "C": "fire edging",
+            "D": "water curtain."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice C is printed without a period."
+          ],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 60,
+      "photo": "IMG_3076.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 91,
+          "stem": "Aspect is the:",
+          "choices": {
+            "A": "direction a slope face.",
+            "B": "measure of the steepness of a slope.",
+            "C": "measure of the roughness of a slope.",
+            "D": "measure of the direction in which the wind moves across a slope."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 92,
+          "stem": "Based on location, ground cover fuels are classified as:",
+          "choices": {
+            "A": "ground, subsurface, and surface.",
+            "B": "surface, intermediate, and crown.",
+            "C": "ground, subsurface, and crown.",
+            "D": "subsurface, surface, and aerial."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 93,
+          "stem": "The term spot fire, is:",
+          "choices": {
+            "A": "the hottest part of a fire that spreads rapidly.",
+            "B": "caused by flying sparks or embers landing outside the main fire.",
+            "C": "where a fire started.",
+            "D": "the unburned area inside the perimeter."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 94,
+          "stem": "Surface fuels are involved in what type of fire?",
+          "choices": {
+            "A": "Ground cover",
+            "B": "Mixed",
+            "C": "Racing",
+            "D": "Track pattern"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 95,
+          "stem": "What are the two weather conditions that most influence wildland fires?",
+          "choices": {
+            "A": "Barometric pressure and moisture",
+            "B": "Relative humidity and wind",
+            "C": "Wind and compactness",
+            "D": "Temperature and barometric pressure"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 96,
+          "stem": "What does the C in LCES stand for?",
+          "choices": {
+            "A": "Conduct",
+            "B": "Communication",
+            "C": "Connection",
+            "D": "Confine"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 97,
+          "stem": "Utility rope should be used for:",
+          "choices": {
+            "A": "rappeling.",
+            "B": "belaying.",
+            "C": "hoisting tools.",
+            "D": "life safety."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 98,
+          "stem": "Exposure to _____ light can damage synthetic ropes.",
+          "choices": {
+            "A": "ultraviolet/sun",
+            "B": "infrared",
+            "C": "incandescent",
+            "D": "fluorescent"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 99,
+          "stem": "The kern of a kernmantle rope is the:",
+          "choices": {
+            "A": "core.",
+            "B": "sheath.",
+            "C": "end.",
+            "D": "weave."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 100,
+          "stem": "Another term for a safety knot is:",
+          "choices": {
+            "A": "rescue knot.",
+            "B": "finishing knot.",
+            "C": "overhand knot.",
+            "D": "double hitch."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 61,
+      "photo": "IMG_3077.jpg",
+      "pageNotes": [
+        "A boxed line drawing of a knot is printed between the stem of question 106 and its choices."
+      ],
+      "questions": [
+        {
+          "n": 101,
+          "stem": "A rescue situation requiring specialized knowledge or training is:",
+          "choices": {
+            "A": "Class I rescue",
+            "B": "Technical rescue",
+            "C": "Class II rescue",
+            "D": "Second stage rescue"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 102,
+          "stem": "The kind of loop that a figure eight on a bight creates is a:",
+          "choices": {
+            "A": "secure, closed loop.",
+            "B": "loop that will tighten at the standing end.",
+            "C": "sliding loop at the running end.",
+            "D": "double loop at both ends."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 103,
+          "stem": "The part of the rope that is used for hoisting or pulling is the:",
+          "choices": {
+            "A": "working end.",
+            "B": "controlling part.",
+            "C": "running end.",
+            "D": "standing part."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 104,
+          "stem": "Fire service rope falls into two classifications:",
+          "choices": {
+            "A": "life safety and utility.",
+            "B": "braided and kernmantle.",
+            "C": "synthetic and braided.",
+            "D": "natural and synthetic."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 105,
+          "stem": "The clove hitch is commonly used in the fire service for:",
+          "choices": {
+            "A": "stringing lines together.",
+            "B": "forming the rescue knot.",
+            "C": "hoisting fire equipment.",
+            "D": "splicing rope together."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 106,
+          "stem": "The _____ is tied as illustrated below :",
+          "choices": {
+            "A": "bowline",
+            "B": "becket/sheet bend",
+            "C": "clove hitch",
+            "D": "figure-eight"
+          },
+          "statements": [],
+          "illustration": "A boxed line drawing of a single rope running diagonally from lower left to upper right, both free ends drawn as arrowheads, with two stacked interlocking loops of similar size forming a doubled, twisted knot body in the middle. No labels.",
+          "notes": [
+            "The stem is printed with a space before the colon (\"below :\")."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 107,
+          "stem": "Elements for forming a knot are:",
+          "choices": {
+            "A": "bight, loop, and round turn.",
+            "B": "loop, bend, and crown.",
+            "C": "round turn, standing, and running.",
+            "D": "standing, bright, and hitch."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D is printed \"bright\" (kept as printed)."
+          ],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 62,
+      "photo": "IMG_3078.jpg",
+      "pageNotes": [
+        "The page-61 knot drawing shows through the paper on the right side; it is not printed on this page."
+      ],
+      "questions": [
+        {
+          "n": 108,
+          "stem": "The end of the rope used to tie a knot is the:",
+          "choices": {
+            "A": "running end.",
+            "B": "standing part.",
+            "C": "safety end.",
+            "D": "working end."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 109,
+          "stem": "A pike pole should be hoisted:",
+          "choices": {
+            "A": "point down.",
+            "B": "sideways.",
+            "C": "head up.",
+            "D": "either up or down."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 110,
+          "stem": "A tag line should be used to:",
+          "choices": {
+            "A": "minimize the number of personnel to hoist object.",
+            "B": "eliminate the need for safety knot.",
+            "C": "reduce strain on life safety rope.",
+            "D": "prevent equipment from striking objects."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 111,
+          "stem": "Which statement describes a bight in a rope?",
+          "choices": {
+            "A": "Reversing the rope back upon itself, while keeping the two sides of the rope parallel.",
+            "B": "The part of the rope used for hoisting or pulling.",
+            "C": "The part of the rope used for the work.",
+            "D": "Forming a loop parallel with the other side"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D is printed without a period."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 112,
+          "stem": "A sudden impact being transferred to a rope all at one time is:",
+          "choices": {
+            "A": "shock/impact load.",
+            "B": "dynamic load.",
+            "C": "compression loading.",
+            "D": "static load."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 113,
+          "stem": "What requires the use of a tag line when it is hoisted up to the roof of a structure?",
+          "choices": {
+            "A": "Salvage covers",
+            "B": "Charged hose line",
+            "C": "Hose tool",
+            "D": "Ladder"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 114,
+          "stem": "A knot used to tie two sections of webbing together is the:",
+          "choices": {
+            "A": "water knot.",
+            "B": "figure eight knot.",
+            "C": "becket bend.",
+            "D": "clove hitch."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 115,
+          "stem": "Life safety rope for firefighters should:",
+          "choices": {
+            "A": "be able to tolerate high heat and direct flame impingement use after use.",
+            "B": "be subjected to repeated impact loads.",
+            "C": "use continuous filament fiber.",
+            "D": "pass an annual inspection by the manufacturer."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 116,
+          "stem": "Which statement is true regarding tying knots?",
+          "choices": {
+            "A": "There is only one way to tie all knots.",
+            "B": "It takes little practice to become proficient.",
+            "C": "Not all knots need to be dressed.",
+            "D": "You must be able to tie them accurately."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 63,
+      "photo": "IMG_3079.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 117,
+          "stem": "To use air monitoring devices correctly, you need to:",
+          "choices": {
+            "A": "work on the leeward side of the structure.",
+            "B": "field test and calibrate the devices.",
+            "C": "wear medical gloves and air mask.",
+            "D": "be within 25 feet of the structure."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 118,
+          "stem": "Single and multi-gas detectors measure in:",
+          "choices": {
+            "A": "parts per million.",
+            "B": "vapor density.",
+            "C": "specific gravity.",
+            "D": "liters per minute."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 119,
+          "stem": "A 4-gas monitor will detect:",
+          "choices": {
+            "A": "hydrogen cyanide.",
+            "B": "hydrogen sulfide",
+            "C": "formaldehyde.",
+            "D": "volatile organic compounds."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice B is printed without a period."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 120,
+          "stem": "Multi-gas monitors can detect:",
+          "choices": {
+            "A": "the exact gas present.",
+            "B": "the exact concentration of a specific gas.",
+            "C": "and print a complex response curve.",
+            "D": "the presence of gas but not the exact gas."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 121,
+          "stem": "In an air monitoring, a fresh-air calibration is the:",
+          "choices": {
+            "A": "baseline response.",
+            "B": "zero calibration.",
+            "C": "starting point.",
+            "D": "bump test."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 122,
+          "stem": "False readings can be caused by:",
+          "choices": {
+            "A": "adequate bump test.",
+            "B": "zero calibration testing.",
+            "C": "contact with corrosive gases.",
+            "D": "recent calibration."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 123,
+          "stem": "Metal ladders exposed to excessive heat should be:",
+          "choices": {
+            "A": "thoroughly washed before being placed back into service.",
+            "B": "visually inspected for metal fatigue.",
+            "C": "constructed well enough to withstand damage.",
+            "D": "placed out of service until tested."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 124,
+          "stem": "When drying synthetic rope, keep it:",
+          "choices": {
+            "A": "in a warm, dry, sunlit place.",
+            "B": "in a cool, moist, sunlit place.",
+            "C": "out of sunlight.",
+            "D": "in a damp, dark place."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 125,
+          "stem": "When inspecting a kernmantle rope, what findings should alert fire fighters to damage in the rope?",
+          "choices": {
+            "A": "Color change of the kern",
+            "B": "Dampness of the mantle",
+            "C": "Depressions of the kern",
+            "D": "Stiffness in the mantle"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 64,
+      "photo": "IMG_3080.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 126,
+          "stem": "Ropes should be inspected:",
+          "choices": {
+            "A": "by conducting static load and elongation tests.",
+            "B": "only when contact with chemicals has occurred.",
+            "C": "after each use.",
+            "D": "a minimum of every two years."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 127,
+          "stem": "When inspecting kernmantle rope for damage, one can assume:",
+          "choices": {
+            "A": "irregularities in shape or weave are of no concern.",
+            "B": "the core can be damaged without showing evidence of outer sheath damage.",
+            "C": "75 percent of the rope's strength lies in the outer sheath.",
+            "D": "that if the rope fails an inspection, it may still be used as a life safety rope."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 128,
+          "stem": "Following each use, the facepiece of a breathing apparatus should be cleaned by:",
+          "choices": {
+            "A": "washing it with cool water only.",
+            "B": "spraying it with a disinfectant.",
+            "C": "washing it with a mixture of warm water and an approved disinfectant.",
+            "D": "washing it with an alcohol and hot water mixture."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 129,
+          "stem": "Part of proper rope maintenance is using a good _____ method.",
+          "choices": {
+            "A": "storage",
+            "B": "packaging",
+            "C": "binding",
+            "D": "stacking"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 130,
+          "stem": "What is one of the questions to consider when inspecting life safety ropes?",
+          "choices": {
+            "A": "Has the rope ever parted under load?",
+            "B": "Has the rope been inactive for more than three months?",
+            "C": "Has the rope been used for life safety?",
+            "D": "Is the rope routinely used as barrier rope at scenes?"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 131,
+          "stem": "A fire department's comprehensive Self-Contained Breathing Apparatus (SCBA) program should include:",
+          "choices": {
+            "A": "inspection of SCBA on a regular basis.",
+            "B": "visual inspection of the harness and frame only.",
+            "C": "an annual maintenance inspection at a minimum.",
+            "D": "using, cleaning, and examination information only."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 132,
+          "stem": "Halyards on extension ladders shall be replaced:",
+          "choices": {
+            "A": "annually.",
+            "B": "semiannually.",
+            "C": "by certified technicians.",
+            "D": "when they become frayed."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 133,
+          "stem": "When cleaning a ladder, use a brush and running water, then:",
+          "choices": {
+            "A": "wipe it down to dry.",
+            "B": "place it back on the apparatus.",
+            "C": "stand it vertically and allow the excess water to run off.",
+            "D": "subject it to the Horizontal Bending Test."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 65,
+      "photo": "IMG_3081.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 134,
+          "stem": "If the blade of an axe is extremely sharp and the body of the blade is ground too thin, _____ when cutting gravel roofs or striking nails.",
+          "choices": {
+            "A": "cutting will be made easier",
+            "B": "no sparks will be given off",
+            "C": "the blade will soften",
+            "D": "pieces of the blade may break off"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 135,
+          "stem": "When performing maintenance on an axe head:",
+          "choices": {
+            "A": "paint the axe head at least annually.",
+            "B": "sand the blade thin to increase the sharpness.",
+            "C": "make sure the blade is sharp.",
+            "D": "maintain the axe head as it will void the manufacturer's warranty."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 136,
+          "stem": "For metal ladders, some parts need to be lubricated. This should be done:",
+          "choices": {
+            "A": "where the dogs contact the rungs.",
+            "B": "at the guides contact the beams.",
+            "C": "by a certified testing agency.",
+            "D": "according to manufacturer recommendations."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 137,
+          "stem": "It is permissible to use paint on a fire department ladder:",
+          "choices": {
+            "A": "to mark the bed section on multi-section ladders.",
+            "B": "when there is a possibility of rust.",
+            "C": "to mark the ladder ends for visibility.",
+            "D": "when salt water may be a problem."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 138,
+          "stem": "Fire department ladders should be cleaned and _____ after each use and on a monthly basis.",
+          "choices": {
+            "A": "tested",
+            "B": "lubricated",
+            "C": "inspected",
+            "D": "varnished"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 139,
+          "stem": "Ropes should be inspected:",
+          "choices": {
+            "A": "after every use.",
+            "B": "monthly.",
+            "C": "weekly.",
+            "D": "prior to being used."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 140,
+          "stem": "Proper care for a tool with a fiberglass handle is to:",
+          "choices": {
+            "A": "lightly sand it then follow with boiled linseed oil.",
+            "B": "paint the handle regularly.",
+            "C": "varnish the handle at least annually.",
+            "D": "wash the handle with mild detergent and rinse."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 141,
+          "stem": "If the personal protective equipment was contaminated with flammable liquids or blood, it should be:",
+          "choices": {
+            "A": "laundered in same washer used for station wear.",
+            "B": "discarded.",
+            "C": "bagged and burned.",
+            "D": "cleaned using a specialized process.."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D ends in a double period as printed."
+          ],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 66,
+      "photo": "IMG_3082.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 142,
+          "stem": "Manufacturers should provide users of personal protective equipment with what information?",
+          "choices": {
+            "A": "Cleaning instructions",
+            "B": "SDS information",
+            "C": "Shelf-life duration",
+            "D": "Liability protection"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 143,
+          "stem": "A technique used to prevent mechanical damage to fire hose is:",
+          "choices": {
+            "A": "closing the nozzle slowly.",
+            "B": "removing wet hose from apparatus and replacing it with dry hose.",
+            "C": "driving vehicles over fire hose slowly.",
+            "D": "tightening leaking couplings only with spinner wrenches."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 144,
+          "stem": "The accordion load:",
+          "choices": {
+            "A": "is easy to load in the hose bed.",
+            "B": "creates less wear on the hose than a flat load does.",
+            "C": "is the preferred way to load large diameter hose.",
+            "D": "is accomplished by standing the hose on its edge and placing it around the perimeter of the hose bed in a U-shape."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 145,
+          "stem": "While inspecting fire hose, you find a defect in a section of hose. You should:",
+          "choices": {
+            "A": "discard the section.",
+            "B": "down-grade the section to training hose.",
+            "C": "call the manufacturer immediately.",
+            "D": "mark the defective area, tag the section as defective, and remove from service."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 146,
+          "stem": "Which coupling goes on the inside of a straight hose roll?",
+          "choices": {
+            "A": "The female",
+            "B": "The male",
+            "C": "Hose jacket",
+            "D": "It depends on the hose diameter."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 147,
+          "stem": "Which is an advantage of the accordion load?",
+          "choices": {
+            "A": "Hose for shoulder carries can easily be taken from the load.",
+            "B": "Hose loaded in this manner is less subject to wear from apparatus vibration.",
+            "C": "Hose loaded in this manner has fewer sharp bends than other loads.",
+            "D": "It is the best way to load large-diameter hose."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 148,
+          "stem": "The length of a single section of 1-3/4-inch attack line is:",
+          "choices": {
+            "A": "10 feet.",
+            "B": "25 feet.",
+            "C": "50 feet.",
+            "D": "80 feet."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 149,
+          "stem": "A Dutchman is:",
+          "choices": {
+            "A": "used when loading hose.",
+            "B": "a process for uncoupling hose.",
+            "C": "a short length of hose that connects a deluge set.",
+            "D": "the fold in a twin donut roll."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 67,
+      "photo": "IMG_3083.jpg",
+      "pageNotes": [
+        "Below question 150: \"Did you score 80% or higher on Exam I-3 Feedback? Circle Yes or No in ink. We will return to your Yes or No answers to these questions later in SAEP.\" The rest of the page is blank; the Feedback Step page shows through."
+      ],
+      "questions": [
+        {
+          "n": 150,
+          "stem": "To prevent cold damage to fire hose, you should:",
+          "choices": {
+            "A": "add antifreeze to the pump tank.",
+            "B": "immediately drain it and roll the hose.",
+            "C": "loosen couplings to prevent freezing.",
+            "D": "soak the hose with bicarbonate of soda."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    }
+  ]
+}

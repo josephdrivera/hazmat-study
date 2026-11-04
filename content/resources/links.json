@@ -1,0 +1,83 @@
+[
+  {
+    "id": "erg-2024",
+    "title": "2024 Emergency Response Guidebook (ERG)",
+    "description": "The guide used in the first phase of a hazmat transportation incident. Free PDF in English, French, and Spanish, plus the ERG 2024 mobile app.",
+    "url": "https://www.phmsa.dot.gov/training/hazmat/erg/emergency-response-guidebook-erg",
+    "publisher": "US DOT PHMSA",
+    "kind": "download",
+    "programs": ["hazmat"],
+    "verified": "2026-11-03"
+  },
+  {
+    "id": "dot-chart-17",
+    "title": "DOT Chart 17: Markings, Labeling, and Placarding Guide",
+    "description": "The placard and label poster. Every DOT hazard class placard, the markings that go with them, and the label rules, on one sheet. Free PDF and app.",
+    "url": "https://www.phmsa.dot.gov/training/hazmat/dot-chart-17-markings-labeling-and-placarding-guide",
+    "publisher": "US DOT PHMSA",
+    "kind": "download",
+    "programs": ["hazmat"],
+    "verified": "2026-11-03"
+  },
+  {
+    "id": "niosh-pocket-guide",
+    "title": "NIOSH Pocket Guide to Chemical Hazards",
+    "description": "Exposure limits, IDLH values, physical properties, and protective-equipment notes for hundreds of chemicals. Searchable online and as a free app.",
+    "url": "https://www.cdc.gov/niosh/npg/default.html",
+    "publisher": "CDC NIOSH",
+    "kind": "view",
+    "programs": ["hazmat"],
+    "verified": "2026-11-03"
+  },
+  {
+    "id": "cameo-chemicals",
+    "title": "CAMEO Chemicals",
+    "description": "Response and reactivity data for chemicals, with a reactivity predictor for mixtures. Free online and as an app.",
+    "url": "https://cameochemicals.noaa.gov/",
+    "publisher": "NOAA and EPA",
+    "kind": "view",
+    "programs": ["hazmat"],
+    "verified": "2026-11-03"
+  },
+  {
+    "id": "osha-1910-120",
+    "title": "OSHA 29 CFR 1910.120 (HAZWOPER)",
+    "description": "The federal rule that sets the Awareness, Operations, and Technician responder levels and the training each one requires.",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.120",
+    "publisher": "OSHA",
+    "kind": "view",
+    "programs": ["hazmat"],
+    "verified": "2026-11-03"
+  },
+  {
+    "id": "osha-ghs-pictograms",
+    "title": "OSHA Hazard Communication pictograms",
+    "description": "The nine GHS pictograms with the hazards each one stands for, as they appear on Safety Data Sheets and container labels.",
+    "url": "https://www.osha.gov/hazcom/pictograms",
+    "publisher": "OSHA",
+    "kind": "view",
+    "programs": ["hazmat"],
+    "verified": "2026-11-03"
+  },
+  {
+    "id": "nfpa-free-access",
+    "title": "NFPA free access to codes and standards",
+    "description": "Read NFPA 470, 472, 1001, and 1010 online at no charge. Viewing needs a free NFPA account; the standards cannot be downloaded or printed.",
+    "url": "https://www.nfpa.org/codes-and-standards/free-access",
+    "publisher": "NFPA",
+    "kind": "view",
+    "programs": ["hazmat", "firefighter-1", "firefighter-2"],
+    "verified": "2026-11-03",
+    "note": "sign-in required"
+  },
+  {
+    "id": "ct-cfpc-certification",
+    "title": "Connecticut CFPC certification",
+    "description": "The Commission on Fire Prevention and Control's certification page: exam applications, candidate information, and the standards each certification tests.",
+    "url": "https://portal.ct.gov/cfpc/certification",
+    "publisher": "CT Commission on Fire Prevention and Control",
+    "kind": "view",
+    "programs": ["hazmat", "firefighter-1", "firefighter-2"],
+    "verified": "2026-11-03"
+  }
+]

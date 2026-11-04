@@ -1,0 +1,1322 @@
+{
+  "exam": "i2",
+  "kind": "questions",
+  "pageRange": [27, 36],
+  "pages": [
+    {
+      "page": 27,
+      "photo": "IMG_3045.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Title line: Exam I-2 – 150 Exam Items Adding Difficulty and Depth / Reading List: / The reading list for Firefighter Exam I-2 is as follows:",
+        "Reading list item 1: IFSTA, Essentials of Fire Fighting and Fire Department Operations, 8th Edition, Chapters; 1, 4-6, 9, 11-15.",
+        "Reading list item 2: Jones and Bartlett Learning, Fundamentals of Fire Fighter Skills, 5h Edition, Chapters; 2, 3, 5, 6, 9-14, 16-19. (edition printed as a superscript 'h' after 5, apparently missing the 't')",
+        "Line: During Exam I-2 progress will be made in developing depth of knowledge and skills.",
+        "Boxed Helpful Hint paragraph about Return on Effort (ROE) and investing time in examination preparation.",
+        "Paragraph beginning 'Instead of calling our expenditure of effort a Return on Investment (ROI) it is called a Return on Effort (ROE).' with 'things right' and 'right things' underlined.",
+        "Directions paragraph: remove Examination I-2 from the manual for ease of scoring and research; exam is portable.",
+        "'First' paragraph: 150 exam items; Answer Form for Firefighter I-2 Examination in Appendix C; fill bubbles (A-D) in ink; rule about changing answers.",
+        "'If you guess' paragraph: mark guessed answers with an X or checkmark; guessed items treated later in SAEP.",
+        "'Next' paragraph: take the examination, score it in Appendix A, follow directions for feedback on missed and guessed items.",
+        "Page number 27 at bottom.",
+        "Only question 1 is printed on this page. The OCR draft listed question 2 under this page; that text is bleed-through from page 28 and is not printed here.",
+        "Photo: a dark monitor arm / chair piece crosses the bottom-left of the photo below the page; no text is covered. Reverse-side text shows faintly through the paper."
+      ],
+      "questions": [
+        {
+          "n": 1,
+          "stem": "The rope used for hoisting the fly section of a ladder is the:",
+          "choices": {
+            "A": "hand line.",
+            "B": "tag line.",
+            "C": "running line.",
+            "D": "halyard."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: stem merged with the reading list and directions text / photo: stem is only 'The rope used for hoisting the fly section of a ladder is the:'"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "photo": "IMG_3046.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 28 at bottom.",
+        "Photo: page is photographed at an angle with the top edge curling; the user's fingers hold the bottom-left corner and a monitor arm appears below the page; no text is covered. The facing page (29) is partly visible at the right edge and was ignored."
+      ],
+      "questions": [
+        {
+          "n": 2,
+          "stem": "While working from a ground ladder, the hook on the ladder belt should be:",
+          "choices": {
+            "A": "attached to a rung.",
+            "B": "attached to a beam.",
+            "C": "secured to a lifeline.",
+            "D": "attached to the halyard."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: question 2 placed on page 27 as unlabeled extra lines / photo: printed at the top of page 28"
+          ]
+        },
+        {
+          "n": 3,
+          "stem": "The type of ladder that is 12 to 20 feet is a wall ladder and also referred to as a:",
+          "choices": {
+            "A": "straight ladder.",
+            "B": "roof ladder.",
+            "C": "combination ladder.",
+            "D": "A-frame ladder."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 4,
+          "stem": "The common length of the straight ground ladder is between _____ feet.",
+          "choices": {
+            "A": "6 to 14",
+            "B": "12 to 24",
+            "C": "18 to 30",
+            "D": "25 to 50"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: stem ends 'is between' with 'feet.' as a stray extra line / photo: 'is between _____ feet.'"
+          ]
+        },
+        {
+          "n": 5,
+          "stem": "The proper distance the butt of a ladder should be from a building is _____ of the working distance of the ladder from the base of the wall.",
+          "choices": {
+            "A": "one-half",
+            "B": "one-quarter",
+            "C": "one-third",
+            "D": "one-eighth"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: 'from a building is distance of the ladder' / photo: 'from a building is _____ of the working distance of the ladder'"
+          ]
+        },
+        {
+          "n": 6,
+          "stem": "Another term for ladders that are carried from the apparatus to point of application is:",
+          "choices": {
+            "A": "modular ladders.",
+            "B": "stand-alone ladders.",
+            "C": "ground/portable ladders.",
+            "D": "Bangor ladders."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 7,
+          "stem": "The purpose of the hooks of a roof ladder is to:",
+          "choices": {
+            "A": "dig into the ground to keep the ladder from slipping.",
+            "B": "grip the eave of the roof to keep the ladder from slipping.",
+            "C": "serve as safe attachment points for fire fighters and equipment.",
+            "D": "secure the tip of the ladder to the peak of a pitched roof."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: A 'from slipping' / photo: 'from slipping.'",
+            "draft: B 'from slipping:' / photo: 'from slipping.'"
+          ]
+        },
+        {
+          "n": 8,
+          "stem": "For a three-firefighter flat carry, the third firefighter stands:",
+          "choices": {
+            "A": "in the middle on the same side.",
+            "B": "in the middle on the opposite side.",
+            "C": "at the tip on the opposite side.",
+            "D": "at the butt on the opposite side."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 9,
+          "stem": "When working with ladders under power lines, a minimum distance of _____ feet must be kept ensuring personal safety.",
+          "choices": {
+            "A": "6",
+            "B": "10",
+            "C": "12",
+            "D": "15"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: 'a minimum distance of kept ensuring' / photo: 'a minimum distance of _____ feet must be kept ensuring'",
+            "draft: choices C and D missing (pasted into question 10) / photo: C. 12, D. 15"
+          ]
+        },
+        {
+          "n": 10,
+          "stem": "The tip of a ladder should be secured:",
+          "choices": {
+            "A": "at all times.",
+            "B": "to keep it from pulling away.",
+            "C": "when the angle is between 70-75 degrees.",
+            "D": "when it is an aerial ladder."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B 'to keep it from pulling away' / photo: 'to keep it from pulling away.'",
+            "draft: C '12' / photo: 'when the angle is between 70-75 degrees.'",
+            "draft: D '15' / photo: 'when it is an aerial ladder.'"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "photo": "IMG_3047.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 29 at bottom.",
+        "Photo: a monitor arm crosses the bottom-left below the page; no text is covered. Reverse-side text shows faintly through the paper; a strip of the previous page's edge is visible at the left."
+      ],
+      "questions": [
+        {
+          "n": 11,
+          "stem": "Which statement is correct regarding a two-firefighter shoulder carry for a portable ladder?",
+          "choices": {
+            "A": "Firefighters stand on opposite sides; one at the butt, one at the tip.",
+            "B": "Both firefighters face the same direction with one at the butt and one at the tip.",
+            "C": "Both firefighters stand at the balance point, one on each side.",
+            "D": "Both firefighters stand in the middle of the ladder, one on each side."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 12,
+          "stem": "When climbing a portable ladder with a tool, your hands should:",
+          "choices": {
+            "A": "only hold onto tools.",
+            "B": "hold tightly onto the rungs.",
+            "C": "slide up the back side of the beams.",
+            "D": "slide up the front side of the beams."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 13,
+          "stem": "The three-fire fighter carry is usually used with extension ladders up to:",
+          "choices": {
+            "A": "50 feet.",
+            "B": "35 feet.",
+            "C": "24 feet.",
+            "D": "16 feet."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 14,
+          "stem": "On a three-fire fighter shoulder carry, how should the fire fighters be aligned?",
+          "choices": {
+            "A": "The front person should be on the left, the others on the right.",
+            "B": "They should all be on the same side of the ladder.",
+            "C": "The front and rear person should be on the left, the middle person on the right.",
+            "D": "Two on one side and one on the opposite side"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D is printed without a trailing period."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 15,
+          "stem": "Which statement concerning ground ladder placement is correct?",
+          "choices": {
+            "A": "To break a window for ventilation, it should be placed on the leeward side.",
+            "B": "To break a window for ventilation, its tip should be even with the bottom of the window.",
+            "C": "For entry or rescue from a window, its tip is placed slightly below the sill.",
+            "D": "Place the ladder so that five rungs extend above the sill."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B ends 'bottom of' with 'the window.' as a stray line / photo: B wraps to 'bottom of the window.'"
+          ]
+        },
+        {
+          "n": 16,
+          "stem": "When a ladder is placed at the proper angle for climbing and a fire fighter is standing on a rung, how far away will the rung at shoulder height be from the fire fighter?",
+          "choices": {
+            "A": "One hand width",
+            "B": "Two hand widths",
+            "C": "Arm's length",
+            "D": "About an arm-and-a-half away"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 17,
+          "stem": "When attacking a fire in the passenger area, you should be cautious of:",
+          "choices": {
+            "A": "the fire stream to maintain a tight pattern.",
+            "B": "fires in the engine or trunk first.",
+            "C": "using a prying tool to break the windows.",
+            "D": "supplemental restraints."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 18,
+          "stem": "What is a property or hazard associated with Liquefied Petroleum Gas?",
+          "choices": {
+            "A": "It is heavier than air.",
+            "B": "It is extremely corrosive.",
+            "C": "It is toxic.",
+            "D": "It is lighter than air."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "photo": "IMG_3048.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 30 at bottom.",
+        "Photo: page photographed at an angle with the top edge curling; the user's fingers hold the bottom-left corner and a monitor arm appears below the page; no text is covered. The facing page (31) is partly visible at the right edge and was ignored."
+      ],
+      "questions": [
+        {
+          "n": 19,
+          "stem": "A recommended action when fighting a fire in an alternative fuel or hybrid vehicle is to:",
+          "choices": {
+            "A": "take the same precautions as would be followed at a conventional vehicle fire.",
+            "B": "fully involved fires in vehicles powered by Compressed Natural Gas (CNG) or Liquefied petroleum Gas (LPG) should be extinguished with two 1-3/4\" handlines.",
+            "C": "take precautions to dissipate leaking CNG because its vapors are heavier than air.",
+            "D": "be aware that batteries are hazardous when burning."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice B is printed with lowercase 'petroleum' in 'Liquefied petroleum Gas (LPG)'; kept as printed."
+          ],
+          "ocrCorrections": [
+            "draft: A 'conventional vehicle fire' / photo: 'conventional vehicle fire.'",
+            "draft: B ends at 'Liquefied' with the wrapped line as a stray extra / photo: B continues 'petroleum Gas (LPG) should be extinguished with two 1-3/4\" handlines.'",
+            "draft: B 'fully Involved' / photo: 'fully involved'",
+            "draft: D 'when burning' / photo: 'when burning.'"
+          ]
+        },
+        {
+          "n": 20,
+          "stem": "A property associated with Compressed Natural Gas is that it is:",
+          "choices": {
+            "A": "toxic.",
+            "B": "lighter than air.",
+            "C": "heavier than air.",
+            "D": "extremely corrosive."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: A 'toxic' / photo: 'toxic.'"
+          ]
+        },
+        {
+          "n": 21,
+          "stem": "Which is true regarding fighting fires on hybrid vehicles?",
+          "choices": {
+            "A": "Fires in hybrid cars require specialized tactics and tools.",
+            "B": "Water is still the extinguishing agent of choice.",
+            "C": "Hybrid vehicles should be allowed to burn.",
+            "D": "Attack fires from the front of the vehicle instead of the sides."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: A empty / photo: 'Fires in hybrid cars require specialized tactics and tools.'"
+          ]
+        },
+        {
+          "n": 22,
+          "stem": "You arrive on scene of a vehicle fire involving combustible metals, you should:",
+          "choices": {
+            "A": "immediately disconnect the batteries.",
+            "B": "establish a control zone and call for hazardous materials unit.",
+            "C": "apply Class D extinguishing agent to the burning metal.",
+            "D": "use a straight stream to disperse the metal components."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 23,
+          "stem": "Water is the primary fire extinguishing agent because of its:",
+          "choices": {
+            "A": "temperature coefficient and surface tension.",
+            "B": "purity and low toxicity.",
+            "C": "ability to cool and absorb heat.",
+            "D": "flexibility and tendency to evaporate slowly."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: C empty / photo: 'ability to cool and absorb heat.'"
+          ]
+        },
+        {
+          "n": 24,
+          "stem": "A tool to aid in handling a charged hoseline is a hose:",
+          "choices": {
+            "A": "wrench.",
+            "B": "jacket.",
+            "C": "strap.",
+            "D": "clamp."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: D missing (pasted into question 25) / photo: 'clamp.'"
+          ]
+        },
+        {
+          "n": 25,
+          "stem": "One-inch rubber hose equipped with one-inch couplings is:",
+          "choices": {
+            "A": "forestry hose.",
+            "B": "supply hose.",
+            "C": "booster hose.",
+            "D": "engine line."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: 'couplings Is:' / photo: 'couplings is:'",
+            "draft: D 'clamp.' / photo: 'engine line.'"
+          ]
+        },
+        {
+          "n": 26,
+          "stem": "Fighting fire in stacked or piled materials creates a unique danger because:",
+          "choices": {
+            "A": "if fog streams are not used, the fire will continue to burn.",
+            "B": "these fires are best fought with piercing nozzles.",
+            "C": "Halligans used to prop up stacked materials can cause trip hazards.",
+            "D": "stacked materials can fall causing injury."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: D 'engine line.' / photo: 'stacked materials can fall causing injury.'"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "photo": "IMG_3049.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 31 at bottom.",
+        "Photo: a monitor arm crosses the bottom-left below the page; no text is covered. Reverse-side text shows faintly through the paper."
+      ],
+      "questions": [
+        {
+          "n": 27,
+          "stem": "Fire fighters must be trained in the methods of evidence preservation because:",
+          "choices": {
+            "A": "training in these methods is less expensive while in the training.",
+            "B": "all firefighters also serve as fire cause determiners, on a rotation basis.",
+            "C": "an understanding of fire cause aids in fire suppression.",
+            "D": "evidence can be lost during suppression and overhaul activities."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 28,
+          "stem": "What can be used to extinguish smoldering fires in tightly packed Class A stacked or piled materials?",
+          "choices": {
+            "A": "Carbon dioxide extinguishers",
+            "B": "Class A foam",
+            "C": "Dry chemical extinguishers",
+            "D": "Class B foam"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 29,
+          "stem": "A common cause of exposure fires is:",
+          "choices": {
+            "A": "radiation.",
+            "B": "osmosis.",
+            "C": "conduction.",
+            "D": "resistance heating."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 30,
+          "stem": "Most handlines with smooth-bore nozzles are designed to operate at a nozzle pressure of _____ psi.",
+          "choices": {
+            "A": "50",
+            "B": "75",
+            "C": "90",
+            "D": "100"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: 'nozzle pressure of psi.' / photo: 'nozzle pressure of _____ psi.'"
+          ]
+        },
+        {
+          "n": 31,
+          "stem": "Fog nozzles provide lower psi, density is lower, and the stream has less:",
+          "choices": {
+            "A": "velocity.",
+            "B": "back pressure.",
+            "C": "cavitation.",
+            "D": "volume."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 32,
+          "stem": "The circular broken stream is often useful for:",
+          "choices": {
+            "A": "attics.",
+            "B": "car fires.",
+            "C": "above grade.",
+            "D": "warehouse fires."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 33,
+          "stem": "The two methods of interior attack are:",
+          "choices": {
+            "A": "straight and solid.",
+            "B": "offensive and defensive.",
+            "C": "direct and indirect.",
+            "D": "fog and solid."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: A 'straight and solid' / photo: 'straight and solid.'"
+          ]
+        },
+        {
+          "n": 34,
+          "stem": "Prior to entering a fire area with a charged hoseline, the nozzle operator should first:",
+          "choices": {
+            "A": "bleed air from the line.",
+            "B": "wait for a building layout.",
+            "C": "wait for the power to be shut off.",
+            "D": "wait for direction from the pump operator."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: C 'to be shut off' / photo: 'to be shut off.'"
+          ]
+        },
+        {
+          "n": 35,
+          "stem": "To achieve extinguishment, sufficient water must be applied to:",
+          "choices": {
+            "A": "thoroughly saturate the flammable liquids.",
+            "B": "smother all flames.",
+            "C": "absorb heat faster than it is being generated.",
+            "D": "produce steam."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "photo": "IMG_3050.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 32 at bottom.",
+        "Photo: page photographed at an angle with the top edge curling; the user's fingers hold the bottom-left corner and a monitor arm appears below the page; no text is covered. The facing page (33) is partly visible at the right edge and was ignored."
+      ],
+      "questions": [
+        {
+          "n": 36,
+          "stem": "A stream discharging more than 350 gpm is:",
+          "choices": {
+            "A": "a booster stream.",
+            "B": "a solid stream.",
+            "C": "an elevated stream.",
+            "D": "a master stream."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 37,
+          "stem": "Standard gpm for a master streams is:",
+          "choices": {
+            "A": "70",
+            "B": "350",
+            "C": "100",
+            "D": "above 100"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Stem printed as 'a master streams is:' (plural); kept as printed."
+          ],
+          "ocrCorrections": [
+            "draft: D missing (pasted into question 38) / photo: 'above 100'"
+          ]
+        },
+        {
+          "n": 38,
+          "stem": "Nozzle controls, hydrants, valves, and hose clamps should be operated _____ to prevent a water hammer.",
+          "choices": {
+            "A": "one-half turn at a time",
+            "B": "slowly",
+            "C": "rapidly",
+            "D": "during low pressure"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: 'should be operated prevent a water hammer.' / photo: 'should be operated _____ to prevent a water hammer.'",
+            "draft: B missing (pasted into question 39) / photo: 'slowly'",
+            "draft: D 'above 100' / photo: 'during low pressure'"
+          ]
+        },
+        {
+          "n": 39,
+          "stem": "How many female couplings are on a wye hose appliance?",
+          "choices": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: D 'during low pressure' / photo: '4'"
+          ]
+        },
+        {
+          "n": 40,
+          "stem": "The Higbee indicator/cut is:",
+          "choices": {
+            "A": "a type of thread on hose couplings.",
+            "B": "a type of ditch or cut for rescue purposes.",
+            "C": "utilized for aligning the male with the female coupling.",
+            "D": "a cut in the coupling to prevent damage."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: C 'female coupling' / photo: 'female coupling.'"
+          ]
+        },
+        {
+          "n": 41,
+          "stem": "When operating hoseline from a ladder, the hose should be:",
+          "choices": {
+            "A": "secured to the ladder.",
+            "B": "secured to the halyard.",
+            "C": "looped through the ladder.",
+            "D": "looped through the halyard."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 42,
+          "stem": "The systems in high-rise buildings that deliver water from the outside up to fire hose outlets on each floor are:",
+          "choices": {
+            "A": "dry bed.",
+            "B": "standpipe.",
+            "C": "cross feed.",
+            "D": "cistern."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 43,
+          "stem": "Which statement regarding fog nozzles is correct?",
+          "choices": {
+            "A": "A fog nozzle can produce a solid stream.",
+            "B": "Fog nozzles provide less heat absorption than do solid stream nozzles..",
+            "C": "Fog nozzles have greater reach than solid stream nozzles.",
+            "D": "Fog streams move large volumes of air along with the water."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice B is printed with a double period ('nozzles..'); kept as printed."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 44,
+          "stem": "Which statement concerning automatic adjusting fog nozzles is true?",
+          "choices": {
+            "A": "The pressure setting does not affect the flow rate of the automatic adjusting nozzle.",
+            "B": "The amount of water flowing through the nozzle is adjusted to maintain the rated pressure.",
+            "C": "A typical automatic adjusting nozzle has an operating range of 50 to 125 gallons per minute while maintaining 100 psi discharge.",
+            "D": "Maximum nozzle pressure is needed to operate a two-way valve.."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D is printed with a double period ('valve..'); kept as printed."
+          ],
+          "ocrCorrections": [
+            "draft: B ends 'to maintain the' with 'rated pressure.' as a stray line / photo: B wraps to 'to maintain the rated pressure.'",
+            "draft: C ends 'gallons per minute' with 'while maintaining 100 psi discharge.' as a stray line / photo: C wraps to 'gallons per minute while maintaining 100 psi discharge.'"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "photo": "IMG_3051.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 33 at bottom.",
+        "Photo: a monitor arm crosses the bottom-left below the page; no text is covered. Reverse-side text shows faintly through the paper."
+      ],
+      "questions": [
+        {
+          "n": 45,
+          "stem": "When utilizing the indirect fire attack, the team should flow water until the:",
+          "choices": {
+            "A": "ceiling takes on a blackened color.",
+            "B": "smoke within the room changes color.",
+            "C": "temperature has been reduced.",
+            "D": "smoke blanket billows."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B empty / photo: 'smoke within the room changes color.'",
+            "draft: C 'has been reduced' / photo: 'has been reduced.'"
+          ]
+        },
+        {
+          "n": 46,
+          "stem": "A water hammer is:",
+          "choices": {
+            "A": "the pressure needed to overcome friction loss.",
+            "B": "the pressure surge that occurs when water valves or nozzles are slowly opened and closed.",
+            "C": "the use of water to assist in overhaul.",
+            "D": "the pressure surge that occurs when water valves or nozzles are rapidly opened or closed."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B ends 'are slowly' with 'opened and closed' as a stray line / photo: B wraps to 'are slowly opened and closed.'",
+            "draft: D ends 'are rapidly' with 'opened or closed.' as a stray line / photo: D wraps to 'are rapidly opened or closed.'"
+          ]
+        },
+        {
+          "n": 47,
+          "stem": "Where should you hook an attack line into a standpipe system during a fire in a multistory building with unprotected stairwells?",
+          "choices": {
+            "A": "The fire floor",
+            "B": "One floor above the fire floor",
+            "C": "Two floors below the fire floor",
+            "D": "One floor below the fire floor"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 48,
+          "stem": "The chemical decomposition of a substance through the action of heat is:",
+          "choices": {
+            "A": "oxidation.",
+            "B": "pyrolysis.",
+            "C": "boiling point.",
+            "D": "heat of decompression."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B and D missing (pasted into question 49) / photo: B. pyrolysis., D. heat of decompression."
+          ]
+        },
+        {
+          "n": 49,
+          "stem": "The three physical states of fuel/matter are:",
+          "choices": {
+            "A": "smoke, heat, and light.",
+            "B": "solid, liquid, and gas.",
+            "C": "conduction, convection, and radiation.",
+            "D": "atom, molecule, and compound."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B 'pyrolysis.' / photo: 'solid, liquid, and gas.'",
+            "draft: D 'heat of decompression.' / photo: 'atom, molecule, and compound.'"
+          ]
+        },
+        {
+          "n": 50,
+          "stem": "When should the firefighter at the hydrant charge the supply line?",
+          "choices": {
+            "A": "As soon as possible.",
+            "B": "When signal is received.",
+            "C": "After slowly opening the hydrant all the way.",
+            "D": "After ten full minutes from the time of drop-off."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B 'When signal is received' / photo: 'When signal is received.'"
+          ]
+        },
+        {
+          "n": 51,
+          "stem": "When utilizing the direct attack, the team should flow water until the:",
+          "choices": {
+            "A": "smoke within the room changes color.",
+            "B": "ceiling takes on a blackened color.",
+            "C": "fire is extinguished.",
+            "D": "smoke blanket billows."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 52,
+          "stem": "When the concentration of a gas is within the range where it can ignite, it is:",
+          "choices": {
+            "A": "at its ignition temperature.",
+            "B": "reached its boiling point.",
+            "C": "within its flammable range.",
+            "D": "at its flash point."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 53,
+          "stem": "The mixture of fuel vapor to air that will ignite when subjected to an ignition source is the:",
+          "choices": {
+            "A": "flash point.",
+            "B": "vapor/fuel density.",
+            "C": "flammable range.",
+            "D": "burning point."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 34,
+      "photo": "IMG_3052.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 34 at bottom.",
+        "Photo: page photographed at an angle with the top edge curling; the user's fingers hold the bottom-left corner and a monitor arm appears below the page; no text is covered. The facing page (35) is partly visible at the right edge and was ignored."
+      ],
+      "questions": [
+        {
+          "n": 54,
+          "stem": "What normal body cooling mechanism is lost when wearing personal protective equipment?",
+          "choices": {
+            "A": "Radiation from the head",
+            "B": "Radiation from the body",
+            "C": "Internal cooling from ingestion",
+            "D": "Evaporation of perspiration"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 55,
+          "stem": "A fire stream is:",
+          "choices": {
+            "A": "the flaming material shot through the air by a flame thrower.",
+            "B": "the main attack line on interior attack.",
+            "C": "water or water based agent as it leaves the nozzle toward the target.",
+            "D": "the total number of streams needed for knockdown and extinguishment of a fire."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B 'on interior attack' / photo: 'on interior attack.'"
+          ]
+        },
+        {
+          "n": 56,
+          "stem": "Which is a warning signal of backdraft conditions?",
+          "choices": {
+            "A": "Smoke-stained windows with little or no visible flames.",
+            "B": "Smoke observed pouring out a burned-through opening in the roof",
+            "C": "Front door unaccountably wide open",
+            "D": "Upper windows observed to be open or shattered"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Only choice A is printed with a trailing period; B, C, and D have none."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 57,
+          "stem": "Firefighters' risk of injury or collapse increases as they:",
+          "choices": {
+            "A": "operate at wildland fires.",
+            "B": "are assigned to forcible entry.",
+            "C": "become tired and/or dehydrated.",
+            "D": "get older."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 58,
+          "stem": "What needs to occur before committing firefighters to a basement fire?",
+          "choices": {
+            "A": "Ensure RIT team is enroute.",
+            "B": "Hold ventilation operations until after extinguishment.",
+            "C": "Make sure only large diameter hoselines are deployed to combat the intense fire.",
+            "D": "Check for structural integrity of the first floor."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 59,
+          "stem": "The leading cause of firefighter fatalities is:",
+          "choices": {
+            "A": "cardiac arrest.",
+            "B": "internal trauma.",
+            "C": "asphyxiation.",
+            "D": "crushing injuries."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: A 'cardiac arrest' / photo: 'cardiac arrest.'",
+            "draft: B and D missing (pasted into question 60) / photo: B. internal trauma., D. crushing injuries."
+          ]
+        },
+        {
+          "n": 60,
+          "stem": "The objective of an indirect fire attack is to:",
+          "choices": {
+            "A": "extinguish the fire directly and immediately.",
+            "B": "quickly remove as much heat as possible.",
+            "C": "mix the fire gases with water vapor.",
+            "D": "cause the fire gases to condense into liquids and fall to the surface."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B 'internal trauma.' / photo: 'quickly remove as much heat as possible.'",
+            "draft: D 'crushing injuries.' / photo: 'cause the fire gases to condense into liquids and fall to the surface.'"
+          ]
+        },
+        {
+          "n": 61,
+          "stem": "The Bresnan Distributor Nozzle is used primarily for what type of fire?",
+          "choices": {
+            "A": "Car fires",
+            "B": "Grass/brush fires",
+            "C": "Dumpster fires",
+            "D": "Basement/cellar fires"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B empty / photo: 'Grass/brush fires'"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 35,
+      "photo": "IMG_3053.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 35 at bottom.",
+        "Photo: a monitor arm crosses the bottom-left below the page; no text is covered. Reverse-side text shows faintly through the paper."
+      ],
+      "questions": [
+        {
+          "n": 62,
+          "stem": "The type of appliance used to attach hoselines of differing diameters is:",
+          "choices": {
+            "A": "an adaptor.",
+            "B": "an expander.",
+            "C": "a manifold.",
+            "D": "a reducer."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 63,
+          "stem": "Attack and supply hose may be equipped with what type of couplings?",
+          "choices": {
+            "A": "Male and Storz",
+            "B": "Threaded and non-threaded",
+            "C": "Compression couplings",
+            "D": "Brass and aluminum"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B empty / photo: 'Threaded and non-threaded'"
+          ]
+        },
+        {
+          "n": 64,
+          "stem": "The measure of how long structural assemblies will maintain their load-bearing ability under fire conditions is:",
+          "choices": {
+            "A": "fire code approved.",
+            "B": "the National Building Code.",
+            "C": "fire resistance rating.",
+            "D": "National Fire Protection Association (NFPA) rated."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: C 'fire resistance rating' / photo: 'fire resistance rating.'"
+          ]
+        },
+        {
+          "n": 65,
+          "stem": "The type of construction where the exterior walls and structural members are made of noncombustible or limited combustible materials and the interior is completely or partially made of wood is:",
+          "choices": {
+            "A": "Type I construction.",
+            "B": "Type II construction.",
+            "C": "Type III construction.",
+            "D": "Type IV construction."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 66,
+          "stem": "The primary concern of ordinary construction is:",
+          "choices": {
+            "A": "the exterior building materials.",
+            "B": "fire extension/fire spread.",
+            "C": "early wall collapse.",
+            "D": "combustible contents and building materials."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 67,
+          "stem": "The type of construction that presents the most hazards due to use of plywood or wood composite I-beams is:",
+          "choices": {
+            "A": "Type II construction.",
+            "B": "Type III construction.",
+            "C": "Type IV construction.",
+            "D": "Type V construction."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: A 'Type Il construction.' / photo: 'Type II construction.'"
+          ]
+        },
+        {
+          "n": 68,
+          "stem": "Which building type will present a greater potential for fire spread and collapse?",
+          "choices": {
+            "A": "Heavy-timber construction,Type IV",
+            "B": "Fire resistive construction, Type I",
+            "C": "Lightweight wood-frame construction, Type V",
+            "D": "Masonry construction, Type III"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice A appears printed with no space after the comma ('construction,Type IV'); kept as printed."
+          ],
+          "ocrCorrections": [
+            "draft: B 'Type l' / photo: 'Type I'"
+          ]
+        },
+        {
+          "n": 69,
+          "stem": "In wood truss design, the weakest point that will fail quickly when exposed to heat is the:",
+          "choices": {
+            "A": "gusset plate.",
+            "B": "fire plate.",
+            "C": "bar joist.",
+            "D": "I beam."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 36,
+      "photo": "IMG_3054.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 36 at bottom.",
+        "Photo: page photographed at an angle with the top edge curling; the user's fingers hold the bottom-left corner and a monitor arm appears below the page; no text is covered. The facing page (37) is partly visible at the right edge and was ignored."
+      ],
+      "questions": [
+        {
+          "n": 70,
+          "stem": "The byproduct of the combustion of plastics and polyurethane foam is:",
+          "choices": {
+            "A": "actaldehyde.",
+            "B": "asbestos.",
+            "C": "carbon dioxide.",
+            "D": "hydrogen cyanide."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice A is printed 'actaldehyde.' (sic); kept as printed."
+          ],
+          "ocrCorrections": [
+            "draft: stem ends 'is: B asbestos' / photo: stem ends 'is:' and B is a separate choice",
+            "draft: B missing / photo: 'asbestos.'"
+          ]
+        },
+        {
+          "n": 71,
+          "stem": "Toxic products of combustion can be deadly and are present in the:",
+          "choices": {
+            "A": "response phase.",
+            "B": "overhaul phase.",
+            "C": "rehab area.",
+            "D": "warm zone."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D is misaligned in print: the text 'warm zone.' sits on the line above the 'D.' label, which is printed alone on the next line. Transcribed as D. warm zone."
+          ],
+          "ocrCorrections": [
+            "draft: D missing with 'warm zone.' as a stray line / photo: D. warm zone."
+          ]
+        },
+        {
+          "n": 72,
+          "stem": "A common factor with regard to firefighter deaths at emergency incidents is:",
+          "choices": {
+            "A": "overexertion.",
+            "B": "most incidents occurred during forest fires.",
+            "C": "collision or being struck.",
+            "D": "most involved industrial complexes."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 73,
+          "stem": "In a high rise fire, the condition that creates an upward draft that can hinder evacuation and ventilation is the:",
+          "choices": {
+            "A": "reverse flow path.",
+            "B": "trench current.",
+            "C": "stack effect.",
+            "D": "stairwell pattern."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 74,
+          "stem": "The mission of the fire service is:",
+          "choices": {
+            "A": "a written agreement between two communities to provide mutual response to emergencies.",
+            "B": "a yearly report from a fire department showing how many incidents it responded to in that year.",
+            "C": "operate under the Incident Command System (ICS).",
+            "D": "to save lives and protect property."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: A ends 'to provide mutual' with 'response to emergencies.' as a stray line / photo: A wraps to 'to provide mutual response to emergencies.'",
+            "draft: B ends 'how many incidents it' with 'responded to in that year.' as a stray line / photo: B wraps to 'how many incidents it responded to in that year.'"
+          ]
+        },
+        {
+          "n": 75,
+          "stem": "When assisting a conscious victim down a ladder, a firefighter should be:",
+          "choices": {
+            "A": "at least four rungs below the victim, with a hand on the victim's belt.",
+            "B": "above the victim at all times to prevent the victim from re-entering the structure.",
+            "C": "feet first, facing the ladder with the firefighter supporting the victim.",
+            "D": "far enough away from the victim to prevent pulling the firefighter off the ladder."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 76,
+          "stem": "When entering a burning building to perform a primary search, which would be your highest priority:",
+          "choices": {
+            "A": "search exposure.",
+            "B": "bedrooms.",
+            "C": "highest floor.",
+            "D": "the most severely threatened section."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": [
+            "draft: B empty / photo: 'bedrooms.'"
+          ]
+        },
+        {
+          "n": 77,
+          "stem": "When conducting a primary search within a structure, a firefighter should:",
+          "choices": {
+            "A": "always begin in the center of the room.",
+            "B": "move quickly to search all areas.",
+            "C": "always start with right hand pattern.",
+            "D": "check under or behind furnishings first."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    }
+  ]
+}

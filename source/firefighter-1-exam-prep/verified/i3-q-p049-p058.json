@@ -1,0 +1,1235 @@
+{
+  "exam": "i3",
+  "kind": "questions",
+  "pageRange": [
+    49,
+    58
+  ],
+  "verifiedBy": "Claude Fable 5.1, page photos checked against the OCR draft, 2026-11-04",
+  "pages": [
+    {
+      "page": 49,
+      "photo": "IMG_3065.jpg",
+      "pageNotes": [
+        "Exam I-3 title (150 Exam Items - Confirming What You Mastered), reading list (IFSTA Essentials 8th Ed. Chapters 6-9; Jones and Bartlett 5th Ed. Chapters 1, 3, 5, 7-9, 11, 12, 17, 19-21), and Directions printed above question 1. The directions refer to the Answer Form for the Firefighter I-2 Examination, as printed."
+      ],
+      "questions": [
+        {
+          "n": 1,
+          "stem": "Which stream pattern would be best for a fire in the undercarriage of a vehicle?",
+          "choices": {
+            "A": "Master",
+            "B": "Broken",
+            "C": "Fog",
+            "D": "Straight"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 2,
+          "stem": "When attacking a vehicle fire, you should:",
+          "choices": {
+            "A": "extinguish the fire inside first.",
+            "B": "approach from the side at a 45-degree angle.",
+            "C": "approach upwind and downhill.",
+            "D": "approach downwind and uphill."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 3,
+          "stem": "What is the smallest hoseline that should be used on vehicle fires?",
+          "choices": {
+            "A": "1-1/2\"",
+            "B": "Booster",
+            "C": "2-1/2\"",
+            "D": "1-3/4\""
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 4,
+          "stem": "Which is a prying tool that could be used on a vehicle fire?",
+          "choices": {
+            "A": "Halligan",
+            "B": "Ram bar",
+            "C": "Plaster hook",
+            "D": "Flathead axe"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 5,
+          "stem": "A tool often used to open a ceiling is a:",
+          "choices": {
+            "A": "pick-head axe.",
+            "B": "pike pole.",
+            "C": "Kelly tool.",
+            "D": "Rex tool."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 50,
+      "photo": "IMG_3066.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 6,
+          "stem": "When pulling a ceiling for overhaul purposes, the firefighter should:",
+          "choices": {
+            "A": "pull down and away on the pike pole.",
+            "B": "pull downward on the pike pole using their entire body weight.",
+            "C": "use a nonmetallic pole to prevent possible electric shock.",
+            "D": "remove some protective clothing to lessen the possibility of fatigue."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 7,
+          "stem": "Hidden fires in mattresses and stuffed or cushioned furniture are handled by:",
+          "choices": {
+            "A": "soaking the material thoroughly before moving from area.",
+            "B": "breaking the material apart and cooling with positive pressure ventilation.",
+            "C": "avoiding movement of the material since that may spread the fire.",
+            "D": "removing the material to the outdoors."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 8,
+          "stem": "Which is a valuable benefit of overhaul?",
+          "choices": {
+            "A": "Helps locate hidden fires",
+            "B": "Reduces property damage",
+            "C": "Helps in the removal of water",
+            "D": "Firefighters can remove their self-contained breathing apparatus"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 9,
+          "stem": "Firefighters can assist the investigator by:",
+          "choices": {
+            "A": "performing overhaul before the investigator arrives.",
+            "B": "moving evidence to an area that is lighted.",
+            "C": "using foam instead of water for extinguishment as it will not disturb evidence.",
+            "D": "reporting anything suspicious."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 10,
+          "stem": "Overhaul operations should commence upon command:",
+          "choices": {
+            "A": "at the same time as suppression.",
+            "B": "after fire investigation concerns are met.",
+            "C": "immediately after fire suppression.",
+            "D": "prior to the first line going into operation."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 11,
+          "stem": "Which statement regarding debris removal is true?",
+          "choices": {
+            "A": "Place large objects away from the building.",
+            "B": "All loose material damaged by the fire must be removed before the investigator arrives.",
+            "C": "Hose down mattresses thoroughly to prevent rekindling, but do not remove from the building.",
+            "D": "Place all small debris in unburned areas of building."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 12,
+          "stem": "Which items of information can a firefighter give the fire investigator?",
+          "choices": {
+            "A": "The name of the individual(s) who reported the fire.",
+            "B": "A written witness statement.",
+            "C": "The time the fire actually started.",
+            "D": "The location of the fire."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 51,
+      "photo": "IMG_3067.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 13,
+          "stem": "Which statement regarding large smoldering items is correct?",
+          "choices": {
+            "A": "All loose material should be placed in a trash can.",
+            "B": "The material should be left in place and heavily doused in water.",
+            "C": "Debris should be taken outside for easy extinguishment.",
+            "D": "Debris should be tossed out the window into a pile."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 14,
+          "stem": "If something suspicious is observed, you should:",
+          "choices": {
+            "A": "make a mental note of the findings and circumstances and report to investigators later.",
+            "B": "Make a written note of the findings and circumstances and turn it into investigators later.",
+            "C": "Nothing; continue as instructed.",
+            "D": "Stop operations until investigators can examine what they found."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 15,
+          "stem": "What is a thermal imaging device designed to detect?",
+          "choices": {
+            "A": "Movement",
+            "B": "Differences in temperature",
+            "C": "The presence of bioactive material",
+            "D": "The absence of heat"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 16,
+          "stem": "The first thing to determine before overhaul operations begin is:",
+          "choices": {
+            "A": "if the fire is extinguished.",
+            "B": "when the area is safe for operations.",
+            "C": "the water is shut off.",
+            "D": "rehab for firefighters has been done."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 17,
+          "stem": "Which is considered a push-pull tool?",
+          "choices": {
+            "A": "Halligan bar",
+            "B": "Pry bar",
+            "C": "Claw tool",
+            "D": "Pike pole"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 18,
+          "stem": "One way to remove water coming through the ceiling is:",
+          "choices": {
+            "A": "sponges.",
+            "B": "chutes.",
+            "C": "carryalls.",
+            "D": "floor runners."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 19,
+          "stem": "What is placed on the floor to hold small amounts of water?",
+          "choices": {
+            "A": "Floor runner",
+            "B": "Carryall",
+            "C": "Catch-all",
+            "D": "Water chute"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 20,
+          "stem": "To form the corners of the basin when constructing a catch-all, you should lay ends of the side rolls over at a _____ angle.",
+          "choices": {
+            "A": "30°",
+            "B": "60°",
+            "C": "90°",
+            "D": "180°"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 21,
+          "stem": "Methods and operating procedures that reduce fire, water, and smoke damage during and after fires are:",
+          "choices": {
+            "A": "overhaul.",
+            "B": "size up.",
+            "C": "salvage.",
+            "D": "a coordinated fire attack."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 52,
+      "photo": "IMG_3068.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 22,
+          "stem": "A device used to route water short distances through doors, windows, or other openings is a:",
+          "choices": {
+            "A": "water chute.",
+            "B": "carryall.",
+            "C": "floor runner.",
+            "D": "catchall."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 23,
+          "stem": "Salvage activities include:",
+          "choices": {
+            "A": "boarding openings made by forcible entry.",
+            "B": "searching for hidden fires.",
+            "C": "determining if the fire has rekindled.",
+            "D": "using charged hoselines to ensure complete extinguishment."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 24,
+          "stem": "The basic premise of salvage operations is to:",
+          "choices": {
+            "A": "prevent fire extension.",
+            "B": "protect fire department property from being damaged.",
+            "C": "separate or protect interior and exterior materials from the harmful environment.",
+            "D": "provide better information to the fire inspector."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 25,
+          "stem": "After a fire, it is a good policy to:",
+          "choices": {
+            "A": "remove the entire door or window.",
+            "B": "overhaul the area above the windows and doors.",
+            "C": "cover openings to prevent trespassers.",
+            "D": "go below the area involved to check for extension."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 26,
+          "stem": "Which statement is correct regarding salvage?",
+          "choices": {
+            "A": "A catch-all is used when the volume of water is too great for a water chute.",
+            "B": "The balloon toss/throw requires two firefighters.",
+            "C": "A catch-all is used to direct small amounts of water outside the structure.",
+            "D": "The shoulder toss/throw is a two-person operation."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 27,
+          "stem": "The flow of water from an individual sprinkler head can be controlled by using:",
+          "choices": {
+            "A": "only by the main system control valve.",
+            "B": "sprinkler wedges or stops.",
+            "C": "the valve required at each branch line.",
+            "D": "individual controls."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 28,
+          "stem": "Which method of entering a structure is the least destructive?",
+          "choices": {
+            "A": "Try before you pry",
+            "B": "Breaking a small window in a door and reaching in through the window to unlock the door",
+            "C": "Removing the stop on a non-rabbeted door frame and prying the latch clear of the frame",
+            "D": "Forcing an outward opening door with a Halligan tool"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 29,
+          "stem": "A _____ is commonly used to stop water from flowing from a sprinkler head.",
+          "choices": {
+            "A": "wedge",
+            "B": "pipe wrench",
+            "C": "Halligan",
+            "D": "rubber pellet"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 53,
+      "photo": "IMG_3069.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 30,
+          "stem": "Another name for salvage is:",
+          "choices": {
+            "A": "loss control.",
+            "B": "fire attack.",
+            "C": "overhaul.",
+            "D": "extinguishment."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 31,
+          "stem": "Salvage covers:",
+          "choices": {
+            "A": "are always constructed of canvas.",
+            "B": "can be used as portable cisterns.",
+            "C": "can be used as catchalls.",
+            "D": "require no maintenance."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 32,
+          "stem": "Which is true regarding the automatic sprinkler system?",
+          "choices": {
+            "A": "Shut down the fire pump and use the engine to better control the pressure supplied to the system.",
+            "B": "Close the main control valve and leave a firefighter at the valve.",
+            "C": "Look for the main riser control which is usually a post indicator valve.",
+            "D": "Once the fire is controlled, be sure to replace the sprinkler head."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 33,
+          "stem": "Water can be diverted from valuable belongings by using a:",
+          "choices": {
+            "A": "floor runner.",
+            "B": "water chute.",
+            "C": "catch all.",
+            "D": "catch basin."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 34,
+          "stem": "Leaving the building in as serviceable a condition is:",
+          "choices": {
+            "A": "fire attack.",
+            "B": "salvage.",
+            "C": "overhaul.",
+            "D": "ventilation."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 35,
+          "stem": "After connecting the supply line to the hydrant, you should _____ the hydrant.",
+          "choices": {
+            "A": "partially open",
+            "B": "fully open",
+            "C": "monitor the pressure of",
+            "D": "never open"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 36,
+          "stem": "When performing a forward lay, the pumper is driven from the:",
+          "choices": {
+            "A": "fire scene to water source.",
+            "B": "water source to fire scene.",
+            "C": "water source to fire scene to water source.",
+            "D": "discharge of one pumper to intake of another."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 37,
+          "stem": "Soft suction hose is used for:",
+          "choices": {
+            "A": "transferring water from a hydrant to an apparatus.",
+            "B": "primarily drafting water from a static source.",
+            "C": "siphoning water from one portable tank to another.",
+            "D": "transferring water from pump to tank."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 38,
+          "stem": "Portable water tanks should be positioned in a location that allows easy access from:",
+          "choices": {
+            "A": "multiple directions.",
+            "B": "one direction.",
+            "C": "the windward side.",
+            "D": "the leeward side."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 54,
+      "photo": "IMG_3070.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 39,
+          "stem": "Which is a method by which tankers unload water?",
+          "choices": {
+            "A": "Drafting hydrant",
+            "B": "Low-level intakes",
+            "C": "Dump valves",
+            "D": "Jet siphon"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 40,
+          "stem": "Which statement regarding hydrants is correct?",
+          "choices": {
+            "A": "Deluge hydrants are used in areas where freezing temperatures could damage the hydrant.",
+            "B": "Modern wet barrel hydrants have one main outlet.",
+            "C": "Dry barrel hydrants use a valve at the base to control water flow to all outlets.",
+            "D": "Wet barrel hydrants are commonly used in the northern parts of the United States."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 41,
+          "stem": "Which statement regarding dry/drafting hydrants is correct?",
+          "choices": {
+            "A": "They are used primarily in high-hazard areas.",
+            "B": "They are a pipe system with a pumper suction connection at one end and an open pipe at the other.",
+            "C": "Dry hydrant is another term for dry barrel hydrant.",
+            "D": "They are a connection point for standpipe operations."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 42,
+          "stem": "Which statement regarding a shuttle operation is correct?",
+          "choices": {
+            "A": "The fill site is set up first.",
+            "B": "The operation involves relay pumping with at least three engines.",
+            "C": "Dump sites should be selected based on location to lakes, ponds, etc.",
+            "D": "The fill site is the location of the water source."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 43,
+          "stem": "Which statement regarding a shuttle operation is true?",
+          "choices": {
+            "A": "The operation involves tankers/tenders moving large quantities.",
+            "B": "The fill site is set up first.",
+            "C": "At the fire scene, the tankers/tenders must be able to drive up, pump their water into the attack engine, and return to the fill site immediately",
+            "D": "An effective tanker/tender shuttle can deliver up to 250 gallons per minute."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice C is printed without a trailing period."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 44,
+          "stem": "Dump site selection should be based on:",
+          "choices": {
+            "A": "access to hydrants.",
+            "B": "turn-around area for the apparatus.",
+            "C": "the size of available mains.",
+            "D": "the location of the fill site."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 45,
+          "stem": "One of the basic duties of an engine company is:",
+          "choices": {
+            "A": "extinguishing wildland fires.",
+            "B": "securing a water source.",
+            "C": "performing technical rescue.",
+            "D": "responding to and controlling hazardous scenes."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 55,
+      "photo": "IMG_3071.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 46,
+          "stem": "A _____ lay results when hose is unloaded at the scene of a fire and the pumper proceeds to the water source.",
+          "choices": {
+            "A": "combination",
+            "B": "forward",
+            "C": "reverse",
+            "D": "direct"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 47,
+          "stem": "What type of valves are opened or closed by rotating a handle a quarter-turn?",
+          "choices": {
+            "A": "Gate",
+            "B": "Siamese",
+            "C": "Butterfly",
+            "D": "Post-indicating"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 48,
+          "stem": "The best way to prevent water hammer is to:",
+          "choices": {
+            "A": "open and close nozzles/valves slowly.",
+            "B": "use spanner wrenches to tighten couplings.",
+            "C": "use lower hose pressures.",
+            "D": "open and close nozzles/valves quickly."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 49,
+          "stem": "What problems could occur in the event of a water hammer?",
+          "choices": {
+            "A": "Pressures decrease on the attack crew's hoseline.",
+            "B": "It will cause back flow.",
+            "C": "It can cause damage to the hoseline or pumper.",
+            "D": "The pump on the pumper may cavitate."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 50,
+          "stem": "The type of hydrant that holds water below the frost line is a:",
+          "choices": {
+            "A": "dry barrel.",
+            "B": "drafting barrel.",
+            "C": "wet barrel.",
+            "D": "check valve barrel."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 51,
+          "stem": "When supply hose beds on apparatus contain two different sections it is considered:",
+          "choices": {
+            "A": "two-stage load.",
+            "B": "Detroit load.",
+            "C": "baffle bed.",
+            "D": "split hose bed."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 52,
+          "stem": "All portable extinguishers are classified according to their:",
+          "choices": {
+            "A": "capacity.",
+            "B": "color.",
+            "C": "intended use.",
+            "D": "contents."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 53,
+          "stem": "When approaching a fire, stored-pressure water extinguishers are designed to be discharged with the nozzle:",
+          "choices": {
+            "A": "aimed at top of fire.",
+            "B": "aimed at base of fire.",
+            "C": "inserted in fire before discharge.",
+            "D": "swept back and forth swiftly."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 54,
+          "stem": "Class B fires involve:",
+          "choices": {
+            "A": "flammable liquids.",
+            "B": "energized electrical equipment.",
+            "C": "combustible metals.",
+            "D": "ordinary combustibles."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 56,
+      "photo": "IMG_3072.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 55,
+          "stem": "Energized electrical equipment and the surrounding area have to be protected with extinguishers that have a _____ rating.",
+          "choices": {
+            "A": "Class A",
+            "B": "Class B",
+            "C": "Class C",
+            "D": "Class D"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 56,
+          "stem": "Extinguishers suitable for Class A fires can be identified by a _____ containing the letter A.",
+          "choices": {
+            "A": "circle",
+            "B": "star",
+            "C": "triangle",
+            "D": "square"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 57,
+          "stem": "A stored-pressure water extinguisher should be chosen to attack a _____ fire.",
+          "choices": {
+            "A": "Class A",
+            "B": "Class B",
+            "C": "Class C",
+            "D": "Class D"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 58,
+          "stem": "Extinguishers suitable for Class B fires can be identified by a _____ containing the letter B.",
+          "choices": {
+            "A": "blue circle",
+            "B": "green triangle",
+            "C": "red square",
+            "D": "yellow star"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 59,
+          "stem": "A multipurpose dry chemical extinguisher is rated for Class _____ fires.",
+          "choices": {
+            "A": "A and B",
+            "B": "B and C",
+            "C": "A and C",
+            "D": "A, B, and C"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 60,
+          "stem": "A Class D fire involves:",
+          "choices": {
+            "A": "combustible metals.",
+            "B": "flammable liquids.",
+            "C": "electrical equipment.",
+            "D": "ordinary combustibles."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 61,
+          "stem": "Fires involving flammable liquids and gases are _____ fires.",
+          "choices": {
+            "A": "Class A",
+            "B": "Class B",
+            "C": "Class C",
+            "D": "Class D"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 62,
+          "stem": "Extinguishers suitable for Class D fires can be identified by a _____ containing the letter D.",
+          "choices": {
+            "A": "blue circle",
+            "B": "yellow star",
+            "C": "green triangle",
+            "D": "red square"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 63,
+          "stem": "Fires involving combustible metals such as zirconium, sodium, and potassium, are _____ fires.",
+          "choices": {
+            "A": "Class A",
+            "B": "Class B",
+            "C": "Class C",
+            "D": "Class D"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 64,
+          "stem": "Dry powder extinguishers are rated for use on _____ fires.",
+          "choices": {
+            "A": "Class A",
+            "B": "Class B",
+            "C": "Class C",
+            "D": "Class D"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 65,
+          "stem": "A Class A fire is fueled by:",
+          "choices": {
+            "A": "electricity.",
+            "B": "combustible materials.",
+            "C": "inert gases.",
+            "D": "gases."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 57,
+      "photo": "IMG_3073.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 66,
+          "stem": "Aqueous film-forming foam (AFFF) extinguishers are suitable for use on _____ fires.",
+          "choices": {
+            "A": "Class B and C",
+            "B": "Class A and B",
+            "C": "Class D",
+            "D": "Class B and D"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 67,
+          "stem": "When applying dry powder to a Class D fire, you will need to:",
+          "choices": {
+            "A": "use thick amounts of dry powder.",
+            "B": "apply the powder in small amounts to avoid spreading the fire.",
+            "C": "apply carbon dioxide to cool the metal first, then apply dry powder.",
+            "D": "place the burning metal in a fireproof container such as a metal garbage can."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 68,
+          "stem": "Is it appropriate to have two different types of fire extinguisher in the same area?",
+          "choices": {
+            "A": "No, this sets up the possibility of opposing streams.",
+            "B": "No, this may risk lay people selecting the wrong one.",
+            "C": "Yes, there may be more than one type of combustible.",
+            "D": "Yes, the Building Code requires it."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 69,
+          "stem": "Which is the best position to attack a fire with a portable extinguisher?",
+          "choices": {
+            "A": "Downwind, with exit path behind you",
+            "B": "Upwind, with exit path across from you",
+            "C": "Upwind, with exit path behind you",
+            "D": "Downwind, with exit path across from you"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 70,
+          "stem": "Water type extinguishers exposed to weather below 40 degrees require _____ to be added.",
+          "choices": {
+            "A": "anti-freeze",
+            "B": "foam",
+            "C": "carbon dioxide",
+            "D": "fluoroidiocarbons"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice D is printed \"fluoroidiocarbons\" (kept as printed)."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 71,
+          "stem": "There are two basic designs for dry chemical extinguishers:",
+          "choices": {
+            "A": "cartridge and stored pressure.",
+            "B": "pressurized and nonpressurized.",
+            "C": "stored pressure and upright.",
+            "D": "nonpressurized and cartridge."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 72,
+          "stem": "Which is true regarding Aqueous Film Forming Foam (AFFF) fire extinguishers?",
+          "choices": {
+            "A": "They are suitable for fires in Class C or D fuels.",
+            "B": "They are most effective on flammable liquids.",
+            "C": "They are suitable for three dimensional fires.",
+            "D": "The thin film of foam is unable to float ahead of the foam blanket."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 73,
+          "stem": "Water-mist fire extinguishers are safe to use on energized electrical equipment because the water they use is:",
+          "choices": {
+            "A": "deionized.",
+            "B": "ordinary.",
+            "C": "filtered.",
+            "D": "sterile."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 58,
+      "photo": "IMG_3074.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 74,
+          "stem": "The acronym for the proper use of fire extinguishers is:",
+          "choices": {
+            "A": "PASS.",
+            "B": "RACE.",
+            "C": "PACE.",
+            "D": "PSAS."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 75,
+          "stem": "Which class of fire involves combustible cooking oils?",
+          "choices": {
+            "A": "Class C.",
+            "B": "Class D.",
+            "C": "Class K.",
+            "D": "Class O."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 76,
+          "stem": "Class K fires involve:",
+          "choices": {
+            "A": "oils and greases.",
+            "B": "flammable liquids.",
+            "C": "energized electrical equipment.",
+            "D": "noncombustible materials."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 77,
+          "stem": "Water-soluble flammable liquids such as alcohols, and acetone are:",
+          "choices": {
+            "A": "Volatile fuels",
+            "B": "Polar solvents",
+            "C": "Flammable surfactants",
+            "D": "Three-dimensional liquids"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 78,
+          "stem": "What is the significance of the C in the fire extinguisher rating of 2-A:10-B:C?",
+          "choices": {
+            "A": "The agent contained therein is of the cyanoacrylate-based family.",
+            "B": "It can be used on energized electrical equipment.",
+            "C": "The lack of a number following the C means it is not suitable for use on any electrical fire.",
+            "D": "The agent contained therein is of the carbon-tetrachloride based family."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 79,
+          "stem": "Dry chemical extinguishers can be used on Class C fires because they:",
+          "choices": {
+            "A": "are chemically similar to water.",
+            "B": "do not conduct electricity.",
+            "C": "never actually touch the fuel.",
+            "D": "are themselves electrically static."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 80,
+          "stem": "Fixed lights are usually mounted so they can be:",
+          "choices": {
+            "A": "raised, lowered, and turned.",
+            "B": "removed for remote use.",
+            "C": "used to signal helicopters.",
+            "D": "used to bypass Ground Fault Interrupter."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 81,
+          "stem": "When faced with down power lines, you should:",
+          "choices": {
+            "A": "obtain a pair of lineman gloves.",
+            "B": "wait until the power company arrives.",
+            "C": "use a dry rope to pull victim from contact with an energized conductor.",
+            "D": "wear rubber boots when approaching the emergency scene."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 82,
+          "stem": "Use lockout/tagout devices to:",
+          "choices": {
+            "A": "ensure utility equipment is off.",
+            "B": "document the date and time firefighters were on scene.",
+            "C": "pull and store the main meter.",
+            "D": "indicate the flow of gas."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    }
+  ]
+}

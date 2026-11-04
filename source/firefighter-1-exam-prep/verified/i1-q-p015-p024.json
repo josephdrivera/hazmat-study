@@ -1,0 +1,1195 @@
+{
+  "exam": "i1",
+  "kind": "questions",
+  "pageRange": [
+    15,
+    24
+  ],
+  "verifiedBy": "Claude Fable 5.1, page photos checked against the OCR draft, 2026-11-04",
+  "pages": [
+    {
+      "page": 15,
+      "photo": "IMG_3034.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 72,
+          "stem": "The protective coat of our ensemble consist of:",
+          "choices": {
+            "A": "outer shell, moisture barrier, and thermal barrier.",
+            "B": "reflective tape, exterior layer, and insulated layer.",
+            "C": "water-proof layer and moisture-proof layer.",
+            "D": "exterior protection and inner lining."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 73,
+          "stem": "Dismounting upon arrival at the emergency scene:",
+          "choices": {
+            "A": "watch for hazards.",
+            "B": "jump quickly to the ground.",
+            "C": "do so while facing outward.",
+            "D": "maintain a two-hand and a two-foot placement throughout the procedure."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 74,
+          "stem": "Which is true regarding the firefighter turnouts?",
+          "choices": {
+            "A": "Wearing personal protective equipment (PPE) increases the risk for heat stress.",
+            "B": "All structural PPE provides chemical, biological, protection.",
+            "C": "PPE decrease the firefighter's ability to feel ambient heat.",
+            "D": "The firefighter will feel thermal burns quickly due to wicking characteristics."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 75,
+          "stem": "With respect to the protective firefighter hood:",
+          "choices": {
+            "A": "the self-contained breathing apparatus (SCBA) facepiece must be secured and then the hood is pulled over.",
+            "B": "the hood should be placed first and then SCBA straps should go over the hood.",
+            "C": "the short old style hoods are no longer approved.",
+            "D": "it provides the least protection when compared to the other personal protective equipment components."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 76,
+          "stem": "Failure to wear your personal protective equipment can lead to:",
+          "choices": {
+            "A": "negligence.",
+            "B": "injury.",
+            "C": "fines.",
+            "D": "increased protection."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 77,
+          "stem": "Which is a hazard associated with riding fire apparatus?",
+          "choices": {
+            "A": "Unsecured equipment in the crew compartment",
+            "B": "Never standing up while the vehicle is in motion",
+            "C": "Not unfastening your seat belt to retrieve equipment",
+            "D": "Never hold on to the side of the moving vehicle"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 78,
+          "stem": "Who makes the decision about which type of strategy to use on a given fire?",
+          "choices": {
+            "A": "Incident Commander",
+            "B": "Operations Chief",
+            "C": "Liaison Officer",
+            "D": "Incident Safety Officer"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "photo": "IMG_3035.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 79,
+          "stem": "Which are the duties of a Firefighter I?",
+          "choices": {
+            "A": "Performs general tasks and supervises volunteer firefighters",
+            "B": "Performs Rapid Intervention Team assignments",
+            "C": "Operates without supervision at emergency incidents",
+            "D": "Performs specifically assigned tasks under supervision."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "The stem's \"Firefighter I\" is printed in a font where I and 1 look alike; read as the Roman numeral."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 80,
+          "stem": "Traffic hazards can be minimized by positioning apparatus to:",
+          "choices": {
+            "A": "on the right side of the road, at all times, in the direction of travel.",
+            "B": "the left side of the road, at all times, in the direction of travel.",
+            "C": "provide barrier to the scene and rescuers.",
+            "D": "the rear of the law enforcement vehicles(s) are already on the scene."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 81,
+          "stem": "What is one source of facts about a structure?",
+          "choices": {
+            "A": "Eyewitness accounts",
+            "B": "Owner information",
+            "C": "A preincident plan",
+            "D": "Local building codes"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 82,
+          "stem": "The document that provides details about a building's construction, layout, contents, special hazards, and fire protection systems is:",
+          "choices": {
+            "A": "a preincident plan/survey.",
+            "B": "an engineer's blueprint.",
+            "C": "a special schematic.",
+            "D": "a private plot plan."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 83,
+          "stem": "The chain of command:",
+          "choices": {
+            "A": "includes training, safety, finance, and logistics.",
+            "B": "includes incident stabilization, life safety, and property conservation.",
+            "C": "allows for supervision of eight or more people by one person.",
+            "D": "is the order and rank of authority of a department."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 84,
+          "stem": "There is no greater priority in the fire service than that of:",
+          "choices": {
+            "A": "firefighter safety.",
+            "B": "establishing the incident command.",
+            "C": "property conservation.",
+            "D": "incident stabilization."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 85,
+          "stem": "Proper lifting requires:",
+          "choices": {
+            "A": "lifting with your back, not your legs.",
+            "B": "lifting with your legs, not your back.",
+            "C": "bending at the waist instead of squatting.",
+            "D": "locking elbows and wrists."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 86,
+          "stem": "All safety hazards must be addressed before:",
+          "choices": {
+            "A": "size-up.",
+            "B": "exiting the apparatus.",
+            "C": "extinguishment.",
+            "D": "the arrival report."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "photo": "IMG_3036.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 87,
+          "stem": "Traffic control and _____ are essential to protect firefighters operating on highways.",
+          "choices": {
+            "A": "police",
+            "B": "road flares",
+            "C": "traffic control signs",
+            "D": "apparatus placement"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 88,
+          "stem": "When operating at any emergency scene, firefighters must wear:",
+          "choices": {
+            "A": "personal protection equipment suitable for that incident.",
+            "B": "bunker gear and self-contained breathing apparatus.",
+            "C": "bunker gear.",
+            "D": "Level A suits."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 89,
+          "stem": "The reply made to the Incident Commander signifying that companies working in the hazard zone are all safe and accounted for is:",
+          "choices": {
+            "A": "all clear report.",
+            "B": "personnel accountability report.",
+            "C": "under control report.",
+            "D": "termination report."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 90,
+          "stem": "The purpose for the use of a drag rescue device is to:",
+          "choices": {
+            "A": "rescue a downed firefighter.",
+            "B": "provide protection for material under the trim.",
+            "C": "allow the wearer to rappel in an emergency.",
+            "D": "rescue civilians."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 91,
+          "stem": "One requirement of structural firefighting gloves is that they must:",
+          "choices": {
+            "A": "provide a positive electrical ground.",
+            "B": "have three points of flexion.",
+            "C": "meet the applicable National Fire Protection Association Standard.",
+            "D": "be able to be twisted and wrung dry."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 92,
+          "stem": "One of the components of the layered protection system in structural personal protective equipment is:",
+          "choices": {
+            "A": "chemical resistant liner.",
+            "B": "waterproof inner layer.",
+            "C": "thermal barrier.",
+            "D": "impact resistant Kevlar lining."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 93,
+          "stem": "A disadvantage in wearing gloves that meet National Fire Protection Association standards for structural firefighting is:",
+          "choices": {
+            "A": "thermal protection.",
+            "B": "protection from puncture.",
+            "C": "protection from scrapes and cuts.",
+            "D": "reduced dexterity."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 94,
+          "stem": "Which statement regarding work uniforms is correct?",
+          "choices": {
+            "A": "National Fire Protection Association (NFPA) Standard 1970/1975 outlines manufacturers' guidelines and requirements.",
+            "B": "Uniforms can be made of approved synthetic materials.",
+            "C": "A uniform that meets NFPA standards is designed to protect the wearer in immediately dangerous to life and health (IDLH) atmospheres.",
+            "D": "A work uniform that meets NFPA standards is also designed to protect the wearer from IDLH atmospheres of structure fires."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "photo": "IMG_3037.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 95,
+          "stem": "Team members working in a hazardous area should maintain contact with each other at all times through voice, vision or _____ contact.",
+          "choices": {
+            "A": "area",
+            "B": "radio",
+            "C": "standard",
+            "D": "physical"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 96,
+          "stem": "A flat-head axe is more suitable for _____, while a pick-head axe is more adaptable to a variety of firefighting functions.",
+          "choices": {
+            "A": "striking",
+            "B": "prying",
+            "C": "heavy work",
+            "D": "chopping"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 97,
+          "stem": "Tempered plate glass should be shattered by striking:",
+          "choices": {
+            "A": "in the center with a blunt object.",
+            "B": "at the lowest corner with the pick end of a fire axe.",
+            "C": "with a flat-headed axe with hands above the head.",
+            "D": "with a flat-headed axe at the highest corner."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 98,
+          "stem": "The type of structures where firefighters usually find sliding doors are:",
+          "choices": {
+            "A": "barns or warehouses.",
+            "B": "commercial.",
+            "C": "residential.",
+            "D": "institutional."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 99,
+          "stem": "The K-tool is used in conjunction with the:",
+          "choices": {
+            "A": "Halligan tool.",
+            "B": "battering ram.",
+            "C": "aerial device.",
+            "D": "pike pole."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 100,
+          "stem": "Which portion of a Halligan tool has three areas designed as striking surfaces?",
+          "choices": {
+            "A": "Hook point",
+            "B": "Adz",
+            "C": "Fork",
+            "D": "Pick"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 101,
+          "stem": "A _____ permits fire fighters to gain access during an emergency.",
+          "choices": {
+            "A": "lockout",
+            "B": "tagout",
+            "C": "Baker box",
+            "D": "key box/lock box"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 102,
+          "stem": "The primary rule of forcible entry is:",
+          "choices": {
+            "A": "work downwind.",
+            "B": "try before you pry.",
+            "C": "always stand to leeward.",
+            "D": "sharp edge pointed down and ahead."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 103,
+          "stem": "One way to force a lock is to physically pull the _____ out of the door using an A-tool or a K-tool.",
+          "choices": {
+            "A": "keyhole",
+            "B": "cylinder",
+            "C": "hasp",
+            "D": "strike plate"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 104,
+          "stem": "The type of hydraulic spreading tool that has a hand-powered pump, a hose, and a set of spreading jaws is the:",
+          "choices": {
+            "A": "rabbit tool.",
+            "B": "snorkel.",
+            "C": "Hydra-Ram.",
+            "D": "integrated tool."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "photo": "IMG_3038.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 105,
+          "stem": "Under ideal conditions, the proper place to stand when breaking window glass is _____ the window.",
+          "choices": {
+            "A": "directly in front of",
+            "B": "to the windward side of",
+            "C": "to the leeward side of",
+            "D": "to either side, slightly lower than"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 106,
+          "stem": "Opening concrete block walls for access is:",
+          "choices": {
+            "A": "breaching.",
+            "B": "barreling.",
+            "C": "mauling.",
+            "D": "ramming."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 107,
+          "stem": "Which is true when forcing entry through metal casement windows?",
+          "choices": {
+            "A": "The latch or lock gives easily when prying force is applied.",
+            "B": "Pry out the cross members.",
+            "C": "Wire glass is never used in the construction of this type of window.",
+            "D": "Break the glass near the lock and unlock the window from the inside."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 108,
+          "stem": "When sent to get a cutting tool for forcible entry, which would you choose?",
+          "choices": {
+            "A": "Pry bar",
+            "B": "Halligan tool",
+            "C": "Kelly tool",
+            "D": "Pick-head axe"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 109,
+          "stem": "Fire axes should be carried:",
+          "choices": {
+            "A": "over the shoulder.",
+            "B": "by the handle with the blade hanging close to the ground.",
+            "C": "by the handle with the blade toward the body.",
+            "D": "with the axe blade pointed away from the body and the pick-end shielded."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 110,
+          "stem": "Which tool is considered to be a pulling tool?",
+          "choices": {
+            "A": "Crowbar",
+            "B": "Flat-head axe",
+            "C": "Pike pole",
+            "D": "Halligan tool"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 111,
+          "stem": "Pike poles and plaster hooks should be carried outdoors with the sharp end:",
+          "choices": {
+            "A": "toward the front and lowered.",
+            "B": "toward the rear and raised.",
+            "C": "straight up.",
+            "D": "to the side, away from the body."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 112,
+          "stem": "Forcible entry is:",
+          "choices": {
+            "A": "forcing less confident firefighters into the structure.",
+            "B": "the ability to gain access to unsecured buildings.",
+            "C": "the ability to gain entry to secured areas and buildings at fires and other operations.",
+            "D": "forcing openings in a structure to facilitate effective ventilation."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 113,
+          "stem": "Which tool belongs to the cutting group of tools?",
+          "choices": {
+            "A": "McLeod tool",
+            "B": "Claw tool",
+            "C": "Center punch",
+            "D": "Torches"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "photo": "IMG_3039.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 114,
+          "stem": "Which rule regarding safety with forcible entry tools is correct?",
+          "choices": {
+            "A": "Make sure tools are in proper operating condition.",
+            "B": "Carry tools with blade facing the body.",
+            "C": "The firefighter holding the pick-headed axe should strike in small, repeated taps.",
+            "D": "Depth gauges on chain saws should be removed for cutting purposes."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 115,
+          "stem": "Which statement regarding power saw safety is true?",
+          "choices": {
+            "A": "Always start the cut at one-half throttle, then accelerate to maximum throttle.",
+            "B": "The saw should be started on the ground then restarted on the roof for use.",
+            "C": "Shut the saw down and wait for the blade to stop completely before remove from the cut.",
+            "D": "Confirm that the safety circle is 20 feet in diameter."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [
+            "Choice C is printed \"before remove from the cut\" (kept as printed)."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 116,
+          "stem": "What is one application for a hydraulic door tool?",
+          "choices": {
+            "A": "Opening doors",
+            "B": "Breaching revolving door",
+            "C": "Forcing windows",
+            "D": "Removing security bars"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 117,
+          "stem": "Which is the most common lock in use?",
+          "choices": {
+            "A": "Cylindrical",
+            "B": "Padlocks",
+            "C": "Rim locks",
+            "D": "Dead bolt"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 118,
+          "stem": "Which forcible entry method could potentially cause serious problems for ventilation efforts, if broken?",
+          "choices": {
+            "A": "locks.",
+            "B": "scuppers.",
+            "C": "meters.",
+            "D": "windows."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 119,
+          "stem": "When overhead doors must be forced open, you should:",
+          "choices": {
+            "A": "make a rectangular cut with a power saw.",
+            "B": "apply a K tool to the latch.",
+            "C": "use a J tool on the roller.",
+            "D": "use the irons."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 120,
+          "stem": "Forcible entry tools can be grouped into which category?",
+          "choices": {
+            "A": "grinding.",
+            "B": "striking.",
+            "C": "twisting.",
+            "D": "crushing."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 121,
+          "stem": "The tool that is specifically designed to open double swinging doors equipped with panic bars is the:",
+          "choices": {
+            "A": "French curve.",
+            "B": "J tool.",
+            "C": "opening strip.",
+            "D": "claw tool."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 122,
+          "stem": "This type of overhead door is used in industrial/commercial occupancies as a high-security service door.",
+          "choices": {
+            "A": "Sliding",
+            "B": "Roll-up",
+            "C": "Tilt-slab",
+            "D": "Folding"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "photo": "IMG_3040.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 123,
+          "stem": "To force entry into an outward-swinging door, where is the Halligan bar applied?",
+          "choices": {
+            "A": "On either side of each hinge in turn",
+            "B": "Space between the door and the door jam near the lock",
+            "C": "Between the door and the frame near each hinge in turn",
+            "D": "Between the door and the frame on the latch side, but at hinge height, each in turn"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 124,
+          "stem": "What is necessary prior to forcible entry:",
+          "choices": {
+            "A": "water supply to a hydrant.",
+            "B": "size up and situational awareness.",
+            "C": "deployment of a rapid intervention team.",
+            "D": "vertical ventilation."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 125,
+          "stem": "Electronic keyless locks usually have:",
+          "choices": {
+            "A": "a reinforced vertical deadbolt.",
+            "B": "a battery power source.",
+            "C": "a drain hole in the lower right corner.",
+            "D": "a set of 3 pins."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 126,
+          "stem": "The tool used to depress the latch and allow the door to be opened is the:",
+          "choices": {
+            "A": "A-tool.",
+            "B": "Shove knife.",
+            "C": "J-tool.",
+            "D": "Rabbit tool."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 127,
+          "stem": "Which is one of the major lock categories?",
+          "choices": {
+            "A": "Mortise locks",
+            "B": "Oval",
+            "C": "Rabbeted locks",
+            "D": "Tumbled locks"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 128,
+          "stem": "A safe haven is:",
+          "choices": {
+            "A": "a temporary location that provides refuge while awaiting rescue.",
+            "B": "an area in which to stay until the emergency is over.",
+            "C": "any area below the fire.",
+            "D": "any enclosed area within the structure, such as a closet."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 129,
+          "stem": "A personnel accountability system tracks all firefighters:",
+          "choices": {
+            "A": "when each firefighter arrives.",
+            "B": "working in the hazard zone.",
+            "C": "intra-crew communications.",
+            "D": "post-dispatch caller information."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 130,
+          "stem": "If you became trapped inside a burning building, would which be the best safe haven?",
+          "choices": {
+            "A": "The basement",
+            "B": "A clothes closet",
+            "C": "A linen closet",
+            "D": "A room with a door and a window"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 131,
+          "stem": "If one member of a firefighting team must leave a fire building during an assignment, who else should leave?",
+          "choices": {
+            "A": "No one else should leave",
+            "B": "The rest of the team",
+            "C": "At least one other person",
+            "D": "Exactly one other person"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "photo": "IMG_3041.jpg",
+      "pageNotes": [],
+      "questions": [
+        {
+          "n": 132,
+          "stem": "Personnel _____ systems provide for the tracking of members at an emergency scene.",
+          "choices": {
+            "A": "advance",
+            "B": "access",
+            "C": "accountability",
+            "D": "address"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 133,
+          "stem": "Which action is acceptable if a fire is coming at you and you need to retreat to a safe haven?",
+          "choices": {
+            "A": "Retreat to a bathroom.",
+            "B": "Retreat to a room, leave the door open, so crews can find you.",
+            "C": "Retreat to a room and shut the door behind you.",
+            "D": "Retreat to a utility room."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 134,
+          "stem": "Which is true regarding crawling in limited visibility?",
+          "choices": {
+            "A": "It is the fastest method to conduct a search.",
+            "B": "Firefighters should send out one person ahead of the team to recon the path.",
+            "C": "Firefighters should duck walk when they cannot see the floor to increase search time.",
+            "D": "It allows firefighters to feel the floor in front of them with a tool."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 135,
+          "stem": "In the term LUNAR, the L stands for:",
+          "choices": {
+            "A": "location.",
+            "B": "low air.",
+            "C": "lead firefighter is coming out.",
+            "D": "ladder Side A for firefighter coming out."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 136,
+          "stem": "The term for a roll call taken by a supervisor at an emergency incident is a:",
+          "choices": {
+            "A": "Fire Fighter Location Confirmation.",
+            "B": "Time and Location Verification.",
+            "C": "System Communications Check.",
+            "D": "Personnel Accountability Report."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 137,
+          "stem": "When the Incident Commander requests a personnel accountability report, the company officer:",
+          "choices": {
+            "A": "takes all the members of that company over to rehab.",
+            "B": "confirms companies working in hazard zones are safe and accounted for.",
+            "C": "releases the members of their company for reassignment.",
+            "D": "meets at the Command Post for an in-progress tactics and strategy review."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 138,
+          "stem": "In the term LUNAR, the R stands for:",
+          "choices": {
+            "A": "resources needed.",
+            "B": "real low on air.",
+            "C": "relay critical information.",
+            "D": "respond now."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "photo": "IMG_3042.jpg",
+      "pageNotes": [
+        "Faint show-through of the Exam Prep I-2 title page behind the text."
+      ],
+      "questions": [
+        {
+          "n": 139,
+          "stem": "One of the most important ways to pay attention to the surroundings in a hazardous environment is for the firefighter to maintain:",
+          "choices": {
+            "A": "situational awareness.",
+            "B": "zone control.",
+            "C": "a minimum crew of four personnel.",
+            "D": "a rapid intervention crew standing by."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 140,
+          "stem": "Placing the butt of the ladder too close to the building reduces the _____ of the ladder.",
+          "choices": {
+            "A": "weight distribution",
+            "B": "stability",
+            "C": "height",
+            "D": "contact"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 141,
+          "stem": "The parts of an extension ladder that prevent the fly section from being over-extended are:",
+          "choices": {
+            "A": "guides.",
+            "B": "locks.",
+            "C": "footers.",
+            "D": "stops."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 142,
+          "stem": "The dogs of an extension ladder serve to:",
+          "choices": {
+            "A": "prevent the fly section from being over-extended.",
+            "B": "hold the fly section in place.",
+            "C": "raise the fly section.",
+            "D": "guide the fly section."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 143,
+          "stem": "The proper name for one of the two principal structural sides of a ladder is a:",
+          "choices": {
+            "A": "truss block.",
+            "B": "beam.",
+            "C": "guide.",
+            "D": "rung."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 144,
+          "stem": "When lifting a ladder or other heavy object, you should:",
+          "choices": {
+            "A": "bend at the knees and waist, lift with the legs.",
+            "B": "bend at the knees keeping the back straight, lift with the legs.",
+            "C": "bend at the knees and back, lift with the arms.",
+            "D": "keep knees straight, bend over, lift with the arms."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 145,
+          "stem": "If 20 feet of a 28-foot extension ladder is needed to reach a victim, the butt of the ladder should be placed _____ feet from the building.",
+          "choices": {
+            "A": "4",
+            "B": "5",
+            "C": "7",
+            "D": "8"
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 146,
+          "stem": "When a ladder is used for the rescue of an injured victim from a window, the tip should be placed:",
+          "choices": {
+            "A": "alongside the window.",
+            "B": "slightly below the sill.",
+            "C": "to the windward side.",
+            "D": "to the leeward side."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 147,
+          "stem": "A firefighter can be safely secured on a ground ladder using:",
+          "choices": {
+            "A": "a rope.",
+            "B": "an elbow lock.",
+            "C": "hose strap.",
+            "D": "a leg lock."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "photo": "IMG_3043.jpg",
+      "pageNotes": [
+        "Lower two-thirds of the page is blank."
+      ],
+      "questions": [
+        {
+          "n": 148,
+          "stem": "A ground ladder should not be placed:",
+          "choices": {
+            "A": "at a corner of the building.",
+            "B": "on uneven surfaces.",
+            "C": "within 10 feet of an energized powerline.",
+            "D": "on a gravel base."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 149,
+          "stem": "The lower section of an extension ladder is the:",
+          "choices": {
+            "A": "fly.",
+            "B": "bed.",
+            "C": "beam.",
+            "D": "truss."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 150,
+          "stem": "An upper section or top section of an extension ladder is a:",
+          "choices": {
+            "A": "truss.",
+            "B": "bed.",
+            "C": "fly.",
+            "D": "main."
+          },
+          "statements": [],
+          "illustration": null,
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    }
+  ]
+}

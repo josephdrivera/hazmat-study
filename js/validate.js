@@ -1,5 +1,6 @@
 /**
- * validate.js — Development-only integrity checks for QUESTION_BANK.
+ * validate.js — Development-only integrity checks for the question banks
+ * (instructor handouts, the HazMat exam-prep book, the Fire Fighter I exam-prep book).
  * Run in browser console via: window.__hazmatValidate()
  * Or add ?validate=1 to the URL.
  * Never shown in the normal student interface.
@@ -239,6 +240,52 @@ function __hazmatValidate() {
         warnings.push(`Duplicate group ${group.id} (${group.ids.join(", ")}) has conflicting answers ${group.answers.join("/")}; all copies excluded from scoring`);
       }
     });
+
+    // Fire Fighter I exam-prep book: three 150-item exams, keys from Appendix A.
+    const FF1 = "fire-fighter-1-exam-prep";
+    const FF1_EXAMS = [["ff1-exam-i1", "ff1-i1"], ["ff1-exam-i2", "ff1-i2"], ["ff1-exam-i3", "ff1-i3"]];
+    const ff1 = HazmatCatalog.sourceById(FF1);
+    if (!ff1) {
+      errors.push("Fire Fighter I book source not loaded");
+    } else {
+      if (ff1.programId !== "firefighter-1") errors.push(`Fire Fighter I source program ${ff1.programId}`);
+      if (ff1.questions.length !== FF1_EXAMS.length * 150) {
+        errors.push(`Fire Fighter I records: expected ${FF1_EXAMS.length * 150}, found ${ff1.questions.length}`);
+      }
+      FF1_EXAMS.forEach(([examId, idPrefix]) => {
+        const exam = HazmatCatalog.bookExamById(examId);
+        if (!exam) { errors.push(`${examId}: exam not loaded`); return; }
+        const label = exam.shortLabel;
+        const numbers = new Set();
+        exam.questions.forEach((q) => {
+          if (q.id !== `${idPrefix}-${q.originalNumber}`) errors.push(`${label} Q${q.originalNumber}: id ${q.id}`);
+          if (q.sourceId !== FF1 || q.programId !== "firefighter-1") errors.push(`${q.id}: wrong source or program`);
+          if (numbers.has(q.originalNumber)) errors.push(`${label}: duplicate question ${q.originalNumber}`);
+          numbers.add(q.originalNumber);
+          if (q.answerKeyNumber !== q.originalNumber) errors.push(`${label} Q${q.originalNumber}: key number ${q.answerKeyNumber}`);
+          if (!q.keyHeader || !new RegExp(`^${q.originalNumber}[.,]?\\s`).test(q.keyHeader)) {
+            errors.push(`${label} Q${q.originalNumber}: key header "${q.keyHeader}"`);
+          }
+          if (q.standard !== "NFPA 1001") errors.push(`${q.id}: standard ${q.standard}`);
+          if ((q.references || []).some((r) => /1072/.test(r.text))) errors.push(`${q.id}: inherits a HazMat citation`);
+          if (q.reviewStatus === "unresolved" && TestEngine.isEligible(q)) errors.push(`${q.id}: unresolved item is eligible`);
+          if (q.illustration && q.illustration.required && !q.illustration.asset && TestEngine.isEligible(q)) {
+            errors.push(`${q.id}: item needing an illustration is eligible`);
+          }
+          if (TestEngine.isEligible(q) && q.correctChoiceId !== q.sourceAnswerLetter) {
+            errors.push(`${q.id}: graded answer differs from the key letter`);
+          }
+          if (q.answerIndependentlyVerified !== false) errors.push(`${q.id}: answers must stay marked as not independently verified`);
+        });
+        for (let n = 1; n <= 150; n++) if (!numbers.has(n)) errors.push(`${label}: missing question ${n}`);
+        const r = HazmatCatalog.examReport(exam);
+        console.log(`Fire Fighter I ${label}: ${r.imported} imported, ${r.eligible} eligible, ${r.held} held, ${r.needsReview} flagged`);
+      });
+      HazmatCatalog.duplicateGroups.forEach((group) => {
+        const programs = new Set(group.sourceIds.map((id) => HazmatCatalog.programForSource(id)));
+        if (programs.size > 1) errors.push(`Duplicate group ${group.id} mixes programs: ${group.ids.join(", ")}`);
+      });
+    }
 
     const handouts = HazmatCatalog.sourceById("instructor-handouts");
     const handoutQuestions = handouts ? handouts.questions : [];

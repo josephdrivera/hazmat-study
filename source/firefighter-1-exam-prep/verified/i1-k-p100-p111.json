@@ -1,0 +1,980 @@
+{
+  "exam": "i1",
+  "kind": "keys",
+  "pageRange": [
+    100,
+    111
+  ],
+  "pages": [
+    {
+      "page": 100,
+      "photo": "IMG_3111.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 100 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: a finger holds the left edge of the page; a desk edge and monitor arm fill the bottom third of the frame. All six entries fully legible."
+      ],
+      "entries": [
+        {
+          "n": 81,
+          "header": "81. 6.3.03 SCENE OPS 9",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 180, 460.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 566.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: Bih Edition / photo: 8th Edition"
+          ]
+        },
+        {
+          "n": 82,
+          "header": "82. 6.3.03 SCENE OPS 11",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 460.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 566.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 83,
+          "header": "83. 6.3.03 SCENE OPS 13",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 9, Fig. 1.2.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 19, Figure 1-14.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: IFSTA line merged into nfpa field as 'IESTA, ...' / photo: separate IFSTA citation line"
+          ]
+        },
+        {
+          "n": 84,
+          "header": "84. 6.3.03 SCENE OPS 15",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 41.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 36.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 85,
+          "header": "85. 6.3.03 SCENE OPS 19",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 474.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 59.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 86,
+          "header": "86. 6.3.03 SCENE OPS 23",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 692.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 577, 578.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 101,
+      "photo": "IMG_3112.jpg",
+      "pageNotes": [
+        "Running header: APPENDIX A - FIREFIGHTER I, Exam I-1 FEEDBACK AND ANSWERS",
+        "Page number 101 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: desk edge and monitor arm at the bottom of the frame; page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 87,
+          "header": "87. 6.3.03 SCENE OPS 24",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 51, Fig. 2.7.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 56, 578.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: Firefichter 1, page 51, Fig. 2 7. / photo: Firefighter 1, page 51, Fig. 2.7.",
+            "draft: Fire Fiohter Skills / photo: Fire Fighter Skills"
+          ]
+        },
+        {
+          "n": 88,
+          "header": "88. 6.3.03 SCENE OPS 26",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 197.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 66.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 89,
+          "header": "89. 6.3.03 SCENE OPS 31",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 464, 477.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 56.",
+          "other": [],
+          "answer": "B",
+          "notes": [
+            "Printed as 'pages 464, 477 .' with a visible space before the final period; transcribed as '477.'"
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 90,
+          "header": "90. 6.3.03 SCENE OPS 37",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 206.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 71.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: page 206 (no period) / photo: page 206."
+          ]
+        },
+        {
+          "n": 91,
+          "header": "91. 6.3.03 SCENE OPS 39",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 206.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 72.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: page 206 (no period) / photo: page 206."
+          ]
+        },
+        {
+          "n": 92,
+          "header": "92. 6.3.03 SCENE OPS 40",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 201, 202.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 70.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 102,
+      "photo": "IMG_3113.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 102 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: a fingertip at the left edge beside entry 97; the facing page (103) is partly visible at right; desk edge and monitor arm at the bottom. Page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 93,
+          "header": "93. 6.3.03 SCENE OPS 41",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 206.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 72.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 94,
+          "header": "94. 6.3.03 SCENE OPS 42",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 199.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 67.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 95,
+          "header": "95. 6.3.03 SCENE OPS 44",
+          "nfpa": "NFPA 1010, 6.3.3",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 472.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 56, 753.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 96,
+          "header": "96. 6.3.04 FORCIBLE ENTR 1",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 392.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 248.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 97,
+          "header": "97. 6.3.04 FORCIBLE ENTR 2",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 417.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 621..",
+          "other": [],
+          "answer": "B",
+          "notes": [
+            "Jones and Bartlett citation is printed with two periods after 621 ('page 621..'); kept as printed."
+          ],
+          "ocrCorrections": []
+        },
+        {
+          "n": 98,
+          "header": "98. 6.3.04 FORCIBLE ENTR 4",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 418.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 602.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 103,
+      "photo": "IMG_3114.jpg",
+      "pageNotes": [
+        "Running header: APPENDIX A - FIREFIGHTER I, Exam I-1 FEEDBACK AND ANSWERS",
+        "Page number 103 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: desk edge and monitor arm at the bottom of the frame; page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 99,
+          "header": "99. 6.3.04 FORCIBLE ENTR 5",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 419, 420, Fig. 10.39.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 258.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 100,
+          "header": "100. 6.3.04 FORCIBLE ENTR 6",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 398.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 254.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: page 398 (no period) / photo: page 398."
+          ]
+        },
+        {
+          "n": 101,
+          "header": "101. 6.3.04 FORCIBLE ENTR 7",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 390, 407.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 560, Fig. 14-5.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 102,
+          "header": "102. 6.3.04 FORCIBLE ENTR 10",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 390, Fig. 10.1.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 629.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 103,
+          "header": "103. 6.3.04 FORCIBLE ENTR 14",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 419.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 258.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 104,
+          "header": "104. 6.3.04 FORCIBLE ENTR 29",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 398, 399, Fig. 10.13.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 255, 256. Fig. 7-21.",
+          "other": [],
+          "answer": "A",
+          "notes": [
+            "Jones and Bartlett citation is printed with a period (not a comma) after 256: 'pages 255, 256. Fig. 7-21.'; kept as printed."
+          ],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 104,
+      "photo": "IMG_3115.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 104 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: a finger holds the left edge beside entries 109-111; facing page partly visible at right; desk edge and monitor arm at the bottom. Page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 105,
+          "header": "105. 6.3.04 FORCIBLE ENTR 30",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 425.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 619.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 106,
+          "header": "106. 6.3.04 FORCIBLE ENTR 32",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 428, 429.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 678.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 107,
+          "header": "107. 6.3.04 FORCIBLE ENTR 34",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 427.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 623.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 108,
+          "header": "108. 6.3.04 FORCIBLE ENTR 37",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 392.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 248, Table 7-3.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 109,
+          "header": "109. 6.3.04 FORCIBLE ENTR 38",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 403,Fig. 10.17.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 245.",
+          "other": [],
+          "answer": "D",
+          "notes": [
+            "IFSTA citation is printed with no space after the comma: 'page 403,Fig. 10.17.'; kept as printed."
+          ],
+          "ocrCorrections": [
+            "draft: page 403, Fig. 10.17. / photo: page 403,Fig. 10.17. (no space after comma)"
+          ]
+        },
+        {
+          "n": 110,
+          "header": "110. 6.3.04 FORCIBLE ENTR 41",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 399.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 253, Table 7-4.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 111,
+          "header": "111. 6.3.04 FORCIBLE ENTR 42",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 403, Fig. 10.17.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 245.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 105,
+      "photo": "IMG_3116.jpg",
+      "pageNotes": [
+        "Running header: APPENDIX A - FIREFIGHTER I, Exam I-1 FEEDBACK AND ANSWERS",
+        "Page number 105 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Entry 113's header is printed directly under entry 112's Answer line with no blank line between them.",
+        "Photo: desk edge and monitor arm at the bottom of the frame; page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 112,
+          "header": "112. 6.3.04 FORCIBLE ENTR 43",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 389.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 596.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: IESTA, Essentials of Fire Flghting, 8th Edition. Firefiahter 1. page 380. (merged into nfpa field) / photo: IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 389.",
+            "draft: Fire Flahter Skills / photo: Fire Fighter Skills"
+          ]
+        },
+        {
+          "n": 113,
+          "header": "113. 6.3.04 FORCIBLE ENTR 47",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 393, Fig. 10.6.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 248, Table 7-3.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 114,
+          "header": "114. 6.3.04 FORCIBLE ENTR 53",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 401.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 262.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 115,
+          "header": "115. 6.3.04 FORCIBLE ENTR 55",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 533.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 718, Skill Drill 16-6.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 116,
+          "header": "116. 6.3.04 FORCIBLE ENTR 58",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 398.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 255, Table 7-5.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 117,
+          "header": "117. 6.3.04 FORCIBLE ENTR 60",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 410.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 608.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 118,
+          "header": "118. 6.3.04 FORCIBLE ENTR 61",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 415.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 701.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 106,
+      "photo": "IMG_3117.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 106 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: a fingertip at the left edge beside entry 123; facing page partly visible at right; desk edge and monitor arm at the bottom. Page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 119,
+          "header": "119. 6.3.04 FORCIBLE ENTR 63",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 423.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 668, 670-671, Skill Drill 15-18.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: Essentiels ... page 423 (no period) / photo: Essentials ... page 423."
+          ]
+        },
+        {
+          "n": 120,
+          "header": "120. 6.3.04 FORCIBLE ENTR 67",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 391.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 246, Table 7-1.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 121,
+          "header": "121. 6.3.04 FORCIBLE ENTR 70",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 421, Fig. 10.41.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 634.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 122,
+          "header": "122. 6.3.04 FORCIBLE ENTR 73",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 121.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 606.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 123,
+          "header": "123. 6.3.04 FORCIBLE ENTR 74",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 438, Skill Sheet 10-3, Fig. 10.68.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 641, Skill Drill 15-3.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: Skill Drill 15-3 (no period) / photo: Skill Drill 15-3."
+          ]
+        },
+        {
+          "n": 124,
+          "header": "124. 6.3.04 FORCIBLE ENTR 86",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 389.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 596.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: appended 'APPENDIX A - FIREFIGHTER I. Exam T-1 FEEDBACY AND ANSWERS' to the jb field / photo: nothing after 'page 596.' (that text is the facing page's running header)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": 107,
+      "photo": "IMG_3118.jpg",
+      "pageNotes": [
+        "Running header: APPENDIX A - FIREFIGHTER I, Exam I-1 FEEDBACK AND ANSWERS",
+        "Page number 107 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: desk edge and monitor arm at the bottom of the frame; page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 125,
+          "header": "125. 6.3.04 FORCIBLE ENTR 89",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 413.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 615.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 126,
+          "header": "126. 6.3.04 FORCIBLE ENTR 91",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 421.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 258, 633-634.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 127,
+          "header": "127. 6.3.04 FORCIBLE ENTR 97",
+          "nfpa": "NFPA 1010, 6.3.4",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 409-410.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 648.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 128,
+          "header": "128. 6.3.05 EXIT HAZARD 2",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 457, 478.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 844.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: page 844 (no period) / photo: page 844."
+          ]
+        },
+        {
+          "n": 129,
+          "header": "129. 6.3.05 EXIT HAZARD 4",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 48, 464, 493.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 841, 842.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 130,
+          "header": "130. 6.3.05 EXIT HAZARD 7",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 479.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 844.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 108,
+      "photo": "IMG_3119.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 108 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: a finger holds the lower-left corner below entry 136; facing page partly visible at right; desk edge and monitor arm at the bottom. Page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 131,
+          "header": "131. 6.3.05 EXIT HAZARD 13",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 458.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 840.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: IF STA, Essontials of Fire Fighting, 8111 Edition (merged into nfpa field) / photo: IFSTA, Essentials of Fire Fighting, 8th Edition"
+          ]
+        },
+        {
+          "n": 132,
+          "header": "132. 6.3.05 EXIT HAZARD 14",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 48, 464, 481, 493.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 841.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 133,
+          "header": "133. 6.3.05 EXIT HAZARD 17",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 477.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 842.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 134,
+          "header": "134. 6.3.05 EXIT HAZARD 18",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 479.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 750.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 135,
+          "header": "135. 6.3.05 EXIT HAZARD 19",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 476.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 847.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 136,
+          "header": "136. 6.3.05 EXIT HAZARD 20",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 48, 464, 481, 493.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 842.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 109,
+      "photo": "IMG_3120.jpg",
+      "pageNotes": [
+        "Running header: APPENDIX A - FIREFIGHTER I, Exam I-1 FEEDBACK AND ANSWERS",
+        "Page number 109 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: desk edge and monitor arm at the bottom of the frame; page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 137,
+          "header": "137. 6.3.05 EXIT HAZARD 21",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 464, 481, 493.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 842.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: pages 464, 481, 493, (trailing comma) / photo: pages 464, 481, 493."
+          ]
+        },
+        {
+          "n": 138,
+          "header": "138. 6.3.05 EXIT HAZARD 22",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 476.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 847.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: Fire Fiahter Skills / photo: Fire Fighter Skills"
+          ]
+        },
+        {
+          "n": 139,
+          "header": "139. 6.3.05 EXIT HAZARD 23",
+          "nfpa": "NFPA 1010, 6.3.5",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 41, 43.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 840.",
+          "other": [],
+          "answer": "A",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: Fire Fichter Skills / photo: Fire Fighter Skills"
+          ]
+        },
+        {
+          "n": 140,
+          "header": "140. 6.3.06 GRND LADDERS 1",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 354.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 462.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: Firefiahter 1 / photo: Firefighter 1",
+            "draft: Jones and Bartlett. Fundamentals of Fire Fiahter Chills / photo: Jones and Bartlett, Fundamentals of Fire Fighter Skills"
+          ]
+        },
+        {
+          "n": 141,
+          "header": "141. 6.3.06 GRND LADDERS 2",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 337.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 437.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 142,
+          "header": "142. 6.3.06 GRND LADDERS 3",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 336, 337, Fig. 9.2.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 437.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 110,
+      "photo": "IMG_3121.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 110 centered at the bottom.",
+        "Faint mirror-image bleed-through of the reverse side's text is visible on the page; ignored.",
+        "Photo: a fingertip at the lower-left corner; facing page (111) partly visible at right including the start of its bold closing paragraph; desk edge and monitor arm at the bottom. Page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 143,
+          "header": "143. 6.3.06 GRND LADDERS 5",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 335, 336, Fig. 9.1.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 432",
+          "other": [],
+          "answer": "B",
+          "notes": [
+            "Jones and Bartlett citation is printed without a final period ('page 432'); kept as printed."
+          ],
+          "ocrCorrections": [
+            "draft: Essentiels / photo: Essentials",
+            "draft: Fundamentels / photo: Fundamentals"
+          ]
+        },
+        {
+          "n": 144,
+          "header": "144. 6.3.06 GRND LADDERS 11",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 345, Fig. 9.12.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 480, 481, Fig. 12-25.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 145,
+          "header": "145. 6.3.06 GRND LADDERS 13",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 349, Table 9.1.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 447.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 146,
+          "header": "146. 6.3.06 GRND LADDERS 15",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 349, 354.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 447, 448, Fig. 12-20, 779, Skill Drill 17-16, 782, Skill Drill 17-17.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 147,
+          "header": "147. 6.3.06 GRND LADDERS 17",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 360, 361, Fig. 9.27, 382, Skill Sheet 9-7.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, page 477, Skill Drill 12-14.",
+          "other": [],
+          "answer": "D",
+          "notes": [],
+          "ocrCorrections": []
+        },
+        {
+          "n": 148,
+          "header": "148. 6.3.06 GRND LADDERS 18",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, page 354.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 460, Fig. 12-26, 461.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 111,
+      "photo": "IMG_3122.jpg",
+      "pageNotes": [
+        "Running header: APPENDIX A - FIREFIGHTER I, Exam I-1 FEEDBACK AND ANSWERS",
+        "Page number 111 centered at the bottom.",
+        "Bold closing paragraph after entry 150: a reminder to enter the information on the Personal Progress Plotter and answer the Yes and No question at the end of the Exam, calling the step extremely important (the words 'extremely important' are underlined) for the Systematic Approach to Examination Preparation. Not a key entry.",
+        "Heavy bleed-through from the following page (the Exam Prep I-2 Feedback and Answers title page: 'PTS Publications', 'Exam Prep I-2 Feedback and Answers', 'Seventh Edition - 2025', 'Please read the instructions on the next page') shows faintly through the blank lower half; ignored.",
+        "Photo: desk edge and monitor arm at the bottom of the frame; page fully legible."
+      ],
+      "entries": [
+        {
+          "n": 149,
+          "header": "149. 6.3.06 GRND LADDERS 20",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 335, 337, Fig. 9.2.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 346, 347, Fig. 12-7.",
+          "other": [],
+          "answer": "B",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: pages 346, 347. Fig. 12-7. / photo: pages 346, 347, Fig. 12-7."
+          ]
+        },
+        {
+          "n": 150,
+          "header": "150. 6.3.06 GRND LADDERS 21",
+          "nfpa": "NFPA 1010, 6.3.6",
+          "ifsta": "IFSTA, Essentials of Fire Fighting, 8th Edition, Firefighter 1, pages 335, 337, Fig. 9.2.",
+          "jb": "Jones and Bartlett, Fundamentals of Fire Fighter Skills and Hazardous Materials Response, 5th Edition, pages 346, 347, Fig. 12-7.",
+          "other": [],
+          "answer": "C",
+          "notes": [],
+          "ocrCorrections": [
+            "draft: appended the closing 'Do not forget...' paragraph and 'am Prep 1-2 Feedback and Answers' to the jb field / photo: jb citation ends at 'Fig. 12-7.'; the paragraph is a separate block recorded in pageNotes"
+          ]
+        }
+      ]
+    }
+  ]
+}

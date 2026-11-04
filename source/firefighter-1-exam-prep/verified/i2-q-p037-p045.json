@@ -1,0 +1,836 @@
+{
+  "exam": "i2",
+  "kind": "questions",
+  "pageRange": [37, 45],
+  "pages": [
+    {
+      "page": 37,
+      "photo": "IMG_3055.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 37 printed at bottom center.",
+        "Photo: a dark monitor-arm style object crosses the bottom-left of the photo below the page edge; it does not cover any text."
+      ],
+      "questions": [
+        {
+          "n": 78,
+          "stem": "In a smoke-filled structure, visibility is usually clearest at the:",
+          "choices": { "A": "windows.", "B": "floor.", "C": "doors.", "D": "walls." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 79,
+          "stem": "Primary search crews should always carry:",
+          "choices": {
+            "A": "an extra self-contained breathing apparatus.",
+            "B": "a positive pressure device.",
+            "C": "a portable radio.",
+            "D": "utility rope for lifeline."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 80,
+          "stem": "A victim should be dragged:",
+          "choices": { "A": "feet first.", "B": "headfirst.", "C": "sideways.", "D": "after being completely immobilized." },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft A: feet first / photo: feet first."]
+        },
+        {
+          "n": 81,
+          "stem": "When using the clothes drag, the victim's head is supported by:",
+          "choices": { "A": "the rescuer's arms.", "B": "the victim's arms.", "C": "the victim's hands.", "D": "a roll of blanket." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 82,
+          "stem": "The area that is the first search priority is the:",
+          "choices": {
+            "A": "area immediately around the fire.",
+            "B": "division \"C\".",
+            "C": "top floor.",
+            "D": "area directly inside the main egress."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft: B empty, unlabeled line 'division \"C\"' / photo: B. division \"C\"."]
+        },
+        {
+          "n": 83,
+          "stem": "Which statement regarding rescue is true?",
+          "choices": {
+            "A": "Drags are fast and provide minimal spinal immobilization..",
+            "B": "Rescue drags provide basic spinal immobilization.",
+            "C": "The two-person walking assist is used with victims who are disabled or paralyzed.",
+            "D": "The two-person extremity carry requires a chair to perform."
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choice A is printed with two trailing periods (\"immobilization..\"); kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 84,
+          "stem": "When is a secondary search performed?",
+          "choices": {
+            "A": "After the fire is under control.",
+            "B": "Immediately upon completion of the primary search.",
+            "C": "During the recovery mode",
+            "D": "Only when the primary search discovered victims."
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choice C is printed without a trailing period; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 85,
+          "stem": "When finding a victim during a search and rescue, you should:",
+          "choices": {
+            "A": "contact Emergency Medical Service (EMS) and have them meet you at the front door.",
+            "B": "communicate to Operations that you found a victim.",
+            "C": "notify Command immediately.",
+            "D": "pass the victim off to the rapid intervention crew."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 86,
+          "stem": "What type of drag provides a fast removal for a downed firefighter from a dangerous area?",
+          "choices": { "A": "Clothes drag", "B": "Blanket drag", "C": "Lower extremities drag", "D": "Webbing sling drag" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "photo": "IMG_3056.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 38 printed at bottom center.",
+        "Photo: left-hand page of the spread, page curves and text is slightly skewed; a finger holds the lower-left corner and a dark monitor-arm style object crosses the bottom-left below the page; neither covers text. The right-hand page (39) is partly visible at the right edge."
+      ],
+      "questions": [
+        {
+          "n": 87,
+          "stem": "In the extremity carry:",
+          "choices": {
+            "A": "both firefighters face each other.",
+            "B": "both firefighters face the same direction.",
+            "C": "firefighters will hold a victim with his ankles and wrists.",
+            "D": "the victim and firefighters keep low to the ground."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft: B empty, unlabeled line 'both firefighters face the same direction.' / photo: B. both firefighters face the same direction."]
+        },
+        {
+          "n": 88,
+          "stem": "When performing search and rescue, you should:",
+          "choices": {
+            "A": "duck walk quickly from room to room in secondary search",
+            "B": "mark entry doors.",
+            "C": "the firefighters should duck walk when they are unable to see the floor.",
+            "D": "start search in basement and work to upper floors."
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choice A is printed without a trailing period; kept as printed."],
+          "ocrCorrections": [
+            "draft stem: 'you should' / photo: 'you should:'",
+            "draft: B missing, unlabeled line 'mark entry doors.' / photo: B. mark entry doors."
+          ]
+        },
+        {
+          "n": 89,
+          "stem": "When performing a search line rescue, you should:",
+          "choices": {
+            "A": "have at least three rings to attach and extend the original search line.",
+            "B": "use a one-inch kernmantle search rope of at least 100 feet.",
+            "C": "use search rope devices for all structures over 1,000 square feet only.",
+            "D": "form a team of three or more firefighters."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": [
+            "draft stem included running header text 'EXAM PREP: FIRE FICHTER I, SEVENTH EDITION' / photo: stem ends at 'you should:'",
+            "draft: A missing / photo: A. have at least three rings to attach and extend the original search line.",
+            "draft: B missing / photo: B. use a one-inch kernmantle search rope of at least 100 feet.",
+            "draft: C missing / photo: C. use search rope devices for all structures over 1,000 square feet only."
+          ]
+        },
+        {
+          "n": 90,
+          "stem": "Which lift or drag is effective for carrying children or small adults who are conscious?",
+          "choices": { "A": "cradle-in-arms lift/carry", "B": "incline drag", "C": "blanket drag", "D": "webbing drag" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed in lower case without trailing periods; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 91,
+          "stem": "Which lift or drag is effective for two rescuers carrying a victim?",
+          "choices": { "A": "Cradle-in-arms carry", "B": "Incline drag", "C": "Blanket drag", "D": "Seat carry" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 92,
+          "stem": "When removing an unconscious adult down a ladder, you should:",
+          "choices": {
+            "A": "place the victim over their shoulder as they descend the ladder.",
+            "B": "tie a rescue knot around the victim and lower them down the ladder.",
+            "C": "cradle the victim in their arms.",
+            "D": "let the victim's weight rest on the firefighter's knee."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 93,
+          "stem": "When removing an unconscious child down a ladder, you should:",
+          "choices": {
+            "A": "place the victim over their shoulder as they descend the ladder.",
+            "B": "tie a rescue knot around the victim and lower the victim down the ladder.",
+            "C": "cradle the victim in their arms.",
+            "D": "place victim across both arms and maintain contact with beam as you descend."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft: B missing, unlabeled line 'tie a rescue knot around the victim and lower the victim down the ladder.' / photo: B. tie a rescue knot around the victim and lower the victim down the ladder."]
+        },
+        {
+          "n": 94,
+          "stem": "A device built into all new turn-out coats that enables firefighters to be quickly removed from a danger area is the:",
+          "choices": { "A": "Class III Harness.", "B": "Ladder Belt.", "C": "Drag Rescue Device.", "D": "Fall Arrest Harness." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 39,
+      "photo": "IMG_3057.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 39 printed at bottom center.",
+        "Photo: a dark monitor-arm style object crosses the bottom-left of the photo below the page edge; it does not cover any text."
+      ],
+      "questions": [
+        {
+          "n": 95,
+          "stem": "Mechanical ventilation devices are most valuable when used:",
+          "choices": {
+            "A": "in conjunction with normal/natural ventilation.",
+            "B": "in all situations where ventilation is necessary.",
+            "C": "instead of natural ventilation.",
+            "D": "to replace fog stream ventilation."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 96,
+          "stem": "When exposed to products of combustion, the _____ is one of the most vulnerable to injury.",
+          "choices": { "A": "respiratory tract", "B": "heart", "C": "eyes", "D": "brain" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": ["draft stem: 'When exposed to products of combustion, the vulnerable to injury. is one of the most' / photo: 'When exposed to products of combustion, the _____ is one of the most vulnerable to injury.'"]
+        },
+        {
+          "n": 97,
+          "stem": "A product of combustion that contains unburned hydrocarbons is:",
+          "choices": { "A": "smoke.", "B": "flame.", "C": "vapor.", "D": "heat." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 98,
+          "stem": "An advantage of mechanical ventilation is it:",
+          "choices": {
+            "A": "may reverse fire damage.",
+            "B": "requires additional personnel for its operation.",
+            "C": "ensures more control of air flow.",
+            "D": "is dependent upon power."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 99,
+          "stem": "The use of blowers, exhaust fans, and smoke ejectors is _____ ventilation.",
+          "choices": { "A": "vertical", "B": "natural", "C": "mechanical", "D": "horizontal" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": ["draft stem: 'is ventilation.' / photo: 'is _____ ventilation.' (printed blank)"]
+        },
+        {
+          "n": 100,
+          "stem": "Proper ventilation results in an orderly movement of _____ from a structure.",
+          "choices": { "A": "water fog", "B": "hose line crews", "C": "rescue personnel", "D": "heated fire gases" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": ["draft stem: 'movement of from a structure.' / photo: 'movement of _____ from a structure.' (printed blank)"]
+        },
+        {
+          "n": 101,
+          "stem": "Hydraulic ventilation is best accomplished by:",
+          "choices": { "A": "a straight stream.", "B": "vertical openings.", "C": "fog streams.", "D": "natural wind currents." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 102,
+          "stem": "Vent, enter, isolate, search is used remotely from the fire when there is:",
+          "choices": {
+            "A": "no smoke is shown in a room.",
+            "B": "a suspected or known victim.",
+            "C": "fire visible in the room.",
+            "D": "a victim hanging out the window."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 103,
+          "stem": "When using a smoke ejector in a window, the fan should be placed:",
+          "choices": {
+            "A": "so that the cone of air completely covers the opening.",
+            "B": "on the leeward side.",
+            "C": "in series with one another.",
+            "D": "on the outside in the same direction as the prevailing wind."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 40,
+      "photo": "IMG_3058.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 40 printed at bottom center.",
+        "Photo: left-hand page of the spread, page curves and text is slightly skewed; a finger at the lower-left edge and a dark monitor-arm style object below the page do not cover text. The right-hand page (41) is partly visible at the right edge."
+      ],
+      "questions": [
+        {
+          "n": 104,
+          "stem": "The phase of fire characterized by diminishing fire is:",
+          "choices": { "A": "ignition.", "B": "growth.", "C": "fully developed.", "D": "decay." },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft: D missing (draft pasted 'D. decay.' into question 105) / photo: D. decay."]
+        },
+        {
+          "n": 105,
+          "stem": "The transfer of heat by the movement of gases or liquid is:",
+          "choices": { "A": "conduction.", "B": "radiation.", "C": "convection.", "D": "direct-flame contact." },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft: B empty, unlabeled line 'radiation.' / photo: B. radiation."]
+        },
+        {
+          "n": 106,
+          "stem": "Toxic products of combustion are:",
+          "choices": {
+            "A": "convection, conduction, radiation, and direct contact.",
+            "B": "fire gases, flame, chemical chain reaction.",
+            "C": "water vapor and soot",
+            "D": "carbon monoxide and hydrogen cyanide."
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choice C is printed without a trailing period; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 107,
+          "stem": "The term vapor density refers to the weight of a gas as compared to the weight of:",
+          "choices": { "A": "water.", "B": "air.", "C": "carbon.", "D": "nitrogen." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 108,
+          "stem": "The stages of fire development are:",
+          "choices": {
+            "A": "initial, growth, developed, and decline.",
+            "B": "incipient, growth, fully developed, and decay.",
+            "C": "origin, intermediate, growth, and decline.",
+            "D": "spontaneous, incipient, growth, and decay."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft C: 'origin, intermediate, growth,' with unlabeled line 'and decline' / photo: C. origin, intermediate, growth, and decline."]
+        },
+        {
+          "n": 109,
+          "stem": "A condition that could be a factor leading to a backdraft situation is:",
+          "choices": {
+            "A": "natural ventilation.",
+            "B": "lack of fire stops.",
+            "C": "confined concentration of products of incomplete combustion.",
+            "D": "rapid extinguishment of products of combustion."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 110,
+          "stem": "The _____ stage of a fire occurs when all combustible materials in the compartment are involved.",
+          "choices": { "A": "rollover", "B": "growth", "C": "flashover", "D": "fully-developed" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": [
+            "draft stem: 'The compartment are involved.' (first line placed under question 109) / photo: 'The _____ stage of a fire occurs when all combustible materials in the compartment are involved.'",
+            "draft: D missing (draft pasted 'D. fully-develope' into question 111) / photo: D. fully-developed"
+          ]
+        },
+        {
+          "n": 111,
+          "stem": "The amount of heat energy released per unit of time as a given fuel burns is:",
+          "choices": { "A": "ignition rate.", "B": "heat release rate.", "C": "heat energy rate.", "D": "rate of combustion." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 112,
+          "stem": "Vapors and gases with vapor densities less than 1 will tend to:",
+          "choices": { "A": "rise.", "B": "dissipate.", "C": "drop.", "D": "condense." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 41,
+      "photo": "IMG_3059.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 41 printed at bottom center.",
+        "Photo: a dark monitor-arm style object crosses the bottom-left of the photo below the page edge; it does not cover any text."
+      ],
+      "questions": [
+        {
+          "n": 113,
+          "stem": "Pyrolysis is:",
+          "choices": {
+            "A": "a physical reaction that produces heat.",
+            "B": "the concentration level of a substance at which it will support ignition and continuous burning.",
+            "C": "a state where a balance has occurred in a mixture.",
+            "D": "decomposition or transformation of a compound caused by heat."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft B ended at 'ignition and' with unlabeled line 'continuous burning' / photo: B. ... support ignition and continuous burning."]
+        },
+        {
+          "n": 114,
+          "stem": "The fire triangle is composed of:",
+          "choices": {
+            "A": "heat, chemical reaction, fuel.",
+            "B": "heat, fuel, and oxygen.",
+            "C": "oxygen, nitrogen, fuel.",
+            "D": "fuel, oxygen, Lower Explosive Limit."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 115,
+          "stem": "The fire tetrahedron includes all the elements of the fire triangle plus:",
+          "choices": { "A": "radiation energy.", "B": "chemical reaction.", "C": "carbon dioxide.", "D": "carbon monoxide." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 116,
+          "stem": "The density or ratio of the mass of a given volume of liquid compared with the density or mass of an equal volume of water at the same temperature is:",
+          "choices": { "A": "specific gravity.", "B": "vapor density.", "C": "flash point.", "D": "surface to mass ratio" },
+          "statements": [], "illustration": null,
+          "notes": ["Choice D is printed without a trailing period; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 117,
+          "stem": "Vapors and gases with vapor densities greater than 1 will tend to:",
+          "choices": { "A": "rise.", "B": "dissipate.", "C": "drop.", "D": "vaporize." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 118,
+          "stem": "How are flammability limits and explosive limits related?",
+          "choices": {
+            "A": "Flammability limits are used to calculate explosive limits.",
+            "B": "Explosive limits are used to calculate flammability limits.",
+            "C": "The two terms are neither mathematically nor conceptually related.",
+            "D": "They are interchangeable terms meaning the same thing."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 119,
+          "stem": "Backdraft is:",
+          "choices": {
+            "A": "a boiling liquid/expanding vapor explosion.",
+            "B": "a layer of air that has the same temperature.",
+            "C": "the rapid ignition of unburned gases.",
+            "D": "sudden ignition of all of the combustible objects within a compartment."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 120,
+          "stem": "A British Thermal Unit (BTU) is:",
+          "choices": {
+            "A": "the amount of heat required to raise one pound of water one degree Fahrenheit.",
+            "B": "a substance or an agent that causes two or more objects or parts to bind.",
+            "C": "decomposition or transformation of a compound caused by light.",
+            "D": "the concentration level of a substance at which it will burn."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 42,
+      "photo": "IMG_3060.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 42 printed at bottom center.",
+        "Photo: left-hand page of the spread, page curves and text is slightly skewed; a finger at the lower-left edge and a dark monitor-arm style object below the page do not cover text. The right-hand page (43) is partly visible at the right edge."
+      ],
+      "questions": [
+        {
+          "n": 121,
+          "stem": "The chemical reaction between two or more materials that changes the materials and produces heat, flames, and toxic smoke is:",
+          "choices": { "A": "endothermic heat reaction.", "B": "exothermic reaction.", "C": "pyrolysis.", "D": "chemical free radicals." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 122,
+          "stem": "Which toxic gas is often present in smoke?",
+          "choices": { "A": "Zinc oxide", "B": "Nitrogen sulfide", "C": "Hydrogen cyanide", "D": "Sodium hydroxide" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": [
+            "draft: B empty, unlabeled line 'Nitrogen sulfide' / photo: B. Nitrogen sulfide",
+            "draft: D empty, unlabeled line 'Sodium hydroxide' / photo: D. Sodium hydroxide"
+          ]
+        },
+        {
+          "n": 123,
+          "stem": "What type of ventilation occurs when fresh air is blown into a structure?",
+          "choices": { "A": "Convection", "B": "Positive pressure", "C": "Vertical", "D": "Dilution" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 124,
+          "stem": "Autoignition temperature is:",
+          "choices": {
+            "A": "the term used to denote a place where heat is drained away from a source.",
+            "B": "the temperature at which a material sustains combustion.",
+            "C": "a catalyst in the breakdown of molecules.",
+            "D": "a chemical reaction that absorbs heat."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 125,
+          "stem": "Flash point is the minimum temperature at which an ignitable liquid will:",
+          "choices": {
+            "A": "start to vaporize an ignitable gas.",
+            "B": "give off sufficient vapor to ignite.",
+            "C": "sustain a continual flame from vaporization.",
+            "D": "give off sufficient vapors to sustain flames."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 126,
+          "stem": "Regarding positive pressure ventilation,",
+          "choices": {
+            "A": "the exit opening must be a window.",
+            "B": "the opening of the exit must be larger than the entry point.",
+            "C": "fog streams are used to move smoke.",
+            "D": "the cone of air from the blower must completely cover the doorway."
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Stem ends with a comma as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 127,
+          "stem": "Ventilation without coordination can lead to:",
+          "choices": { "A": "flashover.", "B": "rollover.", "C": "backdraft.", "D": "thermal layering." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 128,
+          "stem": "Which tool used in ventilation operations would be best for sounding the roof?",
+          "choices": { "A": "nozzle", "B": "pickhead axe", "C": "power saw with extended chain bar", "D": "truss finder" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed in lower case without trailing periods; kept as printed."],
+          "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "photo": "IMG_3061.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "Page number 43 printed at bottom center.",
+        "Photo: a dark monitor-arm style object crosses the bottom-left of the photo below the page edge; it does not cover any text."
+      ],
+      "questions": [
+        {
+          "n": 129,
+          "stem": "After a roof has been opened up, the firefighter must:",
+          "choices": {
+            "A": "direct a hose line into the opening.",
+            "B": "ensure the ceiling below the cut is opened.",
+            "C": "make another opening on the opposite side of the pitched roof.",
+            "D": "remove any natural roof openings."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft B: 'ensure the ceiling below the cut is opened' / photo: 'ensure the ceiling below the cut is opened.'"]
+        },
+        {
+          "n": 130,
+          "stem": "When done properly, trench ventilation:",
+          "choices": {
+            "A": "will stop spread of fire in a long narrow structure.",
+            "B": "will require the use of more water for fire suppression.",
+            "C": "consists of three separate holes cut in a U shape.",
+            "D": "will prevent the normal vertical spread of fire."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 131,
+          "stem": "When a flashover situation exists in a building, which actions will reduce the probability of an explosion?",
+          "choices": {
+            "A": "Opening a window on the windward side and directing a fog stream into the window",
+            "B": "Ventilating the building at its highest point",
+            "C": "Opening a door on the leeward side",
+            "D": "Opening a door or window on opposite sides of the building simultaneously"
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 132,
+          "stem": "When exposed to intense heat, a lightweight metal truss can:",
+          "choices": {
+            "A": "maintain its structural integrity.",
+            "B": "often contain a fire to a specific area.",
+            "C": "be expected to fail.",
+            "D": "be expected to support firefighting operations."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": ["draft A: 'maintain its structural integrity' / photo: 'maintain its structural integrity.'"]
+        },
+        {
+          "n": 133,
+          "stem": "The most common types of lightweight truss construction are:",
+          "choices": {
+            "A": "light weight steel or wood.",
+            "B": "formed steel and I beams.",
+            "C": "lightweight steel and formed steel.",
+            "D": "wooden and engineered steel trusses."
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choice A prints 'light weight' as two words while C prints 'lightweight'; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 134,
+          "stem": "What type of construction provides a path for rapid fire extension?",
+          "choices": { "A": "Side split", "B": "Bungalow", "C": "Slate roof", "D": "Balloon-frame" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 135,
+          "stem": "Before hoisting or carrying a power saw to the roof, it should be:",
+          "choices": {
+            "A": "refueled and the blade tightened.",
+            "B": "shut off.",
+            "C": "tested on available material.",
+            "D": "cooled for safety and handling."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 136,
+          "stem": "The advantage of ventilation for building occupants is that it:",
+          "choices": {
+            "A": "isolates the potential for flashover to only one room.",
+            "B": "reduces the number of firefighters needed for search and rescue.",
+            "C": "removes smoke.",
+            "D": "eliminates the need for firefighter to perform salvage and overhaul."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "photo": "IMG_3062.jpg",
+      "pageNotes": [
+        "Running header: EXAM PREP: FIRE FIGHTER I, SEVENTH EDITION",
+        "Page number 44 printed at bottom center.",
+        "Photo: left-hand page of the spread, page curves and text is slightly skewed; a finger at the lower-left edge and a dark monitor-arm style object below the page do not cover text. The right-hand page (45) is partly visible at the right edge."
+      ],
+      "questions": [
+        {
+          "n": 137,
+          "stem": "Which type of heat transfer is a major contributor to fire development spread?",
+          "choices": { "A": "Radiation", "B": "Conduction", "C": "Convection", "D": "Fusion" },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed in a single row without trailing periods; kept as printed."],
+          "ocrCorrections": ["draft: question 138 stem and choices A/C appended as extra lines under 137 / photo: they belong to question 138."]
+        },
+        {
+          "n": 138,
+          "stem": "The firefighter is secured to the ground ladder prior to deploying the roof ladder with a:",
+          "choices": { "A": "knee lock.", "B": "hose strap.", "C": "leg lock.", "D": "harness seat." },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": [
+            "draft: question 138 missing entirely / photo: stem 'The firefighter is secured to the ground ladder prior to deploying the roof ladder with a:'",
+            "draft: A missing / photo: A. knee lock.",
+            "draft: B missing (draft pasted 'hose strap.' into question 140) / photo: B. hose strap.",
+            "draft: C missing / photo: C. leg lock.",
+            "draft: D missing (draft pasted 'harness seat.' into question 140) / photo: D. harness seat."
+          ]
+        },
+        {
+          "n": 139,
+          "stem": "In a structure, smoke and heat collect at the:",
+          "choices": { "A": "lowest point.", "B": "windward side.", "C": "ceiling.", "D": "leeward side." },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed in a single row."],
+          "ocrCorrections": [
+            "draft: C missing (draft pasted 'ceiling.' into question 140) / photo: C. ceiling.",
+            "draft: D missing (draft pasted 'D. leeward side.' into question 140) / photo: D. leeward side."
+          ]
+        },
+        {
+          "n": 140,
+          "stem": "Louver, kerf, and triangle are types of:",
+          "choices": {
+            "A": "ways to walk across a roof safely.",
+            "B": "techniques used in forcible entry.",
+            "C": "ventilation cuts names.",
+            "D": "blades used on ventilation saws."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": [
+            "draft B: 'hose strap.' / photo: B. techniques used in forcible entry.",
+            "draft C: 'ceiling.' / photo: C. ventilation cuts names.",
+            "draft D: 'harness seat.' / photo: D. blades used on ventilation saws."
+          ]
+        },
+        {
+          "n": 141,
+          "stem": "Which statement regarding trench cuts is correct?",
+          "choices": {
+            "A": "The trench cut is an offensive action.",
+            "B": "The trench cut promotes reduces fuel and vertical air flow.",
+            "C": "Trench cuts require little effort and time to achieve.",
+            "D": "To be effective, trench cuts should be made at the longest length of the structure."
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choice B reads 'promotes reduces fuel' as printed; kept as printed."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 142,
+          "stem": "You sound a roof by:",
+          "choices": {
+            "A": "striking the surface of the roof with the blunt end of a tool.",
+            "B": "striking the surface with the sharp end of a tool.",
+            "C": "striking the surface with the handle end of an axe.",
+            "D": "stomping on the surface with your feet."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 143,
+          "stem": "Thermal layering is:",
+          "choices": {
+            "A": "a column of heat rising from a source.",
+            "B": "a process in which the molecules of a liquid are liberated into the atmosphere at a rate greater than the rate at which the molecules return to a liquid.",
+            "C": "the configuration of heat with higher temperatures at the upper levels and cooler temperatures at the lower levels.",
+            "D": "decomposition or transformation of a compound caused by heat."
+          },
+          "statements": [], "illustration": null, "notes": [],
+          "ocrCorrections": [
+            "draft B ended at 'atmosphere' with unlabeled line 'at a rate greater than ... return to a liquid.' / photo: B is one wrapped choice.",
+            "draft C ended at 'upper levels and' with unlabeled line 'cooler temperatures at the lower levels.' / photo: C is one wrapped choice."
+          ]
+        },
+        {
+          "n": 144,
+          "stem": "A parapet wall is:",
+          "choices": {
+            "A": "exterior wall extending above the roof line.",
+            "B": "fire resistant.",
+            "C": "attached to the building by its floors or columns.",
+            "D": "supports its own weight and the weight of the walls and floors above it."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "photo": "IMG_3063.jpg",
+      "pageNotes": [
+        "Running header: PHASE I, FIREFIGHTER I, EXAMINATION I-2",
+        "After question 150: 'Did you score 80% or higher on Exam I-2 Feedback? Circle Yes or No in ink.' ('ink' underlined) followed by 'We will return to your Yes or No answer to these questions later in SAEP(R).'",
+        "Paragraph: 'Now that you have finished the Feedback Step for Examination I-2, it is time to repeat the process by taking another comprehensive examination of the NFPA Standard.'",
+        "Boxed 'Helpful hint' paragraph (five lines) advising the reader to determine why a wrong answer was selected, study the paragraph containing the correct answer, highlight it as for Exam I-1, and read the surrounding paragraphs.",
+        "Page number 45 printed at bottom center.",
+        "Photo: faint show-through of large text from the following page ('Firefighter I Exam Prep I-3', 'Seventh Edition - 2025', 'PTS Publications') is visible behind the questions; a dark monitor-arm style object crosses the bottom-left below the page edge; neither covers text."
+      ],
+      "questions": [
+        {
+          "n": 145,
+          "stem": "Modern wood-frame construction that uses a technique that builds one floor at a time and inserts a plate between each floor that acts as a fire stop is:",
+          "choices": { "A": "flitch-plate.", "B": "platform-frame.", "C": "balustrade.", "D": "awning." },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed in a single row."],
+          "ocrCorrections": ["draft: D missing (draft pasted 'awning.' into question 146) / photo: D. awning."]
+        },
+        {
+          "n": 146,
+          "stem": "What danger is suggested by the observation of smoke puffing in and out of a structure?",
+          "choices": {
+            "A": "Impending structural collapse",
+            "B": "The presence of backdraft conditions",
+            "C": "Weak structural roofing members",
+            "D": "Untempered, unreinforced glazing in windows"
+          },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed without trailing periods; kept as printed."],
+          "ocrCorrections": ["draft D: 'awning.' / photo: D. Untempered, unreinforced glazing in windows"]
+        },
+        {
+          "n": 147,
+          "stem": "An opening cut in a roof between a trench cut and the fire is a:",
+          "choices": { "A": "Kerf cut.", "B": "Heat hole.", "C": "Louver cut.", "D": "Inspection cut." },
+          "statements": [], "illustration": null,
+          "notes": ["Choices are printed in a single row."],
+          "ocrCorrections": []
+        },
+        {
+          "n": 148,
+          "stem": "Which is a Kerf cut?",
+          "choices": {
+            "A": "A small opening that will be enlarged once the rafters are located.",
+            "B": "A single cut the width of the saw blade.",
+            "C": "Sometimes called a center rafter cut.",
+            "D": "A rectangular exit opening cut into a roof."
+          },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 149,
+          "stem": "A type of opening used in vertical ventilation operations is the:",
+          "choices": { "A": "Cable cut.", "B": "Kerf cut.", "C": "Kelly cut.", "D": "Higbee cut." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        },
+        {
+          "n": 150,
+          "stem": "Type V construction is:",
+          "choices": { "A": "fire resistive.", "B": "wood frame.", "C": "all masonry.", "D": "masonry and synthetics." },
+          "statements": [], "illustration": null, "notes": [], "ocrCorrections": []
+        }
+      ]
+    }
+  ]
+}

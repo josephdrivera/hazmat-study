@@ -1,0 +1,29 @@
+{
+  "about": "Editorial decisions applied on top of the verified transcription by scripts/build-ff1-exams.mjs. Keys are <exam>-<printed question number>. Nothing here changes a stem, a choice, or an answer letter; it attaches illustration assets, adds review notes, and can hold an item out of scored tests.",
+  "sourceNotes": {
+    "i1": [
+      "Printed pages 4, 26, 46, 48, 68, 72, 78, 84, 86, 112, 114, and 142 were not photographed. Joseph confirmed from the physical book on 2026-11-04 that all twelve are blank.",
+      "Key entries 76 and 77 are headed 6.3.02 but their Reference lines print NFPA 1010, 6.3.3; entry 19's Jones and Bartlett citation ends at the word \"page\" with no page number. Both are kept as printed."
+    ],
+    "i2": [
+      "The directions on printed page 27 and the Answer Form reference are the book's own wording.",
+      "Key entries 30 to 73 are headed 6.3.08 but their Reference lines print NFPA 1010, 6.3.10, and entry 147 is headed 6.3.12 with a 6.3.11 Reference line. Kept as printed."
+    ],
+    "i3": [
+      "The directions on printed page 49 refer to the Answer Form for the Firefighter I-2 Examination, as printed.",
+      "Key entry 84 prints its Reference line as NFPA 1010, 6.18 and entry 114 as 6.3,20; entries 117 to 122 print the topic as AIR MONITORNG. Kept as printed.",
+      "Question 106 depends on the knot drawing printed on page 61. A cropped photograph of the book's own figure is attached, not a redrawing."
+    ]
+  },
+  "items": {
+    "i3-106": {
+      "illustration": {
+        "file": "ff1-i3-106-knot.jpg",
+        "alt": "A boxed line drawing of one rope running diagonally from lower left to upper right, both free ends drawn as arrowheads, with two stacked interlocking loops forming a doubled, twisted knot body in the middle.",
+        "redrawn": false,
+        "credit": "Cropped from the photograph of printed page 61 (IMG_3077.jpg)."
+      },
+      "notes": ["The figure is a photographic crop of the book's drawing on printed page 61, not a redrawn graphic."]
+    }
+  }
+}

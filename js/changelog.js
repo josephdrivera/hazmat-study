@@ -21,6 +21,36 @@
 
   var versions = [
     {
+      version: "2.1.0",
+      date: "2026-11-04",
+      title: "Fire Fighter I practice tests from the exam-prep book",
+      items: [
+        "Fire Fighter I now has practice tests. All three examinations from the PTS Exam Prep: Fire Fighter I book (Seventh Edition, 2025) are loaded: 450 questions with the book's own Appendix A answer letters and its NFPA 1010, IFSTA, and Jones and Bartlett citations.",
+        "Every question and key entry was transcribed from photographs of the book and checked page by page. Each one shows its printed question number, the book page it came from, and the key page it was matched to.",
+        "The test builder lists only the sources for the program you are in. HazMat tests still draw from the instructor handouts and the HazMat book; Fire Fighter I tests draw from the Fire Fighter I book, one exam or any mix of the three.",
+        "Study the book one exam at a time from the Fire Fighter I home, with the same instant feedback, Full Review, and content review as HazMat.",
+        "A new Fire Fighter I resource page explains the book's study method (take each exam cold, mark guesses, research every missed item in the cited pages).",
+        "A test in progress now remembers which program it belongs to, and the dashboard counts Fire Fighter I tests separately from HazMat.",
+        "48 key entries where the book prints one NFPA section number in the heading and another in the Reference line are flagged in content review. They stay in tests; nothing was corrected.",
+        "The HazMat banks, your saved answers, and any in-progress test are unchanged."
+      ]
+    },
+    {
+      version: "2.0.0",
+      date: "2026-11-03",
+      title: "New look, three programs, chapter notes, and dark mode",
+      items: [
+        "Switch between HazMat, Fire Fighter I, and Fire Fighter II at the top of every screen. Each program keeps its own home, chapter library, glossary, and resources.",
+        "The home screen is now a dashboard: your last score, average, questions studied, chapters read, a resume banner for an unfinished test, and your two most recent tests.",
+        "Chapter notes: key takeaways from the collected textbook chapters, with a status on each (study notes, starter notes, or needs materials), midterm question ranges for Fire Fighter I, and mark-as-read, mark-as-reviewed, and save-for-review buttons.",
+        "A searchable glossary with letter navigation and category filters, plus a search box that covers chapters, terms, and reference pages.",
+        "Resources: free official downloads (the 2024 ERG, the NIOSH Pocket Guide, CAMEO Chemicals, OSHA 1910.120, NFPA free access) and HazMat reference pages.",
+        "Dark mode. It follows your device setting and can be switched from the header.",
+        "The practice-test builder is its own screen with the same options as before. Study mode, exam mode, results, the Full Review report, and content review all carry over with a cleaner look.",
+        "Your saved HazMat study answers and any in-progress test carry over unchanged."
+      ]
+    },
+    {
       version: "1.9.0",
       date: "2026-10-20",
       title: "25-question practice tests",
