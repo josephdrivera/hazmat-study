@@ -26,7 +26,7 @@
       title: "Fire Fighter I practice tests from the exam-prep book",
       items: [
         "Fire Fighter I now has practice tests. All three examinations from the PTS Exam Prep: Fire Fighter I book (Seventh Edition, 2025) are loaded: 450 questions with the book's own Appendix A answer letters and its NFPA 1010, IFSTA, and Jones and Bartlett citations.",
-        "Every question and key entry was transcribed from photographs of the book and checked page by page. Each one shows its printed question number, the book page it came from, and the key page it was matched to.",
+        "Every question and key entry was transcribed from scans of the book and checked page by page. Each one shows its printed question number, the book page it came from, and the key page it was matched to.",
         "The test builder lists only the sources for the program you are in. HazMat tests still draw from the instructor handouts and the HazMat book; Fire Fighter I tests draw from the Fire Fighter I book, one exam or any mix of the three.",
         "Study the book one exam at a time from the Fire Fighter I home, with the same instant feedback, Full Review, and content review as HazMat.",
         "A new Fire Fighter I resource page explains the book's study method (take each exam cold, mark guesses, research every missed item in the cited pages).",

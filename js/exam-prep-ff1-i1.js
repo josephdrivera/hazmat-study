@@ -1566,7 +1566,7 @@
       "directions": "The book's directions: take the examination without studying first, mark answers in ink, mark any guessed item with an X, then score it against Appendix A and research every missed or guessed item in the cited pages.",
       "answerNote": "Answer letters and page citations are transcribed from the book's Appendix A and have not been independently verified.",
       "sourceNotes": [
-          "Printed pages 4, 26, 46, 48, 68, 72, 78, 84, 86, 112, 114, and 142 were not photographed. Joseph confirmed from the physical book on 2026-11-04 that all twelve are blank.",
+          "Printed pages 4, 26, 46, 48, 68, 72, 78, 84, 86, 112, 114, and 142 were not scanned. Joseph confirmed from the physical book on 2026-11-04 that all twelve are blank.",
           "Key entries 76 and 77 are headed 6.3.02 but their Reference lines print NFPA 1010, 6.3.3; entry 19's Jones and Bartlett citation ends at the word \"page\" with no page number. Both are kept as printed."
       ]
   };

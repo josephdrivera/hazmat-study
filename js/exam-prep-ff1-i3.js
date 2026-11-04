@@ -1094,8 +1094,8 @@
       c: ["bowline", "becket/sheet bend", "clove hitch", "figure-eight"],
       a: "D",
       r: ["6.3.20", "pages 311, 312, Fig. 8.21.", "page 288, Skill Drill 8-6."],
-      image: { description: "A boxed line drawing of a single rope running diagonally from lower left to upper right, both free ends drawn as arrowheads, with two stacked interlocking loops of similar size forming a doubled, twisted knot body in the middle. No labels.", file: "ff1-i3-106-knot.jpg", alt: "A boxed line drawing of one rope running diagonally from lower left to upper right, both free ends drawn as arrowheads, with two stacked interlocking loops forming a doubled, twisted knot body in the middle.", redrawn: false, credit: "Cropped from the photograph of printed page 61 (IMG_3077.jpg)." },
-      notes: ["The stem is printed with a space before the colon (\"below :\").","The figure is a photographic crop of the book's drawing on printed page 61, not a redrawn graphic."],
+      image: { description: "A boxed line drawing of a single rope running diagonally from lower left to upper right, both free ends drawn as arrowheads, with two stacked interlocking loops of similar size forming a doubled, twisted knot body in the middle. No labels.", file: "ff1-i3-106-knot.jpg", alt: "A boxed line drawing of one rope running diagonally from lower left to upper right, both free ends drawn as arrowheads, with two stacked interlocking loops forming a doubled, twisted knot body in the middle.", redrawn: false, credit: "Cropped from the scan of printed page 61 (IMG_3077.jpg)." },
+      notes: ["The stem is printed with a space before the colon (\"below :\").","The figure is a crop of the scanned drawing on printed page 61, not a redrawn graphic."],
       o: "106. The _____ is tied as illustrated below : A. bowline B. becket/sheet bend C. clove hitch D. figure-eight"
     }),
     rec({
@@ -1576,7 +1576,7 @@
       "sourceNotes": [
           "The directions on printed page 49 refer to the Answer Form for the Firefighter I-2 Examination, as printed.",
           "Key entry 84 prints its Reference line as NFPA 1010, 6.18 and entry 114 as 6.3,20; entries 117 to 122 print the topic as AIR MONITORNG. Kept as printed.",
-          "Question 106 depends on the knot drawing printed on page 61. A cropped photograph of the book's own figure is attached, not a redrawing."
+          "Question 106 depends on the knot drawing printed on page 61. A crop of the book's own figure from the scan is attached, not a redrawing."
       ]
   };
 
