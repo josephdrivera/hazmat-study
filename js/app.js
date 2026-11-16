@@ -512,6 +512,33 @@
     }
   }
 
+  // Clears the answers for the set on screen only; other quizzes and exams keep theirs.
+  function restartStudy() {
+    var list = state.studyFiltered;
+    var answered = studyAnsweredCount();
+    if (!list.length || !answered) {
+      state.studyIndex = 0;
+      renderStudyQuestion();
+      return;
+    }
+    showModal(
+      "Start over? This clears your " + answered + " answer" + (answered === 1 ? "" : "s") + " in " +
+      studySetLabel() + " and goes back to the first question. Other study sets keep their answers.",
+      [
+        { label: "Cancel", cls: "btn--nav", action: hideModal },
+        { label: "Start over", cls: "btn--primary btn--danger", action: function () {
+          hideModal();
+          list.forEach(function (q) { delete state.studyAnswers[q.id]; });
+          state.studyIndex = 0;
+          state.studyCompletedKey = "";
+          if (state.studyShuffled) state.studySeed = Math.random();
+          rebuildStudyList();
+          saveState();
+        }}
+      ]
+    );
+  }
+
   function studyGetMissed() {
     return state.studyFiltered.filter(function (q) {
       var a = state.studyAnswers[q.id];
@@ -1202,6 +1229,27 @@
     saveState();
     updateResumeButton();
     resumeExam();
+  }
+
+  // Same questions, blank answer sheet. Asks first when there is something to lose.
+  function restartExam() {
+    if (!state.examQuestions.length) return;
+    var touched = examAnsweredCount() + Object.keys(state.examMarked).length + Object.keys(state.examGuessed).length;
+    if (!touched) {
+      retakeTest();
+      return;
+    }
+    showModal(
+      "Start this test over? Your answers and marks are cleared and you go back to question 1 of the same " +
+      state.examQuestions.length + " questions.",
+      [
+        { label: "Cancel", cls: "btn--nav", action: hideModal },
+        { label: "Start over", cls: "btn--primary btn--danger", action: function () {
+          hideModal();
+          retakeTest();
+        }}
+      ]
+    );
   }
 
   function generateAnother() {
@@ -2425,6 +2473,7 @@
     $("study-next-unanswered").addEventListener("click", studyNextUnanswered);
     $("study-review-missed").addEventListener("click", function () { enterMissedReview("study"); });
     $("study-full-review").addEventListener("click", function () { enterReport("study"); });
+    $("study-restart").addEventListener("click", restartStudy);
 
     $("study-choices").addEventListener("click", function (e) {
       var el = e.target.closest(".choice");
@@ -2485,6 +2534,7 @@
     $("exam-prev").addEventListener("click", examPrev);
     $("exam-next").addEventListener("click", examNext);
     $("exam-submit").addEventListener("click", submitExam);
+    $("exam-restart").addEventListener("click", restartExam);
     $("exam-check").addEventListener("click", checkPracticeAnswer);
     $("exam-mark").addEventListener("change", function () {
       var q = state.examQuestions[state.examIndex];

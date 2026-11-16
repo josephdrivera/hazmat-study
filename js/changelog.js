@@ -21,6 +21,15 @@
 
   var versions = [
     {
+      version: "2.2.0",
+      date: "2026-11-16",
+      title: "Start over from inside a study set or test",
+      items: [
+        "Study mode has a Start over button under the question. It clears your answers for the quiz or exam on screen and returns to the first question. Your other study sets keep their answers.",
+        "Practice tests have a Start over button under Submit. It gives you the same questions with a blank answer sheet."
+      ]
+    },
+    {
       version: "2.1.1",
       date: "2026-11-04",
       title: "Fire Fighter II tucked away for now",
