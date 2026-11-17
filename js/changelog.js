@@ -21,6 +21,18 @@
 
   var versions = [
     {
+      version: "2.3.0",
+      date: "2026-11-17",
+      title: "Read aloud and A, B, C, D keys",
+      items: [
+        "Every question screen has a Read aloud button. It reads the question, each choice, and, once the answer is showing, whether you were right and what the source answer is. Press R to start or stop it.",
+        "Turn on Auto-read and each new question is read as it appears, followed by the result when you answer. The setting is remembered on this device.",
+        "Pick the reading voice and speed next to the button. The site starts with the most natural voice your device has. For a much better one, download a free Premium or Enhanced voice in your device's Spoken Content settings and it shows up in the list.",
+        "Press A, B, C, or D to pick an answer from anywhere on a study or test question. You no longer have to click a choice first. The left and right arrow keys still move between questions.",
+        "In study mode a choice you have tabbed to can be picked with Enter or Space, and screen readers now announce the result."
+      ]
+    },
+    {
       version: "2.2.0",
       date: "2026-11-16",
       title: "Start over from inside a study set or test",

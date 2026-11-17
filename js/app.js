@@ -270,6 +270,7 @@
   // The practice-test builder is its own screen. Code that used to pick
   // the "tests" tab and go home now lands on the builder instead.
   function showView(id) {
+    stopSpeaking();
     if (id === "view-home" && state.activeTab === "tests") {
       state.activeTab = "";
       id = "view-builder";
@@ -405,6 +406,7 @@
     // Nav state
     $("study-prev").disabled = state.studyIndex === 0;
     $("study-next").disabled = state.studyIndex >= list.length - 1;
+    speechOnRender("study");
   }
 
   function renderStudyProgress() {
@@ -1059,6 +1061,7 @@
 
     $("exam-prev").disabled = state.examIndex === 0;
     $("exam-next").disabled = state.examIndex >= list.length - 1;
+    speechOnRender("exam");
   }
 
   function renderExamNavigator() {
@@ -1367,6 +1370,7 @@
 
     $("missed-prev").disabled = state.missedIndex === 0;
     $("missed-next").disabled = state.missedIndex >= list.length - 1;
+    speechOnRender("missed");
   }
 
   /* ─── 7b. COMPLETION REPORT (full right / wrong review) ── */
@@ -2048,9 +2052,6 @@
 
   function letterShortcutAllowed(e) {
     if (!navShortcutAllowed(e)) return false;
-    var target = e.target;
-    if (!target || !target.closest) return false;
-    if (!target.closest("#exam-choices") && !target.closest("#study-choices")) return false;
     if (Date.now() - lastTypingAt < 350) return false;
     return true;
   }
@@ -2079,7 +2080,8 @@
       return;
     }
 
-    if (!answerLetter(e.key) && e.key && e.key.length === 1 && !e.metaKey && !e.ctrlKey && !e.altKey) {
+    var isReadKey = e.key === "r" || e.key === "R";
+    if (!answerLetter(e.key) && !isReadKey && e.key && e.key.length === 1 && !e.metaKey && !e.ctrlKey && !e.altKey) {
       lastTypingAt = Date.now();
     }
 
@@ -2095,9 +2097,21 @@
       return;
     }
 
+    if (isReadKey && SPEECH_VIEWS[viewId]) {
+      e.preventDefault();
+      toggleSpeaking(SPEECH_VIEWS[viewId]);
+      return;
+    }
+
+    var inStudyChoice = e.target.closest && e.target.closest("#study-choices .choice");
+
     if (viewId === "view-study") {
       var studyLetter = answerLetter(e.key);
       if (studyLetter && letterShortcutAllowed(e)) { e.preventDefault(); studySelectAnswer(studyLetter); }
+      else if (inStudyChoice && (e.key === "Enter" || e.key === " " || e.key === "Spacebar")) {
+        e.preventDefault();
+        studySelectAnswer(inStudyChoice.dataset.letter);
+      }
       else if (e.key === "ArrowLeft") { e.preventDefault(); studyPrev(); }
       else if (e.key === "ArrowRight") { e.preventDefault(); studyNext(); }
     } else if (viewId === "view-exam") {
@@ -2117,6 +2131,249 @@
       else if (e.key === "ArrowRight") { e.preventDefault(); missedNext(); }
     }
   });
+
+  /* ─── 9b. READ ALOUD ────────────────────────────── */
+
+  var SPEECH_KEY = "hazmat-study-speech";
+  var SPEECH_VIEWS = { "view-study": "study", "view-exam": "exam", "view-missed": "missed" };
+  var speechSupported = typeof window !== "undefined" && "speechSynthesis" in window &&
+    typeof window.SpeechSynthesisUtterance === "function";
+  var SPEECH_VOICE_KEY = "hazmat-study-speech-voice";
+  var SPEECH_RATE_KEY = "hazmat-study-speech-rate";
+  var speech = { run: 0, speaking: false, auto: false, lastKey: {}, marked: null, voiceName: "", rate: 1, voices: [] };
+
+  try {
+    speech.auto = localStorage.getItem(SPEECH_KEY) === "auto";
+    speech.voiceName = localStorage.getItem(SPEECH_VOICE_KEY) || "";
+    speech.rate = parseFloat(localStorage.getItem(SPEECH_RATE_KEY)) || 1;
+  } catch (e) {}
+
+  // Joke and old synthesizer voices that ship with macOS; never worth offering.
+  var SPEECH_SKIP = /^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Fred|Good News|Jester|Junior|Kathy|Organ|Ralph|Superstar|Trinoids|Whisper|Wobble|Zarvox|Eddy|Flo|Grandma|Grandpa|Reed|Rocko|Sandy|Shelley)\b/;
+
+  // Higher is more natural: downloaded Premium / Enhanced voices and the
+  // browsers' online neural voices come before the stock system voice.
+  function voiceScore(voice) {
+    var score = 0;
+    if (/premium|natural|neural/i.test(voice.name)) score = 50;
+    else if (/enhanced/i.test(voice.name)) score = 40;
+    else if (/^Google /.test(voice.name)) score = 30;
+    else if (voice.default) score = 20;
+    else score = 10;
+    if (voice.lang === "en-US" || voice.lang === "en_US") score += 5;
+    return score;
+  }
+
+  function loadVoices() {
+    var all = window.speechSynthesis.getVoices() || [];
+    speech.voices = all.filter(function (voice) {
+      return /^en([-_]|$)/i.test(voice.lang) && !SPEECH_SKIP.test(voice.name);
+    }).sort(function (a, b) {
+      return voiceScore(b) - voiceScore(a) || a.name.localeCompare(b.name);
+    });
+    var html = speech.voices.map(function (voice) {
+      var region = voice.lang.replace("_", "-").split("-")[1];
+      var label = voice.name.replace(/ \(English \([^)]*\)\)/, "") + (region && region !== "US" ? " (" + region + ")" : "");
+      return '<option value="' + escapeHtml(voice.name) + '">' + escapeHtml(label) + "</option>";
+    }).join("");
+    var current = currentVoice();
+    document.querySelectorAll(".speak-voice").forEach(function (select) {
+      select.innerHTML = html;
+      select.hidden = speech.voices.length < 2;
+      if (current) select.value = current.name;
+    });
+  }
+
+  // The voice the reader picked, or the most natural one this device has.
+  function currentVoice() {
+    var picked = null;
+    speech.voices.forEach(function (voice) { if (voice.name === speech.voiceName) picked = voice; });
+    return picked || speech.voices[0] || null;
+  }
+
+  // The question on screen for a view, the answer picked, and whether the source answer is showing.
+  function speechContext(view) {
+    var q, answer, revealed;
+    if (view === "study") {
+      q = state.studyFiltered[state.studyIndex];
+      answer = q && state.studyAnswers[q.id];
+      revealed = answer !== undefined;
+    } else if (view === "exam") {
+      q = state.examQuestions[state.examIndex];
+      answer = q && state.examAnswers[q.id];
+      revealed = !!q && state.examMode === "practice" && !!state.examRevealed[q.id];
+    } else {
+      q = state.missedQuestions[state.missedIndex];
+      answer = q && (state.missedSource === "study" ? state.studyAnswers[q.id] : state.examAnswers[q.id]);
+      revealed = true;
+    }
+    if (!q) return null;
+    return { q: q, answer: answer, revealed: revealed };
+  }
+
+  function choiceTextFor(q, letter) {
+    var found = "";
+    choiceEntries(q).forEach(function (choice) { if (choice.id === letter) found = choice.text; });
+    return found;
+  }
+
+  function resultSegment(view, ctx) {
+    var correct = correctChoice(ctx.q);
+    var text;
+    if (ctx.answer == null || ctx.answer === "") {
+      text = "Not answered. The source answer is " + correct + ". " + choiceTextFor(ctx.q, correct);
+    } else if (ctx.answer === correct) {
+      text = "Correct. The answer is " + correct + ". " + choiceTextFor(ctx.q, correct);
+    } else {
+      text = "Incorrect. You chose " + ctx.answer + ". The source answer is " + correct + ". " + choiceTextFor(ctx.q, correct);
+    }
+    var el = view === "missed" ? document.querySelector("#missed-choices .missed-answer-row") : $(view + "-feedback");
+    return { text: text, el: el };
+  }
+
+  // One short utterance per part, so the voice pauses between them and the
+  // part being read can be marked on screen.
+  function speechSegments(view, ctx, resultOnly) {
+    if (resultOnly) return [resultSegment(view, ctx)];
+    var q = ctx.q;
+    var segments = [{ text: q.question, el: $(view + "-question") }];
+    if (q.illustration && (q.illustration.alt || q.illustration.description)) {
+      segments.push({ text: "Illustration: " + (q.illustration.alt || q.illustration.description), el: $(view + "-illustration") });
+    }
+    var statementEls = $(view + "-statements").querySelectorAll("li");
+    ((q.statements || []).filter(function (s) { return s && s.text; })).forEach(function (statement, i) {
+      segments.push({ text: "Statement " + (i + 1) + ". " + statement.text, el: statementEls[i] });
+    });
+    var choiceEls = $(view + "-choices").querySelectorAll(".choice");
+    choiceEntries(q).forEach(function (choice, i) {
+      if (choice.text) segments.push({ text: choice.id + ". " + choice.text, el: choiceEls[i] });
+    });
+    if (ctx.revealed) segments.push(resultSegment(view, ctx));
+    return segments.filter(function (segment) { return segment.text; });
+  }
+
+  function markSpeaking(el) {
+    if (speech.marked) speech.marked.classList.remove("is-speaking");
+    speech.marked = el && el.isConnected ? el : null;
+    if (speech.marked) speech.marked.classList.add("is-speaking");
+  }
+
+  function setSpeaking(on) {
+    speech.speaking = on;
+    if (!on) markSpeaking(null);
+    document.querySelectorAll(".speak-btn").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      var label = btn.querySelector(".speak-btn-label");
+      if (label) label.textContent = on ? "Stop reading" : "Read aloud";
+    });
+  }
+
+  function stopSpeaking() {
+    if (!speechSupported) return;
+    speech.run++;
+    window.speechSynthesis.cancel();
+    setSpeaking(false);
+  }
+
+  function speakView(view, resultOnly) {
+    if (!speechSupported) return;
+    var ctx = speechContext(view);
+    if (!ctx) return;
+    stopSpeaking();
+    var segments = speechSegments(view, ctx, resultOnly);
+    if (!segments.length) return;
+    var run = speech.run;
+    setSpeaking(true);
+    segments.forEach(function (segment, i) {
+      var utterance = new SpeechSynthesisUtterance(segment.text);
+      var voice = currentVoice();
+      if (voice) { utterance.voice = voice; utterance.lang = voice.lang; }
+      else utterance.lang = "en-US";
+      utterance.rate = speech.rate;
+      utterance.onstart = function () { if (run === speech.run) markSpeaking(segment.el); };
+      var finish = function () { if (run === speech.run) setSpeaking(false); };
+      if (i === segments.length - 1) utterance.onend = finish;
+      utterance.onerror = finish;
+      window.speechSynthesis.speak(utterance);
+    });
+  }
+
+  function toggleSpeaking(view) {
+    if (speech.speaking) stopSpeaking();
+    else speakView(view, false);
+  }
+
+  // Called after a question screen renders. A new question or a newly shown
+  // answer stops whatever was being read; with Auto-read on it reads the new part.
+  function speechOnRender(view) {
+    if (!speechSupported) return;
+    var ctx = speechContext(view);
+    var questionKey = ctx ? ctx.q.id : "";
+    var key = questionKey + "|" + (ctx && ctx.revealed ? "shown" : "");
+    var previous = speech.lastKey[view];
+    if (previous === key) return;
+    speech.lastKey[view] = key;
+    stopSpeaking();
+    if (!speech.auto || !ctx) return;
+    var resultOnly = view !== "missed" && previous === questionKey + "|" && ctx.revealed;
+    setTimeout(function () {
+      var active = document.querySelector(".view.active");
+      if (!active || SPEECH_VIEWS[active.id] !== view || speech.lastKey[view] !== key) return;
+      speakView(view, resultOnly);
+    }, 0);
+  }
+
+  function initSpeech() {
+    document.querySelectorAll(".speak-row").forEach(function (row) {
+      if (!speechSupported) { row.hidden = true; return; }
+      var view = row.getAttribute("data-speak");
+      row.querySelector(".speak-btn").addEventListener("click", function () { toggleSpeaking(view); });
+      var auto = row.querySelector(".speak-auto-input");
+      auto.checked = speech.auto;
+      auto.addEventListener("change", function () {
+        speech.auto = auto.checked;
+        try { localStorage.setItem(SPEECH_KEY, speech.auto ? "auto" : "off"); } catch (e) {}
+        document.querySelectorAll(".speak-auto-input").forEach(function (other) { other.checked = speech.auto; });
+        if (speech.auto) speakView(view, false);
+        else stopSpeaking();
+      });
+    });
+    if (!speechSupported) return;
+    window.addEventListener("pagehide", stopSpeaking);
+    loadVoices();
+    if (window.speechSynthesis.addEventListener) window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
+
+    // Changing the voice or speed restarts the reading, or plays a short sample.
+    function applySetting(select) {
+      select.blur();
+      var view = select.closest(".speak-row").getAttribute("data-speak");
+      if (speech.speaking) { speakView(view, false); return; }
+      stopSpeaking();
+      var sample = new SpeechSynthesisUtterance("This is how the questions will sound.");
+      var voice = currentVoice();
+      if (voice) { sample.voice = voice; sample.lang = voice.lang; }
+      sample.rate = speech.rate;
+      window.speechSynthesis.speak(sample);
+    }
+    document.querySelectorAll(".speak-voice").forEach(function (select) {
+      select.addEventListener("change", function () {
+        speech.voiceName = select.value;
+        try { localStorage.setItem(SPEECH_VOICE_KEY, speech.voiceName); } catch (e) {}
+        document.querySelectorAll(".speak-voice").forEach(function (other) { other.value = speech.voiceName; });
+        applySetting(select);
+      });
+    });
+    document.querySelectorAll(".speak-rate").forEach(function (select) {
+      select.value = String(speech.rate);
+      if (select.value !== String(speech.rate)) select.value = "1";
+      select.addEventListener("change", function () {
+        speech.rate = parseFloat(select.value) || 1;
+        try { localStorage.setItem(SPEECH_RATE_KEY, String(speech.rate)); } catch (e) {}
+        document.querySelectorAll(".speak-rate").forEach(function (other) { other.value = select.value; });
+        applySetting(select);
+      });
+    });
+  }
 
   /* ─── 10. MODAL SYSTEM ──────────────────────────── */
 
@@ -2474,6 +2731,8 @@
     $("study-review-missed").addEventListener("click", function () { enterMissedReview("study"); });
     $("study-full-review").addEventListener("click", function () { enterReport("study"); });
     $("study-restart").addEventListener("click", restartStudy);
+
+    initSpeech();
 
     $("study-choices").addEventListener("click", function (e) {
       var el = e.target.closest(".choice");
